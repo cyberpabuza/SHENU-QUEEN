@@ -60,6 +60,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "weather",
+            react: "🌤️"
             category: "search",
             desc: "Sends weather info about asked place.",
             use: '<location>',
@@ -157,6 +158,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "image",
+            react: "🖼️"
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',

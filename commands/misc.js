@@ -148,6 +148,7 @@ async(Void, citel, text,{ isCreator }) => {
      //---------------------------------------------------------------------------
  cmd({
              pattern: "uptime",
+             react: "⏳",
              alias: ["runtime"],
              desc: "Tells runtime/uptime of bot.",
              category: "misc",

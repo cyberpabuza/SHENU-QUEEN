@@ -17,14 +17,13 @@ let { fancytext, tlang, tiny, runtime, formatp, botpic, prefix, sck1 } = require
 const long = String.fromCharCode(8206)
 const readmore = long.repeat(4001)
 const Secktor = require('../lib/commands')
-
     //---------------------------------------------------------------------------
 Secktor.cmd({
             pattern: "help",
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "🧚‍♀️",
+            react: "✨",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -55,37 +54,39 @@ Secktor.cmd({
                 let total = await sck1.countDocuments()
                 let str = `╭────《 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 》─────⊷\n`
                 str +=
-                    '```' + `│ ╭──────────────◆
-│👤│ User:- ${citel.pushName}
-│〽️│ Theme:- ${tlang().title}
-│🎊│ Prefix:- [ ${prefix} ]
-│👩‍💻│ Owner:- ${Config.ownername}
-│📍│ Plugins:- ${commands.length}
-│👤│ Users:- ${total}
-│⏳│ Uptime:- ${runtime(process.uptime())}
-│💈│ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│⏰│ Time:- ${time}
-│📆│ Date:- ${date}
-│ ╰──────────────◆
+                    '```' + `│ ╭───────✧❁✧───────«
+│ │ User:- ${citel.pushName}
+│ │ Theme:- ${tlang().title}
+│ │ Prefix:- [ ${prefix} ]
+│ │ Owner:- ${Config.ownername}
+│ │ Plugins:- ${commands.length}
+│ │ Users:- ${total}
+│ │ Uptime:- ${runtime(process.uptime())}
+│ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+│ │ Time:- ${time}
+│ │ Date:- ${date}
+│ ╰───────✧❁✧───────»
 ╰───────────────⊷\n
 ` + '```'
-                for (const category in cmds) 
-                {
-                   str += `╭────❏ *${tiny(category)}* ❏\n` ;
-                   if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
-                        for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                        str += `╰━━━━━━━━━━━━━──⊷\n`  ;
-                        break ;
-                   }
-                   else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                         str += `╰━━━━━━━━━━━━━━──⊷\n`  ; 
-                   }
-  
+                str += `╭───『 ` + fancytext('Commands', 57) + `』──◆`
+                for (const category in cmds) {
+                    str += `
+┃  ╭───────✧❁✧───────«
+┃  │ ✯---- ${tiny(category)} ----⦿
+┃  ╰┬──────✧❁✧───────»
+┃  ┌┤\n`
+                    for (const plugins of cmds[category]) {
+                        str += `┃  │ ✭ ${plugins}\n`
+                    }
+                    str += `┃  ╰─────────────◆`
                 }
-                str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
+
+                str += `\n╰━━━━━━━━━━━──⊷\n`
                 let buttonMessaged = {
                     image: { url: await botpic() },
-                    caption: str
+                    caption: str,
+                    footer: tlang().title,
+                    headerType: 4
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
@@ -95,13 +96,14 @@ Secktor.cmd({
 Secktor.cmd({
             pattern: "list",
             desc: "list menu",
-            category: "general"
+            category: "general",
+            react: "✅"
         },
         async(Void, citel) => {
             const { commands } = require('../lib');
             let str = `
 ╭━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──⊷`
-            str += `
+            str += '```' + `
 ┃ ⛥╭──────────────      
 ┃ ⛥│ User: ${citel.pushName}
 ┃ ⛥│ Theme: ${tlang().title}
@@ -112,23 +114,24 @@ Secktor.cmd({
 ┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 ┃ ⛥│  
 ┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n`
-for (let i = 0; i < commands.length; i++) 
-{
-     if(commands[i].pattern==undefined) continue
-     str +=       `╭ ${i+1} *${fancytext(commands[i].pattern,1)}*\n` 
-     if(commands[i].desc=undefined) commands[i].desc=""
-     str += `╰➛ ${fancytext(commands[i].desc,1)}\n`
-}
-            return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
+╰━━━━━━━━━━━──⊷\n` + '```'
+            str += `╭━━━━━━━━━━━────⊷\n`
+            str += `┃ ⛥ ╭─────────────\n`
+            for (let i = 0; i < commands.length; i++) {
+             if(commands[i].pattern==undefined) continue
+                str += `┃ ⛥ │ ➛ ${i+1}. ` + commands[i].pattern + '\n'
+            }
+            str += `┃ ⛥ ╰─────────────\n`
+            str += `╰━━━━━━━━━━━───⊷\n`
+            return Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
         }
     )
     //---------------------------------------------------------------------------
 Secktor.cmd({
         pattern: "owner",
-        desc: "To find owner number",
+        desc: "To check ping",
         category: "general",
-        react: "👤",
+        react: "💜",
         filename: __filename
     },
     async(Void, citel) => {
@@ -176,7 +179,7 @@ async(Void, citel, text) => {
         else arr.push(`*🍁Command:* ${cmd.pattern}`);
         if (cmd.category) arr.push(`*🧩Type:* ${cmd.category}`);
         if(cmd.filename) arr.push(`✨FileName: ${cmd.filename}`)
-        return citel.reply(arr.join('\n'));
+        return await citel.reply(arr.join('\n'));
 
 
 })

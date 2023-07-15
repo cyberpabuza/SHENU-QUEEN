@@ -14,7 +14,6 @@ const Config = require('../config')
     //---------------------------------------------------------------------------
 cmd({
         pattern: "act",
-        react: "✔️"
         desc: "Switches for varios works.",
         category: "group",
         filename: __filename,

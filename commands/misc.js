@@ -9,7 +9,7 @@
  * @version 0.0.6
  **/
 
- const { tlang, getAdmin, prefix, Config, sck, fetchJson, runtime,cmd,getBuffer } = require('../lib')
+ const { tlang, getAdmin, prefix, Config, sck, fetchJson, runtime,cmd } = require('../lib')
  let { dBinary, eBinary } = require("../lib/binary");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
  const fs = require('fs')
@@ -59,19 +59,14 @@ async(Void, citel, text,{ isCreator }) => {
              filename: __filename,
          },
          async(Void, citel, text) => {
-let a = await getBuffer(`https://citel-x.herokuapp.com/attp/${text}`)
- return citel.reply(a,{packname:'Secktor',author:'ATTP'},"sticker") 
-         }
-     )
- cmd({
-             pattern: "ttp",
-             desc: "Makes static sticker of text.",
-             category: "sticker",
-             filename: __filename,
-         },
-         async(Void, citel, text) => {
-let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
- return citel.reply(a,{packname:'Secktor',author:'TTP'},"sticker") 
+             Void.sendMessage(citel.chat, {
+                 sticker: {
+                     url: `https://api.xteam.xyz/attp?file&text=${encodeURI(text)}`
+                 }
+             }, {
+                 quoted: citel
+             })
+ 
          }
      )
      //---------------------------------------------------------------------------
@@ -96,7 +91,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
                      method: "POST",
                      json: code
                  }, function(_error, _response, body) {
-                    return citel.reply("> " + text[1] + "\n\n" + "```" + body.output + "```");
+                     citel.reply("> " + text[1] + "\n\n" + "```" + body.output + "```");
                  });
              } catch (error) {
                  console.log(error);
@@ -111,7 +106,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
              filename: __filename,
          },
          async(Void, citel, text) => {
-            return await citel.reply(text.replace(/\+/g, (String.fromCharCode(8206)).repeat(4001)))
+             await citel.reply(text.replace(/\+/g, (String.fromCharCode(8206)).repeat(4001)))
  
          }
      )
@@ -160,19 +155,19 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
          },
          async(Void, citel, text) => {
              const upt = runtime(process.uptime())
-             return citel.reply(`Uptime of ${tlang().title}: ${upt}`)
+             citel.reply(`Uptime of ${tlang().title}: ${upt}`)
          }
      )
      //---------------------------------------------------------------------------
  cmd({
              pattern: "wm",
-             desc: "Makes wa.me of quoted or mentioned user.",
+             desc: "Makes wa me of quoted or mentioned user.",
              category: "misc",
              filename: __filename,
          },
          async(Void, citel, text) => {
              let users = citel.mentionedJid ? citel.mentionedJid[0].split('@')[0] : citel.quoted ? citel.quoted.sender.split('@')[0] : text.replace('@')[0]
-            return citel.reply(`https://wa.me/${users}`)
+             citel.reply(`https://wa.me/${users}`)
  
          }
      )
@@ -197,6 +192,39 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
              }, {
                  quoted: citel,
              });
+         }
+     )
+     //---------------------------------------------------------------------------
+ cmd({
+             pattern: "nsfw",
+             desc: "activates and deactivates nsfw.\nuse buttons to toggle.",
+             category: "misc",
+             filename: __filename,
+         },
+         async(Void, citel, text) => {
+             if (!citel.isGroup) return citel.reply(tlang().group);
+             const groupAdmins = await getAdmin(Void, citel)
+             const botNumber = await Void.decodeJid(Void.user.id)
+             const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+             if (!isAdmins) return citel.reply(tlang().admin)
+             if (!isBotAdmins) return citel.reply(tlang().botadmin)
+             let buttons = [{
+                     buttonId: `${prefix}act nsfw`,
+                     buttonText: {
+                         displayText: "Turn On",
+                     },
+                     type: 1,
+                 },
+                 {
+                     buttonId: `${prefix}deact nsfw`,
+                     buttonText: {
+                         displayText: "Turn Off",
+                     },
+                     type: 1,
+                 },
+             ];
+             await Void.sendButtonText(citel.chat, buttons, `Activate nsfw:18+ commands`, Void.user.name, citel);
          }
      )
      //---------------------------------------------------------------------------
@@ -262,7 +290,39 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
          }
      )
      //---------------------------------------------------------------------------
- 
+ cmd({
+             pattern: "events",
+             desc: "activates and deactivates events.\nuse buttons to toggle.",
+             category: "misc",
+             filename: __filename,
+         },
+         async(Void, citel, text) => {
+             if (!citel.isGroup) return citel.reply(tlang().group);
+             const groupAdmins = await getAdmin(Void, citel)
+             const botNumber = await Void.decodeJid(Void.user.id)
+             const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+             if (!isAdmins) return citel.reply(tlang().admin)
+             if (!isBotAdmins) return citel.reply(tlang().botadmin)
+             let buttons = [{
+                     buttonId: `${prefix}act events`,
+                     buttonText: {
+                         displayText: "Turn On",
+                     },
+                     type: 1,
+                 },
+                 {
+                     buttonId: `${prefix}deact events`,
+                     buttonText: {
+                         displayText: "Turn Off",
+                     },
+                     type: 1,
+                 },
+             ];
+             await Void.sendButtonText(citel.chat, buttons, `Activate Events:Welcome & goodbye`, Void.user.name, citel);
+         }
+     )
+     //---------------------------------------------------------------------------
  cmd({
              pattern: "emix",
              desc: "Mixes two emojies.",
@@ -342,8 +402,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
                          ];
                          let chatbott= await chatbot.findOne({ id: 'chatbot' })
                          await Void.sendButtonText(citel.chat, buttons, `Chatbot Status: ${chatbott.worktype} `, 'Secktor-Md', citel);
-                        citel.reply(`Chatbot Status: ${chatbott.worktype} \n*Use:* ${prefix}chatbot on\n${prefix}chatbot off`)
-                        }
+                     }
              }
  
  
@@ -480,27 +539,6 @@ let buttons = [{
              await Void.sendButtonText(citel.chat, buttons, `Activate antilink:Deletes Link + kick`, Void.user.name, citel);
          }
      )
-     cmd({
-        pattern: 'ss',
-        alias :['webss' , 'fullss'],
-        category: "search",
-        desc: "Provides screenshot of given url",
-        use: '<text>',
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-let limit = 5;
-try {
-if (!text) return citel.reply("```Uhh Please, Give me Url!```");
-let urll = `https://s.vercel.app/api?url=${text.match(/\bhttps?:\/\/\S+/gi)[0]}&width=1280&height=720`
-let media  = await getBuffer(urll)
-return await Void.sendMessage(citel.chat ,{image : media } , {quoted:citel} )
-}
-catch (err) { return citel.reply("```Error While Fetching Snapshot```")}
-    }
-)
-
-
      //---------------------------------------------------------------------------
  cmd({ on: "body" }, async(Void, citel) => {
      if (Config.autoreaction === 'true' && citel.text.startsWith(prefix)) {

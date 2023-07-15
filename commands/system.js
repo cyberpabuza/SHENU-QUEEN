@@ -9,10 +9,8 @@
  * @version 0.0.6
  **/
 
-const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config ,sleep} = require('../lib')
-const { TelegraPh } = require('../lib/scraper')   
-const util = require('util')
-//---------------------------------------------------------------------------
+const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config } = require('../lib')
+    //---------------------------------------------------------------------------
 cmd({
             pattern: "addnote",
             category: "owner",
@@ -41,11 +39,19 @@ cmd({
                 await Void.sendMessage(citel.chat, { image: h })
                 return
             }
+            let generatebutton = [{
+                buttonId: `${prefix}qr`,
+                buttonText: {
+                    displayText: 'Generate New'
+                },
+                type: 1
+            }]
             let buttonMessaged = {
-                image: { url: 'https://citel-x.herokuapp.com/session' },
+                image: { url: 'https://secktorbot.onrender.com/' },
                 caption: `*_Scan Qr within 15 seconds_*\nYou'll get session id in your log number.`,
                 footer: ` Session`,
                 headerType: 4,
+                buttons: generatebutton,
                 contextInfo: {
                     externalAdReply: {
                         title: 'Secktor Session',
@@ -101,42 +107,49 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-    cmd({
-        pattern: "url",
-        alias : ['createurl'],
-        category: "misc",
-        filename: __filename,
-        desc: "image to url."
-    },
-    async(Void, citel, text) => {
-        if (!citel.quoted) return await citel.reply(`*Reply To Any Image/Video To Get Url*`)
-        let mime = citel.quoted.mtype
-        if(mime !='videoMessage' && mime !='imageMessage' ) return await citel.reply("Uhh Please, Reply To An Image/Video")
-        let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
-        let anu = await TelegraPh(media);
-        await citel.reply('*Here is URL of your media.\n'+util.format(anu));
-        return await fs.unlinkSync(media);
-    })
-
-    //---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
 cmd({
-    pattern: "trt",
-    alias :['translate'],
-    category: "misc",
-    filename: __filename,
-    desc: "Translate\'s given text in desird language."
-},
-async(Void, citel, text) => {
-    if(!text && !citel.quoted) return await citel.reply(`*Please Give Me Text. Example: _${prefix}trt en Who are you_*`);
-    const translatte = require("translatte");
-    let lang = text ? text.split(" ")[0].toLowerCase() : 'en';
-    if (!citel.quoted)  { text = text.replace( lang , "");  }
-    else { text = citel.quoted.text; }
-    var whole = await translatte(text, { from:"auto",  to: lang , });
-    if ("text" in whole) { return await citel.reply('*Translated text:*\n'+whole.text); }
-}
-)
+            pattern: "url",
+            category: "misc",
+            filename: __filename,
+            desc: "image to url."
+        },
+        async(Void, citel, text) => {
+            if (!citel.quoted) return citel.reply(`Pls mention me any image/video and type ${prefix + command} to upload my ${tlang().greet}`);
+            let mime = citel.quoted.mtype
+            let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
+            if (/image/.test(mime)) {
+                let anu = await TelegraPh(media);
+                return citel.reply(`Here is url of your uploaded Media on Telegraph.\n\n` + util.format(anu));
+            } else if (!/image/.test(mime)) {
+                let anu = await TelegraPh(media);
+                await fs.unlinkSync(media);
+                return citel.reply(`Here is url of your uploaded Media on Telegraph.\n\n` + util.format(anu));
+            }
+            await fs.unlinkSync(media);
+        }
+    )
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "trt",
+            category: "misc",
+            filename: __filename,
+            desc: "Translate\'s given text in desird language."
+        },
+        async(Void, citel, text) => {
+            const translatte = require("translatte");
+            if (!citel.quoted) return citel.reply("*Please reply to any message.*");
+            if (!citel.quoted) return citel.reply(`Please mention or give tex.`);
+            let textt = citel.quoted.text;
+            whole = await translatte(textt, {
+                from: text[1] || "auto",
+                to: text.split(" ")[0] || "hi",
+            });
+            if ("text" in whole) {
+                return await citel.reply("*Translated Into🔎:* " + " ```" + (text.split(" ")[0] || "Auto to Hindi") + "```\n" + " *From Language🔎:* " + " ```" + (text[1] || "Auto Detect") + "```\n" + "*Result♦️:* " + " ```" + whole.text + "```");
+            }
+
+        }
+    )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "shell",
@@ -249,7 +262,7 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-*Version:-* _0.0.7_
+*Version:-* _0.0.6_
 *Uptime:-* _${runtime(process.uptime())}_
 *Owner:-* _${Config.ownername}_
 *Branch:-* _${Config.BRANCH}_

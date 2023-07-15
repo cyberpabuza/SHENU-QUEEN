@@ -130,7 +130,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB _🧚‍♀️SHENU-QUEEN-BOT_`,
+                        caption: ` 🧚‍♀️𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝘽𝙊𝙏 : `,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -285,6 +285,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",

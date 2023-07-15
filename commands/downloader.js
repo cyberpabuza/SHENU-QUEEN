@@ -303,7 +303,7 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('*Downloadig:* '+titleYt)
+            citel.reply('*🧚‍♀️𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝘽𝙊𝙏-𝙎𝙊𝙉𝙂-𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂:* '+titleYt)
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })

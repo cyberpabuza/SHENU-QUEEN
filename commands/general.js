@@ -58,7 +58,7 @@ cmd({
         let cap = `Hey ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* secktorbot.tech/repo
+*🍁 🆁🅴🅿🅾:* secktorbot.tech/repo
 *Group:* secktorbot.tech/support
 *Deploy Your Own:*-
  SecktorBot.tech/youtube`

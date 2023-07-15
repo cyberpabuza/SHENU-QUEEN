@@ -127,7 +127,7 @@ cmd({
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "𝑆𝛨𝛯𝛮𝑈-𝑄𝑈𝛯𝛯𝛮-𝑅𝛯𝛲𝛩",
+                    title: "Secktro-Repo",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
@@ -144,7 +144,7 @@ cmd({
 )
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "system",
+        pattern: "status",
         alias: ["about"],
         desc: "To check bot status",
         category: "general",
@@ -155,7 +155,7 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-╔╌╌ *${tlang().title}* ╌╌╗
+🧚‍♀️ *${tlang().title}* 🧚‍♀️
 *🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
 *⚡🆂🅿🅴🅴🅳:* ${latensie.toFixed(4)} ms
 *🚦🆄🅿🆃🅸🅼🅴:* ${runtime(process.uptime())}

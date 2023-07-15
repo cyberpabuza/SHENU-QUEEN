@@ -94,6 +94,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "🎥",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -111,7 +112,7 @@ cmd({
                 if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
                 let titleYt = infoYt.videoDetails.title;
                 let randomName = getRandom(".mp4");
-                citel.reply('*Downloadig:* '+titleYt)
+                citel.reply('_*🧚‍♀️ 𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝘽𝙊𝙏 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂:*_ '+titleYt)
                 const stream = ytdl(urlYt, {
                         filter: (info) => info.itag == 22 || info.itag == 18,
                     })
@@ -129,7 +130,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB 🧚‍♀️SHENU-QUEEN-BOT-V1`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB _🧚‍♀️SHENU-QUEEN-BOT_`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

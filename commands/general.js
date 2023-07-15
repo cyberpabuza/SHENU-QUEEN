@@ -115,21 +115,23 @@ cmd({
     },
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `Hey ${citel.pushName}\n
-*⭐ Total Stars:* ${data.stargazers_count} stars
-*🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* citel-x.herokuapp.com/repo
-*Group:* citel-x.herokuapp.com/support
-*Deploy Your Own:*-
-citel-x.herokuapp.com`
-        let buttonMessaged = {
+╔╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╗        let cap = `Hey ${citel.pushName}\n
+
+┇*🌟 🆃🅾🆃🅰🅻 🆂🆃🅰🆁🆂:* ${data.stargazers_count} stars
+┇*👩‍🔧 🅵🅾🆁🅺🆂:* ${data.forks_count} forks
+┇*🔥 🆁🅴🅿🅾:*𝐂𝐀𝐌𝐈𝐍𝐆 𝐒𝐎𝐎𝐍
+┇*🧚‍♀️ 🅱🅾🆃 🅽🅰🅼🅴:* 𝑆𝐻𝐸𝑁𝑈-𝑄𝑈𝐸𝐸𝑁-𝑊𝐴-𝐵𝑂𝑇
+┇*👩‍💻 🅳🅴🅿🅻🆈 🆈🅾🆄 🅾🆆🅽:*-𝙲𝚈𝙱𝙴𝚁-𝚃𝙷𝚄𝚂𝙷𝙰𝙽`
+
+╚╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╝	    
+       let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
             footer: tlang().footer,
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Secktor-Repo",
+                    title: "𝑆𝛨𝛯𝛮𝑈-𝑄𝑈𝛯𝛯𝛮-𝑅𝛯𝛲𝛩",
                     body: "Easy to Use",
                     thumbnail: log0,
                     mediaType: 4,
@@ -146,7 +148,7 @@ citel-x.herokuapp.com`
 )
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "status",
+        pattern: "system bot",
         alias: ["about"],
         desc: "To check bot status",
         category: "general",
@@ -157,13 +159,13 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-🔰 *${tlang().title}* 🔰
+╔╌╌ *${tlang().title}* ╌╌╗
 *🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-*⚡Speed:* ${latensie.toFixed(4)} ms
-*🚦Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 0.0.7
-*👤Owner:*  ${Config.ownername}
-*Powered by ${tlang().title}*
+*⚡🆂🅿🅴🅴🅳:* ${latensie.toFixed(4)} ms
+*🚦🆄🅿🆃🅸🅼🅴:* ${runtime(process.uptime())}
+*🕸🆅🅴🆁🆂🅸🅾🅽:* 0.0.1
+*👤🅾🆆🅽🅴🆁:*  ${Config.ownername}
+*🅂𝗛𝗘𝗡𝗨-🅀𝗨𝗘𝗘𝗡-🄱𝗢𝗧 ${tlang().title}*
 `;
         let buttonMessaged = {
             image: {

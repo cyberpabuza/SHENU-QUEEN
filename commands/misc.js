@@ -47,7 +47,7 @@ async(Void, citel, text,{ isCreator }) => {
                 return citel.reply('Goodbye added for this group.');
             } else {
                 await await sck.updateOne({ id: citel.chat }, { goodbye:text,events:'true' })
-                return citel.reply('Goodbye updated successfully.');     
+                return citel.reply('Goodbye updated successfully✔️.');     
             }      
 }
 )
@@ -365,7 +365,7 @@ async(Void, citel, text,{ isCreator }) => {
                      } else {
                          if (chatbott.worktype == "true") return citel.reply("Chatbot was already enabled.")
                          await chatbot.updateOne({ id: 'chatbot' }, { worktype: "true" })
-                         citel.reply('Enabled chatbot successfully.')
+                         citel.reply('_SEENU QUEEN chatbot successfully✔️_.')
                          return
                      }      
                      }

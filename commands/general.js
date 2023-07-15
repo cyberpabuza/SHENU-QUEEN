@@ -56,9 +56,9 @@ cmd({
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
         let cap = `Hey ${citel.pushName}\n
-*⭐ Total Stars:* ${data.stargazers_count} stars
-*🍽️ Forks:* ${data.forks_count} forks
-*🍁 🆁🅴🅿🅾:* secktorbot.tech/repo
+*⭐ 𝙏𝙊𝙏𝘼𝙇 𝙎𝙏𝘼𝙍𝙎:* ${data.stargazers_count} stars
+*🍽️ 𝙁𝙊𝙍𝙆𝙎:* ${data.forks_count} forks
+*🍁 𝙍𝙀𝙋𝙊:* secktorbot.tech/repo
 *Group:* secktorbot.tech/support
 *Deploy Your Own:*-
  SecktorBot.tech/youtube`

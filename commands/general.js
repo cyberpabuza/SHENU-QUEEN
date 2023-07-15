@@ -114,17 +114,13 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-╔╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╗        let cap = `Hey ${citel.pushName}\n
-
+        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')        let cap = `Hey ${citel.pushName}\n
 ┇*🌟 🆃🅾🆃🅰🅻 🆂🆃🅰🆁🆂:* ${data.stargazers_count} stars
 ┇*👩‍🔧 🅵🅾🆁🅺🆂:* ${data.forks_count} forks
 ┇*🔥 🆁🅴🅿🅾:*𝐂𝐀𝐌𝐈𝐍𝐆 𝐒𝐎𝐎𝐍
 ┇*🧚‍♀️ 🅱🅾🆃 🅽🅰🅼🅴:* 𝑆𝐻𝐸𝑁𝑈-𝑄𝑈𝐸𝐸𝑁-𝑊𝐴-𝐵𝑂𝑇
 ┇*👩‍💻 🅳🅴🅿🅻🆈 🆈🅾🆄 🅾🆆🅽:*-𝙲𝚈𝙱𝙴𝚁-𝚃𝙷𝚄𝚂𝙷𝙰𝙽`
-
-╚╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╝	    
-       let buttonMessaged = {
+ let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
             footer: tlang().footer,
@@ -148,7 +144,7 @@ cmd({
 )
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "system bot",
+        pattern: "system",
         alias: ["about"],
         desc: "To check bot status",
         category: "general",

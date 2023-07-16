@@ -92,7 +92,7 @@ Secktor.cmd({
                     image: { url: await botpic() },
                     caption: str,
                     footer: tlang().title,
-                    headerType: 10
+                    headerType: 1
                 };
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }

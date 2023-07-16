@@ -95,7 +95,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
-            react: "📽️",
+            react: "📽",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -131,7 +131,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title :_*SHENU-QUEEN-MD*_ _*CREAYED BY CY THUSHAN*_`,
+                        caption: ` 👩‍🎨 _*♡SHENU-QUEEN-MD*_ _*CREAYED BY CY THUSHAN*_`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -158,6 +158,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
+            react: "🎶",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
@@ -174,13 +175,13 @@ cmd({
                 },
                 caption: `
 ╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
+│👑 ${tlang().title} 
+│♤ *Youtube Player* ✨
+│♤ *Title:* ${anu.title}
+│♤ *Duration:* ${anu.timestamp}
+│♤ *Viewers:* ${anu.views}
+│♤ *Uploaded:* ${anu.ago}
+│♤ *Author:* ${anu.author.name}
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,

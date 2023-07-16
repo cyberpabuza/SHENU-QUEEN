@@ -94,6 +94,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "📽️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -129,7 +130,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: ` 🧚‍♀️𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝙈𝘿-𝘽𝙊𝙏 `,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -172,13 +173,13 @@ cmd({
                 },
                 caption: `
 ╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
+┇📽️ ${tlang().title} 
+│  *𝙔𝙊𝙐𝙏𝙐𝘽 𝙋𝙇𝘼𝙔𝙀𝙍* ✨
+┇🛡️ *𝙏𝙄𝙏𝙇𝙀:* ${anu.title}
+│📎 *𝘿𝙐𝙍𝘼𝙏𝙄𝙊𝙉:* ${anu.timestamp}
+┇📲 *𝙑𝙄𝙀𝙒𝙀𝙍𝙎:* ${anu.views}
+│🗒️ *𝙐𝙋𝙇𝙊𝘼𝘿𝙀𝘿:* ${anu.ago}
+┇📡 *Author:* ${anu.author.name}
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,
@@ -284,6 +285,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -301,7 +303,7 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('*Downloadig:* '+titleYt)
+            citel.reply('*🧚‍♀️ 𝘿𝙊𝙒𝙉𝙇𝙊𝘿𝙄𝙉𝙂 𝙔𝙊𝙐 𝙎𝙊𝙉𝙂:* '+titleYt)
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })

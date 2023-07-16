@@ -91,14 +91,14 @@ Void.sendMessage(citel.chat,{image:{url:data.data[0].url}})
 //---------------------------------------------------------------------------
 cmd({
         pattern: "repo",
-        react: "🧛‍♀️",
+        react: "✍️",
         alias: ["git", "sc", "script"],
         desc: "Sends info about repo.",
         category: "general",
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/mrhansamala/Queen-Nethu-MD')
+        let { data } = await axios.get('https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1.git')
         let cap = `╭═════╍╍╍╍╍╍╍╍╍╍═══════°
 *╎ 💕 𝑄𝛯𝛯𝛮 𝛮𝛯𝑇𝛨𝑈 𝛭𝐷💕*
 *╎ ✶✶✶✶✶✶✶═╍═╍═╍═✶✶✶✶✶✶✶*

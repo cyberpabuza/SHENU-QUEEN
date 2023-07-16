@@ -21,10 +21,10 @@ const Secktor = require('../lib/commands')
     //---------------------------------------------------------------------------
 Secktor.cmd({
             pattern: "help",
-            alias: ["menu"],
+            alias: ["menu"],["𝚊𝚕𝚒𝚟𝚎"],
             desc: "Help list",
             category: "general",
-            react: "🧞",
+            react: "👸",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -56,23 +56,23 @@ Secktor.cmd({
                 let str = `╭────《 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 》─────⊷\n`
                 str +=
                     '```' + `│ ╭──────────────◆
-│ │ User:- ${citel.pushName}
-│ │ Theme:- ${tlang().title}
-│ │ Prefix:- [ ${prefix} ]
-│ │ Owner:- ${Config.ownername}
-│ │ Plugins:- ${commands.length}
-│ │ Users:- ${total}
-│ │ Uptime:- ${runtime(process.uptime())}
-│ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│ │ Time:- ${time}
-│ │ Date:- ${date}
+│ ┇ 𝙐𝙎𝙀𝙍:- ${citel.pushName}
+│ ☲ 𝙏𝙃𝙀𝙈𝙀:- ${tlang().title}
+│ ┇ 𝙋𝙍𝙀𝙁𝙄𝙓:- [ ${prefix} ]
+│ ☲ 𝙊𝙒𝙉𝙀𝙍:- ${Config.ownername}
+│ ┇ 𝙋𝙇𝙐𝙂𝙄𝙉𝙎:- ${commands.length}
+│ ☲ 𝙐𝙎𝙀𝙍𝙎:- ${total}
+│ ┇ 𝙐𝙋𝙏𝙄𝙈𝙀:- ${runtime(process.uptime())}
+│ ☲ 𝙈𝙀𝙈:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+│ ┇ 𝙏𝙄𝙈𝙀:- ${time}
+│ ☲ 𝘿𝘼𝙏𝙀:- ${date}
 │ ╰──────────────◆
 ╰───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╭────◤◩ *${tiny(category)}* ◪◥\n` ;
-                   if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
+                   str += `╭────◸◧ _*${tiny(category)}*_ ◨◹\n` ;
+                   if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────◸◧ _*${tiny(category)}*_ ◨◹\n` ;      
                         for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `╰━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
@@ -82,7 +82,7 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*📡𝙏𝙮𝙥𝙚 𝙮𝙤𝙪 .𝙢𝙚𝙣𝙪 𝙤𝙧 .𝙖𝙡𝙞𝙫𝙚:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
+                str+= `*📡𝙏𝙮𝙥𝙚 𝙮𝙤𝙪 .𝙢𝙚𝙣𝙪 𝙤𝙧 .𝙖𝙡𝙞𝙫𝙚:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with 𝙲𝚈-𝚃𝙷𝚄𝚂𝙷𝙰𝙽* `
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str

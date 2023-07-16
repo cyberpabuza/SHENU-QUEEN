@@ -18,6 +18,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
     //---------------------------------------------------------------------------
     cmd({
         pattern: "photo",
+        react: "⬇️",
         desc: "Makes photo of replied sticker.",
         category: "converter",
         use: '<reply to any gif>',
@@ -51,6 +52,7 @@ if (mime =="imageMessage" || mime =="stickerMessage")
 
 cmd({
          pattern: "vv",
+         react: "🔂",
          alias : ['viewonce','retrive'],
          desc: "Flips given text.",
          category: "misc",
@@ -162,7 +164,7 @@ cmd({
             desc: "Makes stylish/fancy given text",
             category: "converter",
             use: '56 Secktor',
-            react: "✅",
+            react: "🔤",
             filename: __filename
         },
         async(Void, citel, text) => {

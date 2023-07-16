@@ -24,7 +24,7 @@ Secktor.cmd({
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "👼",
+            react: "🧞",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -71,7 +71,7 @@ Secktor.cmd({
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╭────❏ *${tiny(category)}* ❏\n` ;
+                   str += `╭────◤◩ *${tiny(category)}* ◪◥\n` ;
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
                         for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `╰━━━━━━━━━━━━━──⊷\n`  ;
@@ -82,7 +82,7 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*⭐️Type:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
+                str+= `*📡𝙏𝙮𝙥𝙚 𝙮𝙤𝙪 .𝙢𝙚𝙣𝙪 𝙤𝙧 .𝙖𝙡𝙞𝙫𝙚:* _${prefix}help cmd_ name to know more about specific command.\n*Eg:* _${prefix}help attp_\n*Made with ❤️ in Nodejs* `
                 let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str
@@ -128,7 +128,7 @@ Secktor.cmd({
         pattern: "owner",
         desc: "To find owner number",
         category: "general",
-        react: "💜",
+        react: "👤",
         filename: __filename
     },
     async(Void, citel) => {

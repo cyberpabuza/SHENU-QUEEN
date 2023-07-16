@@ -17,6 +17,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
 //---------------------------------------------------------------------------
 cmd({
             pattern: "join",
+	    react: "📎",
             desc: "joins group by link",
             category: "owner",
             use: '<group link.>',
@@ -28,7 +29,7 @@ cmd({
                 citel.reply("Link Invalid, Please Send a valid whatsapp Group Link!");
             let result = text.split(" ")[0].split("https://chat.whatsapp.com/")[1];
             await Void.groupAcceptInvite(result)
-                .then((res) => citel.reply("🟩Joined Group"))
+                .then((res) => citel.reply("📎 Joined Group"))
                 .catch((err) => citel.reply("Error in Joining Group"));
 
         }
@@ -37,6 +38,7 @@ cmd({
 cmd({
             pattern: "sticker",
             alias: ["s"],
+	    react: "🎀",
             desc: "Makes sticker of replied image/video.",
             category: "group",
             use: '<reply to any image/video.>',
@@ -117,6 +119,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "unblock",
+	    react: "✔️",
             desc: "Unblocked to the quoted user.",
             category: "owner",
             filename: __filename,
@@ -135,6 +138,7 @@ cmd({
     //---------------------------------------------------------------------------
     cmd({
         pattern: "ujid",
+	react: "ℹ️",
         desc: "get jid of all user in a group.",
         category: "owner",
         filename: __filename,
@@ -155,6 +159,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "tagall",
+	react: "🕹️",
         desc: "Tags every person of group.",
         category: "group",
         filename: __filename,
@@ -168,7 +173,7 @@ cmd({
         if (!isAdmins) return citel.reply(tlang().admin);
 
         let textt = `
-══✪〘   *Tag All*   〙✪══
+══▣〘   *Tag All*   〙▣══
 
 ➲ *Message :* ${text ? text : "blank"}\n\n
 ➲ *Author:* ${citel.pushName} 🔖
@@ -261,37 +266,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "poll",
-            desc: "Makes poll in group.",
-            category: "group",
-            filename: __filename,
-            use: `question;option1,option2,option3.....`,
-        },
-        async(Void, citel, text,{ isCreator }) => {
-            if (!isCreator) return citel.reply(tlang().owner)
-            let [poll, opt] = text.split(";");
-            if (text.split(";") < 2)
-                return await citel.reply(
-                    `${prefix}poll question;option1,option2,option3.....`
-                );
-            let options = [];
-            for (let i of opt.split(',')) {
-                options.push(i);
-            }
-            await Void.sendMessage(citel.chat, {
-                poll: {
-                    name: poll,
-                    values: options
-                }
-            })
-        }
-    )
-    //---------------------------------------------------------------------------
-cmd({
-            pattern: "profile",
-            desc: "Shows profile of user.",
-            category: "group",
-            filename: __filename,
-        },
+	
         async(Void, citel, text) => {
             var bio = await Void.fetchStatus(citel.sender);
             var bioo = bio.status;
@@ -385,6 +360,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "rank",
+	    react: "♦️",
             desc: "Sends rank card of user.",
             category: "group",
             filename: __filename,
@@ -540,6 +516,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "promote",
+	    react: "🏅",
             desc: "Provides admin role to replied/quoted user",
             category: "group",
             filename: __filename,
@@ -567,6 +544,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "kick",
+	    react: "📵",
             desc: "Kicks replied/quoted user from group.",
             category: "group",
             filename: __filename,
@@ -621,6 +599,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "group",
+	    react: "🔔",
             desc: "mute and unmute group.",
             category: "group",
             filename: __filename,
@@ -682,6 +661,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "hidetag",
+	    react: "⚠️",
             alias: ["htag"],
             desc: "Tags everyperson of group without mentioning their numbers",
             category: "group",
@@ -760,6 +740,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "demote",
+	react: "‼️",
         desc: "Demotes replied/quoted user from group",
         category: "group",
         filename: __filename,
@@ -788,6 +769,7 @@ cmd({
 //---------------------------------------------------------------------------
 cmd({
             pattern: "del",
+	    react: "⛔",
             alias: ["delete"],
             desc: "Deletes message of any user",
             category: "group",
@@ -853,6 +835,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "block",
+	    react: "🚫",
             desc: "blocks that person",
             fromMe: true,
             category: "owner",

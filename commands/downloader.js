@@ -61,6 +61,7 @@ cmd({
      //---------------------------------------------------------------------------
      cmd({
         pattern: "yts",
+        react: "🔍",
         desc: "Gives descriptive info of query from youtube..",
         category: "downloader",
         filename: __filename,
@@ -94,6 +95,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "📽️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -129,7 +131,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: ` ⿻ Title :_*SHENU-QUEEN-MD*_ _*CREAYED BY CY THUSHAN*_`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -284,6 +286,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -492,6 +495,7 @@ cmd({
   //---------------------------------------------------------------------------
 cmd({
         pattern: "ytdoc",
+        react: "📁",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',

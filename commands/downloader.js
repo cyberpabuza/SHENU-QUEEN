@@ -95,7 +95,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
-            react: "📽",
+            react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -131,7 +131,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` 👩‍🎨 _*♡SHENU-QUEEN-MD*_ _*CREAYED BY CY THUSHAN*_`,
+                        caption: ` 👩‍🎨 _*♡SHENU-QUEEN-MD*_ _*CREATED BY CY THUSHAN*_`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

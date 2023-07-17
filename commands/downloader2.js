@@ -322,7 +322,7 @@ const videolink = fbdls.result.audio
 
 cmd({
 
-            pattern: "apk",
+            pattern: "apk2",
 
             desc: "apk down",
 

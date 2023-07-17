@@ -117,13 +117,19 @@ cmd({
     },
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `Hey ${citel.pushName}\n
-*🔔l 🅃🄾🅃🄰🄻 🅂🅃🄰🅁🅂:* ${data.stargazers_count} stars
-*🍽️ 🄵🄾🄴🄺🅂:* ${data.forks_count} forks
-*🍁 🄱🄾🅃 🅁🄴🄿🄾:* citel-x.herokuapp.com/repo
-*🄶🅁🄾🅄🄿:* citel-x.herokuapp.com/support
-*Deploy Your Own:*-
-citel-x.herokuapp.com`
+        let cap = `╔⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊◁
+*╠ℍ𝔼𝕐 ${citel.pushName}\n *
+*║ℍ𝔼𝕐 𝕀 𝔸𝕄 𝕊ℍ𝔼ℕ𝕌-ℚ𝕌𝔼𝔼ℕ-𝕄𝔻 🧚‍♀️
+*╠𝔻𝔸𝕋𝔼:- ${date}
+*║𝕋𝕆𝕋𝔸𝕃 𝕊𝕋𝔸ℝ𝕊 :* ${data.stargazers_count} stars
+*╠𝔽𝕆ℝ𝕂𝕊 :* ${data.forks_count} forks
+*║ℝ𝔼ℙ𝕆 :* ℕ𝕆 ℙ𝕌𝔹𝕃𝕀ℂ
+*╠𝔾ℝ𝕆𝕌ℙ:* https://chat.whatsapp.com/KCb5XO0jhm676fNwkJz93o
+*║𝕊ℍ𝔼ℕ𝕌-ℚ𝕌𝔼𝔼ℕ-𝔹𝕆𝕋-𝕆𝕎ℕ𝔼ℝ:*-ℂ𝕐-𝕋ℍ𝕌𝕊ℍ𝔸ℕ▯🧙‍♀️
+*╠𝕆𝕎ℕ𝔼ℝ:* wa.me/+94710109956
+*║𝕊ℝ𝕀 𝕃𝔸ℕ𝕂𝔸 𝕄𝔻 𝔹𝕆𝕋*
+*╠𝐏𝐎𝐖𝐄𝐑𝐃 𝐁𝐘 𝐒𝐇𝐄𝐍𝐔 𝐐𝐔𝐄𝐄𝐍 𝐓𝐌☸*
+*╚⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊▷*`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,

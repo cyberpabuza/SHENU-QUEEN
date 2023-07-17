@@ -103,6 +103,7 @@ cmd({
     //---------------------------------------------------------------------------
     cmd({
         pattern: "url",
+        react: "✔️",
         alias : ['createurl'],
         category: "misc",
         filename: __filename,
@@ -122,6 +123,7 @@ cmd({
 //---------------------------------------------------------------------------
 cmd({
     pattern: "trt",
+    react: "↩️",
     alias :['translate'],
     category: "misc",
     filename: __filename,
@@ -207,6 +209,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ban",
+            react: "⛔",
             category: "owner",
             filename: __filename,
             desc: "Bans user from using bot."

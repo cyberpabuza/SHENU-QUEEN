@@ -22,7 +22,7 @@ let result = await download(text)
         image: {
             url: icon,
         },
-        caption: `*Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Apk File*\n╭─────◆\n│⿻ ${tlang().title}\n│  *Playstore Download*\n│⛞ *App name:* ${getname}\n│⛞ *Last update:* ${lastupdate}\n│⛞ *Package name:* ${packagename}\n│⛞ *File size:* ${size}\n╰──────────★\n⦿ *You can also download the App from the link below* 👇: \n${applink}`,
+        caption: `_*👼Hello ${citel.pushName} , _Please wait...._ ,I Am Finding Your Apk File_*\n╔─────★\n│⿻ ${tlang().title}\n│  *Playstore Download*\n│⛞ *App name:* ${getname}\n│⛞ *Last update:* ${lastupdate}\n│⛞ *Package name:* ${packagename}\n│⛞ *File size:* ${size}\n╚──────────★\n⦿ *You can also download the App from the link below* 👇: \n${applink}`,
     })
     return Void.sendMessage(citel.chat, {
         document: {

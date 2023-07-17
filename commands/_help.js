@@ -56,18 +56,18 @@ Secktor.cmd({
                 let str = `╔────❤▷ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ◁❤─────⊷\n`
                 str +=
                     '```' + `│ ╔──────────────⛥
-│ │ User:- ${citel.pushName}
-│ │ Theme:- ${tlang().title}
-│ │ Prefix:- [ ${prefix} ]
-│ │ Owner:- ${Config.ownername}
-│ │ Plugins:- ${commands.length}
-│ │ Users:- ${total}
-│ │ Uptime:- ${runtime(process.uptime())}
-│ │ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│ │ Time:- ${time}
-│ │ Date:- ${date}
-│ ╰──────────────◆
-╰───────────────⊷\n
+▯🧙‍♀️⃝乡│ User:- ${citel.pushName}
+▯🧙‍♀️⃝乡│ Theme:- ${tlang().title}
+▯🧙‍♀️⃝乡│ Prefix:- [ ${prefix} ]
+▯🧙‍♀️⃝乡│ Owner:- ${Config.ownername}
+▯🧙‍♀️⃝乡│ Plugins:- ${commands.length}
+▯🧙‍♀️⃝乡│ Users:- ${total}
+▯🧙‍♀️⃝乡│ Uptime:- ${runtime(process.uptime())}
+▯🧙‍♀️⃝乡│ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+▯🧙‍♀️⃝乡│ Time:- ${time}
+▯🧙‍♀️⃝乡│ Date:- ${date}
+▯      ╰──────────────◆
+╚───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
@@ -102,17 +102,17 @@ Secktor.cmd({
             let str = `
 ╭━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──⊷`
             str += `
-┃ ⛥╭──────────────      
-┃ ⛥│ User: ${citel.pushName}
-┃ ⛥│ Theme: ${tlang().title}
-┃ ⛥│ Prefix: ${prefix}
-┃ ⛥│ Owner: ${Config.ownername}
-┃ ⛥│ Commands: ${commands.length}
-┃ ⛥│ Uptime: ${runtime(process.uptime())}
-┃ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃ ⛥│  
-┃ ⛥╰───────────
-╰━━━━━━━━━━━──⊷\n`
+☱ ☆╭──────────────      
+☱ ☆│ User: ${citel.pushName}
+☱ ☆│ Theme: ${tlang().title}
+☱ ⛥│ Prefix: ${prefix}
+☱ ⛥│ Owner: ${Config.ownername}
+☱ ⛥│ Commands: ${commands.length}
+☱ ⛥│ Uptime: ${runtime(process.uptime())}
+☱ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+☱ ⛥│  
+☱ ⛥╰───────────
+╚━━━━━━━━━━━──⊷\n`
 for (let i = 0; i < commands.length; i++) 
 {
      if(commands[i].pattern==undefined) continue
@@ -165,7 +165,7 @@ Secktor.cmd({
     pattern: "file",
     desc: "to get extact name where that command is in repo.\nSo user can edit that.",
     category: "general",
-    react: "✨",
+    react: "☸",
     filename: __filename
 },
 async(Void, citel, text) => {

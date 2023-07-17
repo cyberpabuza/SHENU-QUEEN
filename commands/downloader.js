@@ -287,7 +287,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -305,7 +304,7 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('*Downloadig:* '+titleYt)
+            citel.reply = ('\t ╭──────Youtube Search Result─────╮  \n\n🏷Title : " + i.title + "\n\n🖇️Url : " + i.url +"\n\n🔖Description : " + i.timestamp +"\n\n👀Views : "+i.views +"\n\n📤Uploaded : " +i.ago +"\n\n👲🏻Author : "+i.author.name+"')
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -320,9 +319,10 @@ cmd({
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
+                    document: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'document/mpeg',
                     fileName: titleYt + ".mp3",
+		    caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -342,7 +342,7 @@ cmd({
             } else {
                 citel.reply(`❌ File size bigger than 100mb.`);
             }
-            fs.unlinkSync(`./${randomName}`);
+            fs.unlinkSy
             
 
 

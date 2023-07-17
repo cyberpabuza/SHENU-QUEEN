@@ -13,6 +13,7 @@
               "dependencies": {
                        "@sampandey001/baileys": "latest", 
                        "@adiwajshing/keyed-db": "^0.2.4",
+                       "aptoide-scraper": "^1.0.1",
                        "awesome-phonenumber": "^3.3.0",
                        "anime-character-random": "latest",
                        "axios": "^0.24.0",

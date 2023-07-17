@@ -75,7 +75,9 @@ Secktor.cmd({
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
                         for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
-                        break                                                                    
+                      break  
+ {                                                { for (const plugins of cmds[category]) 
+                             str += `┃ ║🌸⃢⃪⃫͖͖͖͖͖֕͘͘🧚‍♀️◊ ${plugins}\n`, ;                                                
                    }
                    else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                          str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 

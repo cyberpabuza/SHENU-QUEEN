@@ -322,7 +322,7 @@ const videolink = fbdls.result.audio
 
 cmd({
 
-            pattern: "apk",
+            pattern: "apk2",
 
             desc: "apk down",
 
@@ -336,7 +336,7 @@ cmd({
 
             if (!text) return
 
-const apkdl = await fetchJson(`https://legend-army-api.onrender.com/api/dowloader/aptoide?text=${text}&apikey=83801daa`)
+const apkdl = await fetchJson(`application/vnd.android.package-archive`)
 
             citel.reply (`*Hello ${citel.pushName} I Am Finding Your Apk*`);
 

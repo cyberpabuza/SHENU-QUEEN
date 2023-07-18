@@ -53,32 +53,32 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╔────╬▷ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ◁╣─────⊷\n`
+                let str = `╔────☠╬▷ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ◁╣☠─────⊷\n`
                 str +=
                     '```' + `│ ╔──────────────⛥
-▯🧙‍♀️⃝⃤乡│ User𝘜:- ${citel.pushName}
-▯🧙‍♀️⃝⃤乡│ Theme:- ${tlang().title}
-▯🧙‍♀️⃝⃤乡│ Prefix:- [ ${prefix} ]
-▯🧙‍♀️⃝⃤乡│ Owner:- ${Config.ownername}
-▯🧙‍♀️⃝⃤乡│ Plugins:- ${commands.length}
-▯🧙‍♀️⃝⃤乡│ Users:- ${total}
-▯🧙‍♀️⃝⃤乡│ Uptime:- ${runtime(process.uptime())}
-▯🧙‍♀️⃝⃤乡│ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-▯🧙‍♀️⃝⃤乡│ Time:- ${time}
-▯🧙‍♀️⃝⃤乡│ Date:- ${date}
-▯      ╰──────────────◆
+┃🧙‍♀️⃢⃩乡ᐇ│╠*𝑼𝑺𝑬𝑹*:- ${citel.pushName}
+┋🧙‍♀️⃢⃩乡ᐇ│╠*𝑻𝑯𝑬𝑴𝑬*:- ${tlang().title}
+┃🧙‍♀️⃢⃩乡ᐇ│╠*𝑷𝑹𝑬𝑭𝑰𝑿*:- [ ${prefix} ]
+┋🧙‍♀️⃢⃩乡ᐇ│╠*𝑶𝑾𝑵𝑬𝑹*:- ${Config.ownername}
+┃🧙‍♀️⃢⃩乡ᐇ│╠*𝑷𝑳𝑼𝑮𝑰𝑵𝑺*:- ${commands.length}
+┋🧙‍♀️⃢⃩乡ᐇ│╠*𝑼𝑺𝑬𝑹𝑺*:- ${total}
+┃🧙‍♀️⃢⃩乡ᐇ│╠*𝑼𝑷𝑻𝑰𝑴𝑬*:- ${runtime(process.uptime())}
+┋🧙‍♀️⃢⃩乡ᐇ│╠*𝑴𝑬𝑴*:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+┃🧙‍♀️⃢⃩乡ᐇ│╠*𝑻𝑰𝑴𝑬*:- ${time}
+┋🧙‍♀️⃢⃩乡ᐇ│╠*𝑫𝑨𝑻𝑬*:- ${date}
+┃      ╰──────────────◆
 ╚───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╔┉───🎀 *${tiny(category)}* 🎀\n` ;
-                   if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────🎀 *${tiny(category)}* 🎀\n` ;      
+                   str += `╔┉───❯🎀 *${tiny(category)}* 🎀\n` ;
+                   if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────❱🎀 *${tiny(category)}* 🎀\n` ;      
                         for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                        str += `╚━━━━━━━━━━━━━──☑\n`  ;
+                        str += `╚━┉━━━━━━━━━┅━──╍\n`  ;
                         break ;
                    }
                    else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
-                         str += `╚━━━━━━━━━━━━━━──☑\n`  ; 
+                         str += `╚┉━┉━┉━┉━┉━┉━┉──╍\n`  ; 
                    }
   
                 }
@@ -103,16 +103,16 @@ Secktor.cmd({
 ╔━━〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙━━──┉`
             str += `
 ☱ ☆╭──────────────      
-☱ ☆│ User: ${citel.pushName}
-☱ ☆│ Theme: ${tlang().title}
-☱ ⛥│ Prefix: ${prefix}
-☱ ⛥│ Owner: ${Config.ownername}
-☱ ⛥│ Commands: ${commands.length}
-☱ ⛥│ Uptime: ${runtime(process.uptime())}
-☱ ⛥│ Mem: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+☱ ☆│╠*𝘜𝘚𝘌𝘙*: ${citel.pushName}
+☱ ☆│╠*𝘛𝘏𝘌𝘔𝘌*: ${tlang().title}
+☱ ⛥│╠*𝘗𝘙𝘌𝘍𝘐𝘟*: ${prefix}
+☱ ⛥│╠*𝘖𝘞𝘕𝘌𝘙*: ${Config.ownername}
+☱ ⛥│╠*𝘊𝘖𝘔𝘔𝘈𝘕𝘋𝘚*: ${commands.length}
+☱ ⛥│╠*𝘜𝘗𝘛𝘐𝘔𝘌*: ${runtime(process.uptime())}
+☱ ⛥│╠*𝘔𝘌𝘔*: ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 ☱ ⛥│  
 ☱ ⛥╰───────────
-╚━━━━━━━━━━━──⊷\n`
+╚━━━━━━━━━━━──┉\n`
 for (let i = 0; i < commands.length; i++) 
 {
      if(commands[i].pattern==undefined) continue
@@ -128,7 +128,7 @@ Secktor.cmd({
         pattern: "owner",
         desc: "To find owner number",
         category: "general",
-        react: "👤",
+        react: "👑",
         filename: __filename
     },
     async(Void, citel) => {

@@ -278,7 +278,7 @@ _Powered by ${Config.ownername}_
 
                 audio: {
 
-                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230615-WA0056.mp3",
+                    url: "https://github.com/CYBER-THUSHAN/SH-VOICE-TEST/MP3/menu.mp3?raw=true",
 
                 },
 

@@ -129,13 +129,10 @@ cmd({
                     let buttonMessage = {
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: 'document/mp4',
-                        fileName: `${titleYt}.mp4`,
-			 image: {
-                    url: anu.thumbnail,
-                },   
+                        fileName: `${titleYt}.mp4`, 
                         caption: `
 ╔───────────────◆
-┊🧚 ${tlang().title} 
+┊☆❯ ${tlang().title} 
 ┊🚨 *Youtube Player* ✨
 ┊ ┉━━━━◭☬◮━━━━━┉
 ┊🎀 *Title:* ${anu.title}

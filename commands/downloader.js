@@ -304,18 +304,7 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('*`
-╔───────────────◆
-▣ ${tlang().title} 
-│  *Youtube Player* 🔥
-▣ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-▣ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-▣ *Author:* ${anu.author.name}
-╚────────────────
-⦿ *Url* : ${anu.url}
-`,* ')
+            citel.reply('*`'SHENU QUEEN DOWN LOD YOU SONG);
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })

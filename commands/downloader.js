@@ -304,12 +304,13 @@ cmd({
             citel.reply(`
 ╔───────────────◆
 ┊🧚 ${tlang().title} 
-┊🚨*Youtube Player* ✨
-┊🎀*Title:* ${anu.title}
-┊🌐*Duration:* ${anu.timestamp}
-┊👀*Viewers:* ${anu.views}
-┊⬆️*Uploaded:* ${anu.ago}
-┊👽*Author:* ${anu.author.name}
+┊🚨 *Youtube Player* ✨
+┊ ┉━━━━◭☬◮━━━━━┉
+┊🎀 *Title:* ${anu.title}
+┊🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+┊⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
 ╚────────────────◆
 ⦿ *Url* : ${anu.url}`,)
             const stream = ytdl(anu.url, {

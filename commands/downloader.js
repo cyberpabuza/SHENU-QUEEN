@@ -323,7 +323,18 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'Audio/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝘽𝙊𝙏🧙‍♀️ `,  
+		    caption: `
+╭───────────────◆
+│▣❵ ${tlang().title} 
+│  *Youtube Player* ✨
+│☆ *Title:* ${anu.title}
+│☆ *Duration:* ${anu.timestamp}
+│☆ *Viewers:* ${anu.views}
+│☆ *Uploaded:* ${anu.ago}
+│☆ *Author:* ${anu.author.name}
+╰────────────────◆
+⦿ *Url* : ${anu.url}
+`,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

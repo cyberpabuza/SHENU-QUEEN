@@ -273,6 +273,24 @@ _Powered by ${Config.ownername}_
              return Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
             });
+//voice clip\\
+return Void.sendMessage(citel.chat, {
+
+                audio: {
+
+                    url: `https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230615-WA0056.mp3`,
+
+                },
+
+                mimetype: "audio/mpeg",
+
+                fileName: `alive.mp3`,
+
+            }, {
+
+                quoted: citel,
+
+            });
 
         }
     )

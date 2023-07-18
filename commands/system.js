@@ -278,13 +278,13 @@ _Powered by ${Config.ownername}_
 
                 audio: {
 
-                    url: "https://gist.github.com/mrhansamala/3b02632b5a3ea91a534aee6cb402b863",
+                    url: "https://github.com/CYBER-THUSHAN/SH-VOICE-TEST/MP3/menu.mp3?raw=true",
 
                 },
 
                 mimetype: "audio/mpeg",
 
-                fileName: `alive.mp3`,
+                fileName: `menu.mp3`,
 
             }, {
 

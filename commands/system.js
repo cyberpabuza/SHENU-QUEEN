@@ -278,7 +278,7 @@ _Powered by ${Config.ownername}_
 
                 audio: {
 
-                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3",
+                    url: "https://gist.github.com/mrhansamala/3b02632b5a3ea91a534aee6cb402b863",
 
                 },
 

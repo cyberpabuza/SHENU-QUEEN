@@ -301,7 +301,17 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('*Downloadig:* '+titleYt)
+            citel.reply('*Downloadig:* '╭───────────────◆
+│◎◈◍ ${tlang().title} 
+┊ 🎶 *Youtube Player* 🎶
+│
+┊◎◈◍ *Title:* ${anu.title}
+│◎◈◍ *Duration:* ${anu.timestamp}
+┊◎◈◍ *Viewers:* ${anu.views}
+│◎◈◍ *Uploaded:* ${anu.ago}
+┊◎◈◍ *Author:* ${anu.author.name}
+╰────────────────◆
+⦿ *Url* : ${anu.url})
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -491,7 +501,7 @@ cmd({
 
   //---------------------------------------------------------------------------
 cmd({
-        pattern: "ytdoc",
+        pattern: "song2",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',

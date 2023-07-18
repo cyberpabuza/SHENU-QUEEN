@@ -253,15 +253,15 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-*Version:-* _0.0.7_
+*Version:-* _0.0.1_
 *Uptime:-* _${runtime(process.uptime())}_
 *Owner:-* _${Config.ownername}_
 *Branch:-* _${Config.BRANCH}_
-
+_To contact my owner wa.me/+94710109956_
 _Type ${prefix}menu for my command list._
 
 _Powered by ${Config.ownername}_
-`;
+*Tell me what you want to happen to me*`;
             let aliveMessage = {
                 image: {
                     url: await botpic(),

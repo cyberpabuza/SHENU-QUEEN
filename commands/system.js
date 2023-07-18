@@ -253,11 +253,11 @@ cmd({
 ┇👋*Hello, ${citel.pushName},*
 ┇ _This is  ${tlang().title}._
 ${alivemessage}
-┇```WHATSAPP MD BOT YOU CAN GET YOUR WANT SONG VIDEO PICTURES MUCH MORE```
-┇📌 ➢*Version:-* _0.0.1_
-┇⏳ ➢*Uptime:-* _${runtime(process.uptime())}_
-┇🎩 ➢*Owner:-* _${Config.ownername}_
-┇🕹️ ➢*Branch:-* _${Config.BRANCH}_
+┇_WHATSAPP MD BOT YOU CAN GET YOUR WANT SONG VIDEO PICTURES MUCH MORE_
+┇📌 *Version:-* _0.0.1_
+┇⏳ *Uptime:-* _${runtime(process.uptime())}_
+┇🎩 *Owner:-* _${Config.ownername}_
+┇🕹️ *Branch:-* _${Config.BRANCH}_
 ┇_To contact my owner wa.me/+94710109956_
 ┇_Type ${prefix}menu for my command list._
 ╚┉━┉━┉━┉━┉━┉━┉━┉━┉━┉━

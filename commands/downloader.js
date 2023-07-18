@@ -130,10 +130,10 @@ cmd({
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: 'document/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `image: {
+			 image: {
                     url: anu.thumbnail,
-                },
-                caption: ´
+                },   
+                        caption: `
 ╔───────────────◆
 ┊🧚 ${tlang().title} 
 ┊🚨 *Youtube Player* ✨

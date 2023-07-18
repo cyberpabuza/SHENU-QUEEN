@@ -241,22 +241,22 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🔰",
+            react: "‍👋",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
         },
         async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by CYBER༆THUSHAN.*`
+            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by SamPandey001.*`
             const alivtxt = `
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
 
-🔱 *Version:-* _0.0.1_
-⏰ *Uptime:-* _${runtime(process.uptime())}_
-🎩 *Owner:-* _${Config.ownername}_
-🕹️ *Branch:-* _${Config.BRANCH}_
+*Version:-* _0.0.7_
+*Uptime:-* _${runtime(process.uptime())}_
+*Owner:-* _${Config.ownername}_
+*Branch:-* _${Config.BRANCH}_
 
 _Type ${prefix}menu for my command list._
 
@@ -270,28 +270,27 @@ _Powered by ${Config.ownername}_
                 footer: tlang().footer,
                 headerType: 4,
             };
-             return Void.sendMessage(citel.chat, aliveMessage, {
+            Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
             });
-//voice clip\\
-return Void.sendMessage(citel.chat, {
+            
+            Void.sendMessage(citel.chat, {
 
                 audio: {
 
-                    url: `https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230615-WA0056.mp3`,
+                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230615-WA0056.mp3",
 
                 },
 
                 mimetype: "audio/mpeg",
 
-                fileName: `alive.mp3`,
+                fileName: `Audio/AUD-20230615-WA0056.mp3`,
 
             }, {
 
                 quoted: citel,
 
             });
-
         }
     )
     //---------------------------------------------------------------------------

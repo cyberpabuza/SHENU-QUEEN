@@ -259,7 +259,7 @@ ${alivemessage}
 ┇🎩 ➢ *Owner:-* _${Config.ownername}_
 ┇🕹️ ➢ *Branch:-* _${Config.BRANCH}_
 ┇📆 ➢ *Date:-* _${date}_
-┇⏱️ ➢ *Time:-* _${time}_
+┇⏱️ ➢ *owner:-* _wa.me/+94710109956?text❯ 👋Hi☆THUSHAN_
 ┇_To contact my owner wa.me/+94710109956_
 ┇_Type ${prefix}menu for my command list._
 ╚┉━┉━┉━┉━┉━┉━┉━┉━┉━┉━◁

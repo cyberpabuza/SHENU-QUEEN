@@ -52,7 +52,7 @@ cmd({
 
             desc: "fb down",
 
-            react: "📥",
+            react: "🌐",
 
             category: "downloader"
 
@@ -96,7 +96,7 @@ cmd({
 
             desc: "tiktok downloader",
 
-            react:"🎊",
+            react:"🚨",
 
             category: "downloader"
 

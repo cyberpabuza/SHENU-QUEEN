@@ -94,6 +94,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -162,7 +163,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: `𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉 🧚`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -189,6 +190,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
+            react: "🔍",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
@@ -205,13 +207,13 @@ cmd({
                 },
                 caption: `
 ╭───────────────◆
-│⿻ ${tlang().title} 
+│◮ ${tlang().title} 
 │  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
+│◮ *Title:* ${anu.title}
+│◮ *Duration:* ${anu.timestamp}
+│◮ *Viewers:* ${anu.views}
+│◮ *Uploaded:* ${anu.ago}
+│◮ *Author:* ${anu.author.name}
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,
@@ -227,6 +229,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
+            react: "📳",
             desc: "Downloads ringtone.",
             category: "downloader",
             filename: __filename,
@@ -285,6 +288,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "mediafire",
+            react: "💾",
             desc: "Downloads zip from Mediafire.",
             category: "downloader",
             filename: __filename,
@@ -317,6 +321,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -426,6 +431,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 cmd({
             pattern: "ytmp4",
+            react: "⬇️",
             desc: "Downloads video from youtube.",
             category: "downloader",
             filename: __filename,

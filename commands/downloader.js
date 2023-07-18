@@ -669,7 +669,7 @@ cmd({
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝙎𝙊𝙉𝙂-𝘿𝙇 🎧*   \n\n◪Title : " + i.title + "\n◪Url : " + i.url +"\n◪Description : " + i.timestamp +"\n◪Views : "+i.views +"\n◪Uploaded : " +i.ago +"\n◪Author : "+i.author.name+"\n\n\n*❘📽 1 ┃VIDEO* \n*❘🎧 2 ┃AUDIO*" ;
+                let cap = "\t *𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝙎𝙊𝙉𝙂-𝘿𝙇 🎧*   \n\n◪Title : " + i.title + "\n◪Url : " + i.url +"\n◪Description : " + i.timestamp +"\n◪Views : "+i.views +"\n◪Uploaded : " +i.ago +"\n◪Author : "+i.author.name+"\n\n\n* 1 ┃VIDEO* \n 2 ┃AUDIO*" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            

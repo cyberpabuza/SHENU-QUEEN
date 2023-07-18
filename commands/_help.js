@@ -56,16 +56,16 @@ Secktor.cmd({
                 let str = `╔────☠╬▷ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ◁╣☠─────┅\n`
                 str +=
                     '```' + `│ ╔──────────────⛥
-┃🧙‍♀️⃢⃩乡ᐇ│╠ _𝑼𝑺𝑬𝑹 :-_ ${citel.pushName}
-┋🧙‍♀️⃢⃩乡ᐇ│╠ _𝑻𝑯𝑬𝑴𝑬_ :- ${tlang().title}
-┃🧙‍♀️⃢⃩乡ᐇ│╠ _𝑷𝑹𝑬𝑭𝑰𝑿_ :- [ ${prefix} ]
-┋🧙‍♀️⃢⃩乡ᐇ│╠ _𝑶𝑾𝑵𝑬𝑹_ :- ${Config.ownername}
-┃🧙‍♀️⃢⃩乡ᐇ│╠ _𝑷𝑳𝑼𝑮𝑰𝑵𝑺_ :- ${commands.length}
-┋🧙‍♀️⃢⃩乡ᐇ│╠ _𝑼𝑺𝑬𝑹𝑺_ :- ${total}
-┃🧙‍♀️⃢⃩乡ᐇ│╠ _𝑼𝑷𝑻𝑰𝑴𝑬_ :- ${runtime(process.uptime())}
-┋🧙‍♀️⃢⃩乡ᐇ│╠ _𝑴𝑬𝑴_ :- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-┃🧙‍♀️⃢⃩乡ᐇ│╠ _𝑻𝑰𝑴𝑬_ :- ${time}
-┋🧙‍♀️⃢⃩乡ᐇ│╠ _𝑫𝑨𝑻𝑬_ :- ${date}
+┃💌⃢⃩乡ᐇ│╠ 𝑼𝑺𝑬𝑹 :- ${citel.pushName}
+┋💌⃢⃩乡ᐇ│╠ 𝑻𝑯𝑬𝑴𝑬 :- ${tlang().title}
+┃💌⃢⃩乡ᐇ│╠ 𝑷𝑹𝑬𝑭𝑰𝑿 :- [ ${prefix} ]
+┋💌⃢⃩乡ᐇ│╠ 𝑶𝑾𝑵𝑬𝑹 :- ${Config.ownername}
+┃💌⃢⃩乡ᐇ│╠ 𝑷𝑳𝑼𝑮𝑰𝑵𝑺 :- ${commands.length}
+┋💌⃢⃩乡ᐇ│╠ 𝑼𝑺𝑬𝑹𝑺 :- ${total}
+┃💌⃢⃩乡ᐇ│╠ 𝑼𝑷𝑻𝑰𝑴𝑬 :- ${runtime(process.uptime())}
+┋💌⃢⃩乡ᐇ│╠ 𝑴𝑬𝑴 :- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+┃💌⃢⃩乡ᐇ│╠ 𝑻𝑰𝑴𝑬 :- ${time}
+┋💌⃢⃩乡ᐇ│╠ 𝑫𝑨𝑻𝑬 :- ${date}
 ┃      ╰──────────────◭
 ╚───────────────⊷\n
 ` + '```'

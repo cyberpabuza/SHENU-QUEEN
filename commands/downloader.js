@@ -132,11 +132,10 @@ cmd({
             let search = await yts(text);
             let anu = search.videos[0];
             let buttonMessage = {
-                image: {
+                caption: `
+╭───────────────◆image: {
                     url: anu.thumbnail,
                 },
-                caption: `
-╭───────────────◆
 │◎◈◍ ${tlang().title} 
 ┊ 🎶 *Youtube Player* 🎶
 │

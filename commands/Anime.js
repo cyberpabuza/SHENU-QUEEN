@@ -509,35 +509,60 @@ const data = await response.json();
 }
    )
 //---------------------------------------------------------------------------
-const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib')
-const Esana = require('@sl-code-lords/esana-news');
-var api = new Esana()
-
 cmd({
-    pattern: 'esana1',
-    alias: ['esananews','news'],
-    desc: 'whatsapp beta infomation.',
-    category: 'downloader',
-    react: "📃",
-    use: '<wbi>',
-  },
+            pattern: "docvideo",
+            desc: "Downloads video from yt.",
+            category: "downloader",
+            filename: __filename,
+            use: '<faded-Alan Walker>',
+        },
         async(Void, citel, text) => {
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let urlYt = anu.url
+            const getRandom = (ext) => {
+                return `${Math.floor(Math.random() * 10000)}${ext}`;
+            };
+                let infoYt = await ytdl.getInfo(urlYt);
+                if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+                let titleYt = infoYt.videoDetails.title;
+                let randomName = getRandom(".mp4");
+            citel.reply('_Download Your Video_')
+	    citel.reply('_Upload Your Video_')
 
-       try { const latst = await api.latest_id();
-            const nws = latst.results.news_id
-            let nn = text || nws
-            const ress = await api.news(nn);
-            const res = ress.results;
-
-            const txt2 = await Void.sendMessage(citel.chat, {image: {url: res.COVER}, caption: `\n*┣━( _📃ＥＳＥＮＡ📃ＮＥＷＳ📃_ )* \n\n*┃◉* *⇨ ᴛɪᴛᴇʟ :* ${res.TITLE}\n\n*┃◉* *⇨ ᴅᴀᴛᴇ :* ${res.PUBLISHED}\n\n*┃◉* *⇨ ᴜʀʟ :* ${res.URL}\n\n*┃◉* *⇨ Description :* ${res.DESCRIPTION}\n\n*┗━━━━━━━━━━━━━━◆*\n\nꜱʜᴇɴᴜ Qᴜᴇᴇɴ ᴍᴅ ⦁ ᴇꜱᴀɴᴀ ɴᴇᴡꜱ\n\n ᴍᴀᴅᴇ ʙʏ ᴍʀ ʜᴀɴꜱᴀᴍᴀʟᴀ`}, { quoted: citel });
-
-                await Void.sendMessage(citel.chat, { react: {
-        text: "📰",
-        key: txt2.key,
-            } } );
-
-    } catch (e) {
-    console.log(e)
-    citel.reply("❗ *" + e + "*")
-  }
-})
+                const stream = ytdl(urlYt, {
+                        filter: (info) => info.itag == 22 || info.itag == 18,
+                    })
+                    .pipe(fs.createWriteStream(`./${randomName}`));
+                await new Promise((resolve, reject) => {
+                    stream.on("error", reject);
+                    stream.on("finish", resolve);
+                });
+                let stats = fs.statSync(`./${randomName}`);
+                let fileSizeInBytes = stats.size;
+                let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+                if (fileSizeInMegabytes <= dlsize) {
+                    let buttonMessage = {
+                        document: fs.readFileSync(`./${randomName}`),
+                        mimetype: 'document/mp4',
+                        fileName: `${titleYt}.mp4`,
+                        caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,                        
+                        headerType: 4,
+                        contextInfo: {
+                            externalAdReply: {
+                                title: titleYt,
+                                body: citel.pushName,
+                                thumbnail: await getBuffer(search.all[0].thumbnail),
+                                renderLargerThumbnail: true,
+				mediaUrl: search.all[0].thumbnail
+                                
+                            }
+                        }
+                    }
+                 Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                 return fs.unlinkSync(`./${randomName}`);
+                } else {
+                    citel.reply(`❌ File size bigger than 100mb.`);
+                }
+                return fs.unlinkSync(`./${randomName}`);

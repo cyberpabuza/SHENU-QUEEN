@@ -162,9 +162,8 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         video: fs.readFileSync(`./${randomName}`),
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
-                        mimetype: 'document/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉 🧚`,
+                        caption: `𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉 𝙑𝙄𝘿𝙀𝙊 𝘿𝙇`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

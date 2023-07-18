@@ -267,6 +267,9 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
+         image: {
+                    url: anu.thumbnail,
+                },
             citel.reply( `
 ╭───────────────◆╭───────────────◆
 │◎◈◍ ${tlang().title} 

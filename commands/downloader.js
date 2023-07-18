@@ -287,7 +287,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -305,7 +304,18 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply = ('\t ╭──────Youtube Search Result─────╮  \n\n🏷Title : " + i.title + "\n\n🖇️Url : " + i.url +"\n\n🔖Description : " + i.timestamp +"\n\n👀Views : "+i.views +"\n\n📤Uploaded : " +i.ago +"\n\n👲🏻Author : "+i.author.name+"')
+            citel.reply('*`
+╔───────────────◆
+▣ ${tlang().title} 
+│  *Youtube Player* 🔥
+▣ *Title:* ${anu.title}
+│⿻ *Duration:* ${anu.timestamp}
+▣ *Viewers:* ${anu.views}
+│⿻ *Uploaded:* ${anu.ago}
+▣ *Author:* ${anu.author.name}
+╚────────────────
+⦿ *Url* : ${anu.url}
+`,* ')
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -320,33 +330,9 @@ cmd({
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
-                    document: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'Audio/mpeg',
+                    audio: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-		    citel.reply(`
-╭───────────────◆
-│⿻ ${tlang().title} 
-│  *Youtube Player* ✨
-│⿻ *Title:* ${anu.title}
-│⿻ *Duration:* ${anu.timestamp}
-│⿻ *Viewers:* ${anu.views}
-│⿻ *Uploaded:* ${anu.ago}
-│⿻ *Author:* ${anu.author.name}
-╰────────────────◆
-⦿ *Url* : ${anu.url}
-`,)
-		    caption: `
-╭───────────────◆
-│▣❵ ${tlang().title} 
-│  *Youtube Player* ✨
-│☆ *Title:* ${anu.title}
-│☆ *Duration:* ${anu.timestamp}
-│☆ *Viewers:* ${anu.views}
-│☆ *Uploaded:* ${anu.ago}
-│☆ *Author:* ${anu.author.name}
-╰────────────────◆
-⦿ *Url* : ${anu.url}
-`,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

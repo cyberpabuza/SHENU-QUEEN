@@ -249,6 +249,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -266,11 +267,8 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-         image: {
-                    url: anu.thumbnail,
-                },
             citel.reply( `
-╭───────────────◆╭───────────────◆
+╭───────────────◆
 │◎◈◍ ${tlang().title} 
 ┊ 🎶 *Youtube Player* 🎶
 │

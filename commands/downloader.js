@@ -129,19 +129,8 @@ cmd({
                     let buttonMessage = {
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: 'document/mp4',
-                        fileName: `${titleYt}.mp4`, 
-                        caption: `
-╔───────────────◆
-┊☆❯ ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
-┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
-⦿ *Url* : ${anu.url}`,                        
+                        fileName: `${titleYt}.mp4`,
+                        caption: `★[❮☆SHENU QUEEN VIDEO DOCUMENT DL ☆❯]★ `,                        
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

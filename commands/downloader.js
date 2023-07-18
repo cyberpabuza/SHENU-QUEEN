@@ -59,6 +59,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -94,7 +95,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        citel.reply('*Downloadig:* '+titleYt)
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -121,6 +122,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
+            react: "🎤",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
@@ -159,6 +161,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
+            react: "🎉",
             desc: "Downloads ringtone.",
             category: "downloader",
             filename: __filename,
@@ -217,6 +220,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "mediafire",
+            react: "💾",
             desc: "Downloads zip from Mediafire.",
             category: "downloader",
             filename: __filename,
@@ -325,6 +329,7 @@ cmd({
 
 cmd({
             pattern: "ytmp4",
+            react: "🔛",
             desc: "Downloads video from youtube.",
             category: "downloader",
             filename: __filename,
@@ -393,6 +398,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "ytmp3",
+        react: "⬆️",
         desc: "Downloads audio by yt link.",
         category: "downloader",
         use: '<yt video url>',

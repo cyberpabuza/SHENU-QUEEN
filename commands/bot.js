@@ -1,6 +1,6 @@
 const{bot, forwadOrBroadCast }= require(../lib)
 
-bot({
+cmd({
      pattern: ,'vdo ?(.*)'
      frome: true,
      desc: 'whatsapp',

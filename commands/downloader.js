@@ -656,6 +656,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*
 
 cmd({
             pattern: "song",
+	    react: "🎧",
             alias: ["audio"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -668,7 +669,7 @@ cmd({
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t *𝙎𝙃𝙀𝙉𝙐-𝙌𝙐𝙀𝙀𝙉-𝙎𝙊𝙉𝙂-𝘿𝙇 🎧*   \n\n◪Title : " + i.title + "\n◪Url : " + i.url +"\n◪Description : " + i.timestamp +"\n◪Views : "+i.views +"\n◪Uploaded : " +i.ago +"\n◪Author : "+i.author.name+"\n\n\n*❘📽 1 ┃VIDEO* \n*❘🎧 2 ┃AUDIO*" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            

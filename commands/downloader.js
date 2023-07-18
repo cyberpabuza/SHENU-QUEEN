@@ -323,6 +323,18 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'Audio/mpeg',
                     fileName: titleYt + ".mp3",
+		    citel.reply(`
+╭───────────────◆
+│⿻ ${tlang().title} 
+│  *Youtube Player* ✨
+│⿻ *Title:* ${anu.title}
+│⿻ *Duration:* ${anu.timestamp}
+│⿻ *Viewers:* ${anu.views}
+│⿻ *Uploaded:* ${anu.ago}
+│⿻ *Author:* ${anu.author.name}
+╰────────────────◆
+⦿ *Url* : ${anu.url}
+`,)
 		    caption: `
 ╭───────────────◆
 │▣❵ ${tlang().title} 

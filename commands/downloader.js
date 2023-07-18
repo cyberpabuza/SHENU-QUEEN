@@ -101,8 +101,41 @@ cmd({
         },
         async(Void, citel, text) => {
             let yts = require("secktor-pack");
-            let search = await yts(text);
+            let textYt;        
+if (text.startsWith("https://youtube.com/shorts/")) {
+  const svid = text.replace("https://youtube.com/shorts/", "https://youtube.com/v=");
+  const s2vid = svid.split("?feature")[0];
+  textYt = s2vid;
+} else {
+  textYt = text;
+}
+            let search = await yts(textYt);
             let anu = search.videos[0];
+                               let buttonMessaged = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+╔───────────────◆
+┊☆❯ ${tlang().title} 
+┊🚨 *Youtube Player* ✨
+┊ ┉━━━━◭☬◮━━━━━┉
+┊🎀 *Title:* ${anu.title}
+┊🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+┊⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────◆
+⦿ *Url* : ${anu.url}
+`,
+                footer: tlang().footer,
+                headerType: 4,
+            };
+            await Void.sendMessage(citel.chat, buttonMessaged, {
+                quoted: citel,
+            });
+   
+            
             let urlYt = anu.url
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
@@ -111,9 +144,7 @@ cmd({
                 if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
                 let titleYt = infoYt.videoDetails.title;
                 let randomName = getRandom(".mp4");
-            citel.reply('_Download Your Video_')
-	    citel.reply('_Upload Your Video_')
-
+             //   citel.reply('*Downloadig:* '+titleYt)
                 const stream = ytdl(urlYt, {
                         filter: (info) => info.itag == 22 || info.itag == 18,
                     })
@@ -127,10 +158,11 @@ cmd({
                 let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
                 if (fileSizeInMegabytes <= dlsize) {
                     let buttonMessage = {
-                        document: fs.readFileSync(`./${randomName}`),
-                        mimetype: 'document/mp4',
+                        video: fs.readFileSync(`./${randomName}`),
+                        jpegThumbnail: log0,
+                        mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `★[❮☆SHENU QUEEN VIDEO DOCUMENT DL ☆❯]★ `,                        
+                        caption: `*☆❯SHENU QUEEN VIDEO DL❮☆*`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -138,17 +170,18 @@ cmd({
                                 body: citel.pushName,
                                 thumbnail: await getBuffer(search.all[0].thumbnail),
                                 renderLargerThumbnail: true,
-				mediaUrl: search.all[0].thumbnail
-                                
+                                mediaType: 2,
+                                mediaUrl: search.all[0].thumbnail,
+                                sourceUrl: search.all[0].thumbnail
                             }
                         }
                     }
-                 Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+              await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
                 } else {
                     citel.reply(`❌ File size bigger than 100mb.`);
                 }
-                return fs.unlinkSync(`./${randomName}`);      
+                return fs.unlinkSync(`./${randomName}`);;      
 
 
         }

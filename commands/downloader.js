@@ -283,62 +283,28 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "audio",
-            alias :['song'],
-            desc: "Downloads audio from youtube.",
+            pattern: "sound",
+            react: "🎧",
+            desc: "Downloads ringtone.",
             category: "downloader",
             filename: __filename,
-            use: '<text>',
+            use: '<Dowanload Tiktok Sounds>',
         },
         async(Void, citel, text) => {
-            let yts = require("secktor-pack");
-            let search = await yts(text);
-            let anu = search.videos[0];
-            const getRandom = (ext) => {
-                return `${Math.floor(Math.random() * 10000)}${ext}`;
-            };
-            let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
-            citel.reply('*Downloadig:* '+titleYt)
-            const stream = ytdl(anu.url, {
-                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
-                })
-                .pipe(fs.createWriteStream(`./${randomName}`));
-            await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
-
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: true,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: text,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: text,
-                        },
-                    },
-                }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                return fs.unlinkSync(`./${randomName}`);
-            } else {
-                citel.reply(`❌ File size bigger than 100mb.`);
-            }
-            fs.unlinkSync(`./${randomName}`);
+            if (!text) return citel.reply(`*Give A Number Example: ${prefix}sound 5*`)
+	const n = parseInt(text);
+	if(n.toString()=="NaN" || n < 1 || n > 160 ) return citel.reply('```❌ Give Me A Number From 1 to 160```');
+	   let url = `https://github.com/DGXeon/Tiktokmusic-API/raw/master/tiktokmusic/sound${n.toString()}.mp3`
+            let anu  = await getBuffer(url)
+//await Void.sendMessage(citel.chat, { audio: botzy_buffer, mimetype: 'audio/mp4', ptt: true })
+        let buttonMessage = {
+		audio: anu,
+		fileName: url.toString() ,
+		mimetype: 'audio/mp4',
+		ptt: true 
+		}
+	return Void.sendMessage(citel.chat,buttonMessage, { quoted: citel } )
+})
             
 
 

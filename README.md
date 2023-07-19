@@ -5,6 +5,21 @@
     <img alt="SHENU-QUEEN-V1" height="300" src="https://telegra.ph/file/0ec11c279af938fd9c178.jpg">
   
 #### ```TOTAL PROFILE VIEWS 🧚```
-![Visitor Count](https://profile-counter.glitch.me/CYBER-THUSHAN/count.svg)
-##                            [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-.                typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=𝙃𝙊𝙒+𝘾𝘼𝙉+𝙃𝙀𝙇𝙋+𝙔𝙊𝙐👷‍♀️" alt="">
+![Visitor Count](https://profile-counter.glitch.me/CYBER-THUSHAN/count.svg   [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-. 
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=𝙃𝙊𝙒+𝘾𝘼𝙉+𝙃𝙀𝙇𝙋+𝙔𝙊𝙐  👩‍🔧" alt="">
 </p>

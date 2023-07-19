@@ -56,28 +56,28 @@ Secktor.cmd({
                 let str = `╔────《☬🚨 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 🚨☬》─────⊷\n`
                 str +=
                     '```' + `│ ╔──────────────◆
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▲│╠ User:- ${citel.pushName}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▼│╠ Theme:- ${tlang().title}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▲│╠ Prefix:- [ ${prefix} ]
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▼│╠ Owner:- ${Config.ownername}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▲│╠ Plugins:- ${commands.length}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▼│╠ Users:- ${total}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▲│╠ Uptime:- ${runtime(process.uptime())}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▼│╠ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▲│╠ Time:- ${time}
-│❯🧙‍♀️⃢⃩乡ᐇ◨➢▼│╠ Date:- ${date}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ User:- ${citel.pushName}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Theme:- ${tlang().title}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Prefix:- [ ${prefix} ]
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Owner:- ${Config.ownername}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Plugins:- ${commands.length}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Users:- ${total}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Uptime:- ${runtime(process.uptime())}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Time:- ${time}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Date:- ${date}
 │ ╰──────────────◆
 ╰───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╭────❯★ *${tiny(category)}* ★\n` ;
-                   if(text.toLowerCase() == category.toLowerCase()){ str = `╭─────❏ *${tiny(category)}* ❏\n` ;      
-                        for (const plugins of cmds[category]) { str += `│🧙‍♀️⃢⃩乡ᐇ ${fancytext(plugins,1)}\n` ; }
+                   str += `╔────❯★ *${tiny(category)}* ★\n` ;
+                   if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────☷ *${tiny(category)}* ☷\n` ;      
+                        for (const plugins of cmds[category]) { str += `│☵ ${fancytext(plugins,1)}\n` ; }
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `│🧙‍♀️⃢⃩乡ᐇ ${fancytext(plugins,1)}\n` ; }
+                   else { for (const plugins of cmds[category]) { str += `│☵ ${fancytext(plugins,1)}☵\n` ; }
                          str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   

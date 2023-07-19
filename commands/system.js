@@ -114,7 +114,7 @@ cmd({
         if(mime !='videoMessage' && mime !='imageMessage' ) return await citel.reply("Uhh Please, Reply To An Image/Video")
         let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
         let anu = await TelegraPh(media);
-        await citel.reply('*Here is URL of your media.\n'+util.format(anu));
+        await citel.reply('*Here is URL of your media.\n*'+util.format(anu));
         return await fs.unlinkSync(media);
     })
 
@@ -249,15 +249,15 @@ cmd({
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
-
-*Version:-* _0.0.7_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
-
+╔
+║*Version:-* _0.0.7_
+║*Uptime:-* _${runtime(process.uptime())}_
+║*Owner:-* _${Config.ownername}_
+║*Branch:-* _${Config.BRANCH}_
+╚
 _Type ${prefix}menu for my command list._
 
-_Powered by ${Config.ownername}_
+╚_Powered by ${Config.ownername}_
 `;
             let aliveMessage = {
                 image: {

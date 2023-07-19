@@ -238,7 +238,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🎀",
+            react: "☑️",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -249,15 +249,15 @@ cmd({
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
-╔
-║*Version:-* _0.0.7_
-║*Uptime:-* _${runtime(process.uptime())}_
-║*Owner:-* _${Config.ownername}_
-║*Branch:-* _${Config.BRANCH}_
-╚
+
+*Version:-* _0.0.7_
+*Uptime:-* _${runtime(process.uptime())}_
+*Owner:-* _${Config.ownername}_
+*Branch:-* _${Config.BRANCH}_
+
 _Type ${prefix}menu for my command list._
 
-╚_Powered by ${Config.ownername}_
+_Powered by ${Config.ownername}_
 `;
             let aliveMessage = {
                 image: {
@@ -279,7 +279,7 @@ _Type ${prefix}menu for my command list._
 
                 },
 
-                mimetype: "audio/",
+                mimetype: "audio/mpeg",
 
                 fileName: `alive.mp3`,
 

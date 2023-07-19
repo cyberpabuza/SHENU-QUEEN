@@ -87,6 +87,7 @@ Secktor.cmd({
                     image: { url: await botpic() },
                     caption: str
                 };
+             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/CYBER-THUSHAN/SH-VOICE-TEST/blob/main/Audio_alive.mp3?raw=true" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

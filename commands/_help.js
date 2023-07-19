@@ -83,13 +83,13 @@ Secktor.cmd({
   
                 }
                 str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*`
-                let buttonMessaged = {
+               let buttonMessaged = {
                     image: { url: await botpic() },
-                    caption: str
+                    caption: str,
                     footer: tlang().title,
                     headerType: 4
-                };         
-             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/CYBER-THUSHAN/SH-VOICE-TEST/blob/main/Audio_alive.mp3?raw=true" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+                };
+             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/MR-DARK-SHADOW/DARK-SHADOW-MEDIA/blob/main/PTT-20230624-WA0005.mp3?raw=true" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

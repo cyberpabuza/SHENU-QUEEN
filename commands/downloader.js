@@ -317,6 +317,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -340,17 +341,21 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                 },
                 caption: `
-╔───────────────◆
-┊🧚 ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
+╔───────────────▢
+┊ ┇${tlang().title}┇ 
+┊♦ *Youtube Player* 🎧📁
+┊☵┉━━╍╍◭☬◮╍╍━━━┉☷
 ┊🎀 *Title:* ${anu.title}
+▢ ❮                    ❯ ▢
 ┊🌐 *Duration:* ${anu.timestamp}
+▢ ❮                    ❯ ▢
 ┊👀 *Viewers:* ${anu.views}
+▢ ❮                    ❯ ▢
 ┊⬆️ *Uploaded:* ${anu.ago}
+▢ ❮                    ❯ ▢
 ┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
-⦿ *Url* : ${anu.url}
+╚────────────────▢
+▣ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -570,6 +575,7 @@ cmd({
   //---------------------------------------------------------------------------
 cmd({
         pattern: "song2",
+        react: "📁",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',

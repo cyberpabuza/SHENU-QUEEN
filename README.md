@@ -38,13 +38,34 @@
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=HERAOKU+DEPLY+SHENU+QUEEN" alt="">
 </p>
 
+
+
+
+
+
+
+
+
+
+
 <details>
 <summary>RELLWEY DEPLY CLICK HEARE 🔰</summary>
 <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=RELLWEY+DEPLY+SHENU+QUEEN" alt="">
 </p>
 ##  CAMING SOON
-<details>
+
+    
+    
+    
+    
+    
+    
+  
+  
+  
+  
+##  <details>
 <summary>RELLIT DEPLY CLICK HEARE 🔰</summary>
 <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=REPLIT+DEPLY+SHENU+QUEEN" alt="">

@@ -70,3 +70,11 @@
 <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=REPLIT+DEPLY+SHENU+QUEEN" alt="">
 </p>
+
+
+
+
+
+
+
+## 🔰ඔබට ඉතමත් ලෙසියෙන් සද ගත හැකි WAHTSAPP BOT වරයෙකි 

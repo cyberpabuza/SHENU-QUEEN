@@ -279,7 +279,7 @@ _Powered by ${Config.ownername}_
 
                 },
 
-                mimetype: "audio/mpeg",
+                mimetype: "audio/",
 
                 fileName: `alive.mp3`,
 

@@ -37,3 +37,10 @@
 <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=HERAOKU+DEPLY+SHENU+QUEEN" alt="">
 </p>
+
+<details>
+<summary>𝗖𝗟𝗜𝗖𝗞 𝗧𝗢 𝗗𝗘𝗣𝗟𝗢𝗬</summary>
+<p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=RELLWEY+DEPLY+SHENU+QUEEN" alt="">
+</p>
+##  CAMING SOON

@@ -5,8 +5,8 @@
     <img alt="SHENU-QUEEN-V1" height="300" src="https://telegra.ph/file/0ec11c279af938fd9c178.jpg">
   
 #### ```TOTAL PROFILE VIEWS 🧚```
-![Visitor Count](https://profile-counter.glitch.me/CYBER-THUSHAN/count.svg   [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-. 
-</p>
+![Visitor Count](https://profile-counter.glitch.me/CYBER-THUSHAN/count.svg 
+<
 
 
 

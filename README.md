@@ -12,7 +12,8 @@
 # SHENU-QUEEN-V1
 
 # CREATED BY THUSHAN 
-##  ## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=𝙃𝙀𝙇𝙇𝙊𝙒+𝙃𝙊𝙒+𝘾𝘼𝙉.𝙃𝙀𝙇𝙋╺+𝙔𝙊𝙐+-
  <p align="center">
-  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=QUEEN+ELISA+WHATSAPP+BOT" alt="">
+  <a aria-label="Join our chats" href="https://chat.whatsapp.com/KwFkWjI8qJ6B174esar8IM" 
+ <p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=𝙃𝙊𝙒+𝘾𝘼𝙉+𝙃𝙀𝙇𝙋+𝙔𝙊𝙐👷‍♀️" alt="">
 </p>

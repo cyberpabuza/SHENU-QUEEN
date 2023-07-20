@@ -250,13 +250,13 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🧚‍♀️",
+            react: "🔱",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
         },
         async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by Mr.Hansamala.*`
+            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by SamPandey001.*`
             const alivtxt = `
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
@@ -279,8 +279,26 @@ _Powered by ${Config.ownername}_
                 footer: tlang().footer,
                 headerType: 4,
             };
-             return Void.sendMessage(citel.chat, aliveMessage, {
+            Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
+            });
+            
+            Void.sendMessage(citel.chat, {
+
+                audio: {
+
+                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3",
+
+                },
+
+                mimetype: "audio/mpeg",
+
+                fileName: `alive.mp3`,
+
+            }, {
+
+                quoted: citel,
+
             });
 
         }

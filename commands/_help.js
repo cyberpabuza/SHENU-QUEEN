@@ -53,25 +53,25 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╔────《☬🚨 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 🚨☬》─────⊷\n`
+                let str = `╔╍───《☬🚨 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 🚨☬》╍────⊷\n`
                 str +=
-                    '```' + `│ ╔──────────────◆
-│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ User:- ${citel.pushName}
-│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Theme:- ${tlang().title}
-│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Prefix:- [ ${prefix} ]
-│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Owner:- ${Config.ownername}
-│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Plugins:- ${commands.length}
-│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Users:- ${total}
-│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Uptime:- ${runtime(process.uptime())}
-│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Mem:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ Time:- ${time}
-│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ Date:- ${date}
-│ ╰──────────────◆
-╰───────────────⊷\n
+                    '```' + `│ ╔╍─────────────◆
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ 𝗨𝗦𝗘𝗥:- ${citel.pushName}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ 𝗢𝗪𝗡𝗘𝗥:- ${Config.ownername}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ 𝗨𝗦𝗘𝗥𝗦:- ${total}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+│❯🧙‍♀️⃢⃩乡ᐇ▲│╠ 𝗧𝗜𝗠𝗘:- ${time}
+│❯🧙‍♀️⃢⃩乡ᐇ▼│╠ 𝗗𝗔𝗧𝗘:- ${date}
+│ ╚──────────────➢
+╚───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╔────❯★ *${tiny(category)}* ★\n` ;
+                   str += `╔────❯★ ~${tiny(category)}~ ★\n` ;
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────☷ *${tiny(category)}* \n` ;      
                         for (const plugins of cmds[category]) { str += `│☵ ${fancytext(plugins,1)}\n` ; }
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
@@ -131,7 +131,7 @@ Secktor.cmd({
         pattern: "owner",
         desc: "To find owner number",
         category: "general",
-        react: "💜",
+        react: "🕹️",
         filename: __filename
     },
     async(Void, citel) => {
@@ -168,7 +168,7 @@ Secktor.cmd({
     pattern: "file",
     desc: "to get extact name where that command is in repo.\nSo user can edit that.",
     category: "general",
-    react: "✨",
+    react: "🥀",
     filename: __filename
 },
 async(Void, citel, text) => {

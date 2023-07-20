@@ -17,6 +17,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
 //---------------------------------------------------------------------------
 cmd({
             pattern: "join",
+	    react: "🔰",
             desc: "joins group by link",
             category: "owner",
             use: '<group link.>',
@@ -28,14 +29,15 @@ cmd({
                 citel.reply("Link Invalid, Please Send a valid whatsapp Group Link!");
             let result = text.split(" ")[0].split("https://chat.whatsapp.com/")[1];
             await Void.groupAcceptInvite(result)
-                .then((res) => citel.reply("🟩Joined Group"))
-                .catch((err) => citel.reply("Error in Joining Group"));
+                .then((res) => citel.reply("PLEASE WAITING  JOIND GROUP ✅"))
+                .catch((err) => citel.reply("Error in Joining Group⛔"));
 
         }
     )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "sticker",
+	    react: "🔨",
             alias: ["s"],
             desc: "Makes sticker of replied image/video.",
             category: "group",
@@ -155,6 +157,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "tagall",
+	react: "📍",
         desc: "Tags every person of group.",
         category: "group",
         filename: __filename,
@@ -188,6 +191,7 @@ cmd({
 //---------------------------------------------------------------------------
 cmd({
             pattern: "request",
+	    react: "🗄️",
             desc: "Sends requst to main Bot developer.",
             category: "group",
             filename: __filename,
@@ -261,6 +265,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "poll",
+	    react: "⛓️",
             desc: "Makes poll in group.",
             category: "group",
             filename: __filename,
@@ -385,6 +390,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "rank",
+	    react: "📡",
             desc: "Sends rank card of user.",
             category: "group",
             filename: __filename,
@@ -682,6 +688,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "hidetag",
+	    react: "🔖",
             alias: ["htag"],
             desc: "Tags everyperson of group without mentioning their numbers",
             category: "group",
@@ -760,6 +767,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "demote",
+	react: "🖱️",
         desc: "Demotes replied/quoted user from group",
         category: "group",
         filename: __filename,
@@ -788,6 +796,7 @@ cmd({
 //---------------------------------------------------------------------------
 cmd({
             pattern: "del",
+	    react: "🗑️",
             alias: ["delete"],
             desc: "Deletes message of any user",
             category: "group",
@@ -853,6 +862,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "block",
+	    react: "🚫",
             desc: "blocks that person",
             fromMe: true,
             category: "owner",
@@ -919,7 +929,7 @@ cmd({
     }
 )
 
-//---------------------------------------------------------------------------
+/*//---------------------------------------------------------------------------
 if(Config.WORKTYPE!=='private'){
 cmd({ on: "text" }, async(Void, citel) => {
     const randomXp = 8;
@@ -985,18 +995,8 @@ cmd({ on: "text" }, async(Void, citel) => {
                 image: {
                     url: await botpic(),
                 },
-                caption: `
-╔════◇
-║ *Wow,Someone just*
-║ *leveled Up huh⭐*
-║ *👤Name*: ${citel.pushName}
-║ *🎐Level*: ${sck1.level}🍭
-║ *🛑Exp*: ${sck1.xp} / ${Levels.xpFor(sck1.level + 1)}
-║ *📍Role*: *${role}*
-║ *Enjoy🥳*
-╚════════════╝
-`,
-            }, {
+                caption: `,
+*/            }, {
                 quoted: citel,
             });
         }

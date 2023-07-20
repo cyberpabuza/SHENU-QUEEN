@@ -250,7 +250,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🧚‍♀️",
+            react: "☑️",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -262,10 +262,10 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-*Version:-* _0.0.7_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
+*Version:-* _0.0.1_ 🔰
+*Uptime:-* _${runtime(process.uptime())}_ ⏰
+*Owner:-* _${Config.ownername}_ 🎩
+*Branch:-* _${Config.BRANCH}_ 🕹️
 
 _Type ${prefix}menu for my command list._
 

@@ -261,11 +261,12 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-*Version:-* _0.0.1_ 🔰
-*Uptime:-* _${runtime(process.uptime())}_ ⏰
-*Owner:-* _${Config.ownername}_ 🎩
-*Branch:-* _${Config.BRANCH}_ 🕹️
-
+📍 *𝗩𝗘𝗥𝗦𝗜𝗢𝗡:-* _0.0.1_ 🔰
+📲 *𝗨𝗣𝗧𝗜𝗠𝗘:-* _${runtime(process.uptime())}_ ⏰
+🕹️ *𝗢𝗪𝗡𝗘𝗥:-* _${Config.ownername}_ 🎩
+🔮 *𝗕𝗥𝗔𝗡𝗖𝗛:-* _${Config.BRANCH}_ 🕹️
+💻 *𝐎𝐖𝐍𝐄𝐑 𝐍𝐁:-* _${wa.me/+94710109956}_
+📼 *𝑅𝐸𝑃𝑂 𝐿𝐼𝑁𝐾:-* _${CAMING SOON}_
 _Type ${prefix}menu for my command list._
 
 _Powered by ${Config.ownername}_

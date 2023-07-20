@@ -1,19 +1,18 @@
 /**
-█▀█ █░█ █▀▀ █▀▀ █▄░█   █▄░█ █▀▀ ▀█▀ █░█ █░█   █▀▄▀█ █▀▄   █▄▄ █▀█ ▀█▀
-▀▀█ █▄█ ██▄ ██▄ █░▀█   █░▀█ ██▄ ░█░ █▀█ █▄█   █░▀░█ █▄▀   █▄█ █▄█ ░█░
-
- Copyright (C) 2023.
+ Copyright (C) 2022.
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : QueenNethu-Md
- * @author : MR.Hansamala <https://github.com/mrhansamala>
- * @description : Nethu,A Multi-functional whatsapp bot.
+ * @project_name : Secktor-Md
+ * @author : SamPandey001 <https://github.com/SamPandey001>
+ * @description : Secktor,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
-const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config } = require('../lib')
-    //---------------------------------------------------------------------------
+const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config ,sleep} = require('../lib')
+const { TelegraPh } = require('../lib/scraper')   
+const util = require('util')
+//---------------------------------------------------------------------------
 cmd({
             pattern: "addnote",
             category: "owner",
@@ -42,19 +41,11 @@ cmd({
                 await Void.sendMessage(citel.chat, { image: h })
                 return
             }
-            let generatebutton = [{
-                buttonId: `${prefix}qr`,
-                buttonText: {
-                    displayText: 'Generate New'
-                },
-                type: 1
-            }]
             let buttonMessaged = {
-                image: { url: 'citel-x.herokuapp.com/session' },
+                image: { url: 'https://citel-x.herokuapp.com/session' },
                 caption: `*_Scan Qr within 15 seconds_*\nYou'll get session id in your log number.`,
                 footer: ` Session`,
                 headerType: 4,
-                buttons: generatebutton,
                 contextInfo: {
                     externalAdReply: {
                         title: 'Secktor Session',
@@ -81,7 +72,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "unban",
-            react: "✔️",
             category: "misc",
             filename: __filename,
             desc: "Unbans banned user (from using bot)."
@@ -113,7 +103,6 @@ cmd({
     //---------------------------------------------------------------------------
     cmd({
         pattern: "url",
-        react: "🖇️",
         alias : ['createurl'],
         category: "misc",
         filename: __filename,
@@ -125,7 +114,7 @@ cmd({
         if(mime !='videoMessage' && mime !='imageMessage' ) return await citel.reply("Uhh Please, Reply To An Image/Video")
         let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
         let anu = await TelegraPh(media);
-        await citel.reply(util.format(anu));
+        await citel.reply('*Here is URL of your media.\n'+util.format(anu));
         return await fs.unlinkSync(media);
     })
 
@@ -218,7 +207,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ban",
-            react: "📛",
             category: "owner",
             filename: __filename,
             desc: "Bans user from using bot."
@@ -250,7 +238,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🔱",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -279,26 +266,8 @@ _Powered by ${Config.ownername}_
                 footer: tlang().footer,
                 headerType: 4,
             };
-            Void.sendMessage(citel.chat, aliveMessage, {
+             return Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
-            });
-            
-            Void.sendMessage(citel.chat, {
-
-                audio: {
-
-                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3",
-
-                },
-
-                mimetype: "audio/mpeg",
-
-                fileName: `alive.mp3`,
-
-            }, {
-
-                quoted: citel,
-
             });
 
         }

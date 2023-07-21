@@ -17,6 +17,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
   //---------------------------------------------------------------------------
  cmd({
     pattern: "setwelcome",
+    react: "✅",
     desc: "sets welcome message in specific group.",
     category: "misc",
 },
@@ -36,6 +37,7 @@ async(Void, citel, text,{ isCreator }) => {
  //---------------------------------------------------------------------------
 cmd({
     pattern: "setgoodbye",
+    react: "✅",
     desc: "sets goodbye message in specific group.",
     category: "misc",
 },
@@ -54,6 +56,7 @@ async(Void, citel, text,{ isCreator }) => {
  //---------------------------------------------------------------------------
  cmd({
              pattern: "attp",
+             react: "♒",
              desc: "Makes glowing sticker of text.",
              category: "sticker",
              filename: __filename,
@@ -153,6 +156,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
      //---------------------------------------------------------------------------
  cmd({
              pattern: "uptime",
+             react: "✔️",
              alias: ["runtime"],
              desc: "Tells runtime/uptime of bot.",
              category: "misc",
@@ -287,6 +291,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
      //---------------------------------------------------------------------------
  cmd({
              pattern: "chatbot",
+             react: "🤖",
              desc: "activates and deactivates chatbot.\nuse buttons to toggle.",
              category: "misc",
              filename: __filename
@@ -450,6 +455,7 @@ let buttons = [{
      //---------------------------------------------------------------------------
  cmd({
              pattern: "antilink",
+             react: "♦",
              desc: "activates and deactivates antilink.\nuse buttons to toggle.",
              category: "group",
              filename: __filename,

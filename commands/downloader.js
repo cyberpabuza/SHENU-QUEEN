@@ -320,9 +320,9 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "audio",
+            pattern: "song",
             react: "🎧",
-            alias :['song'],
+            alias :['audio'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -407,7 +407,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
-                            renderLargerThumbnail: true,
+                            renderLargerThumbnail: false,
                             thumbnailUrl: search.all[0].thumbnail,
                             mediaUrl: anu.url,
                             mediaType: 1,

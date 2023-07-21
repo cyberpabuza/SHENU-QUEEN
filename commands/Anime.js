@@ -149,6 +149,7 @@ async(Void, citel,text) =>
 //-----------------------------------------------------------------------
 cmd({
     pattern: "neko",
+    react: "🧚‍♀️",        
     category: "Anime Pics",
     desc: "Sends a Neko Image in chat",
     filename: __filename
@@ -156,7 +157,7 @@ cmd({
 async(Void, citel, text) => {
         let name1 = text.split("|")[0] || ''
         let name2 = text.split("|")[1] || `1`
-        let cap = text.split("|")[1] ? '': "Here we go😊!!!!"
+        let cap = text.split("|")[1] ? '': "*𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘔𝘋 🧙*"
          
 for (let i = 0; i < name2; i++)
 {
@@ -503,7 +504,7 @@ const data = await response.json();
 
                 let buttonMessaged = {
                     image: { url: url },
-                    caption: '*---Random Wallpapers Here---*',
+                    caption: '*---𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘔𝘋 🧚‍♀️🧙 ---*',
                     footer: tlang().footer,
                     headerType: 4,
                    

@@ -60,6 +60,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "weather",
+            react: "🌤️",
             category: "search",
             desc: "Sends weather info about asked place.",
             use: '<location>',
@@ -133,6 +134,7 @@ cmd({
     //---------------------------------------------------------------------------
     cmd({
         pattern: "google",
+        react: "➰",
         alias :['search','gsearch'],
         category: "search",
         desc: "Sends info of given query from Google Search.",
@@ -157,6 +159,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "image",
+            react: "🖼️",
             category: "search",
             desc: "Searches Image on Google",
             use: '<text>',
@@ -166,7 +169,7 @@ cmd({
             if (!text) return citel.reply("Provide me a query!")
             if (!text) return reply("Hey bie please tell me for which pic you're looking");
             let name1 = text.split("|")[0]
-            let name2 = text.split("|")[1] || `1`
+            let name2 = text.split("|")[1] || `5`
             citel.reply(`Sending ${name2} image(s) of ${name1} in chat`)
             let nn = name2
             for (let i = 0; i < nn; i++) {

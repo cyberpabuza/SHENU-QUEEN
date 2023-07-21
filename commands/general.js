@@ -116,11 +116,11 @@ cmd({
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
         let cap = `Hey ${citel.pushName}\n
-*⭐ Total Stars:* ${data.stargazers_count} stars
-*🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* citel-x.herokuapp.com/repo
-*Group:* citel-x.herokuapp.com/support
-*Deploy Your Own:*-
+*🔥 𝑇𝑂𝑇𝐴𝐿 𝑆𝑇𝐴𝑅𝑆:* ${data.stargazers_count} stars
+*🖥️ 𝐹𝑂𝑅𝐾𝑆:* ${data.forks_count} forks
+*🔮 𝑅𝐸𝑃𝑂:* citel-x.herokuapp.com/repo
+*🗺️ 𝐺𝑅𝑂𝑈𝑃:* citel-x.herokuapp.com/support
+*📼 Deploy Your Own:*-
 citel-x.herokuapp.com`
         let buttonMessaged = {
             image: { url: await botpic() },

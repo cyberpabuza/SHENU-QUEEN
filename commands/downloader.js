@@ -96,6 +96,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -164,7 +165,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: ` 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

@@ -354,7 +354,7 @@ cmd({
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
                     document: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'document/mpeg',
+                    mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
 		    caption: `𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘔𝘋 𝘉𝘖𝘛 🧙`,  
                     headerType: 4,

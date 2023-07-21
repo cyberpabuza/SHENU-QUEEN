@@ -399,26 +399,20 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
-                    let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
-                    document: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'document/mpeg',
+                    audio: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
-                            renderLargerThumbnail: true,
+                            renderLargerThumbnail: false,
                             thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: text,
+                            mediaUrl: anu.url,
                             mediaType: 1,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: text,
+                            sourceUrl: anu.url,
                         },
                     },
                 }

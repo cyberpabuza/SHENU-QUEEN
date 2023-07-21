@@ -119,16 +119,16 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                 },
                 caption: `
-╔───────────────◆
-┊🧚 ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
+╔───────────────◧
+✰🧚 ${tlang().title} 
+┊📽️ *Youtube Player* ⬇️
+✰ ┉━━━━◭☬◮━━━━━┉
 ┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
+✰🌐 *Duration:* ${anu.timestamp}
 ┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
+✰⬆️ *Uploaded:* ${anu.ago}
 ┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
+╚────────────────◧
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
@@ -320,9 +320,9 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "audio",
+            pattern: "song",
             react: "🎧",
-            alias :['song'],
+            alias :['audio'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -345,16 +345,16 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                 },
                 caption: `
-╔───────────────◆
-┊🧚 ${tlang().title} 
+╔───────────────✰
+◭🧚${tlang().title} 
 ┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
 ┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
+◭🌐 *Duration:* ${anu.timestamp}
 ┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
+◭⬆️ *Uploaded:* ${anu.ago}
 ┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
+╚────────────────✰
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,

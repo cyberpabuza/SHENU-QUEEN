@@ -238,6 +238,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
+            react: "‍👋",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -265,12 +266,28 @@ _Powered by ${Config.ownername}_
                 caption: alivtxt,
                 footer: tlang().footer,
                 headerType: 4,
-            
-             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
-                return await Void.sendMessage(citel.chat, buttonMessaged);
-         return Void.sendMessage(citel.chat, aliveMessage, {
+            };
+            Void.sendMessage(citel.chat, aliveMessage, {
                 quoted: citel,
-         });
+            });
+            
+            Void.sendMessage(citel.chat, {
+
+                audio: {
+
+                    url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3",
+
+                },
+
+                mimetype: "audio/mpeg",
+
+                fileName: `alive.mp3`,
+
+            }, {
+
+                quoted: citel,
+
+            });
         }
     )
     //---------------------------------------------------------------------------

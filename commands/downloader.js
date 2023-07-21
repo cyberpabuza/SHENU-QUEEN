@@ -191,108 +191,43 @@ if (text.startsWith("https://youtube.com/shorts/")) {
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "song",
-            react: "🎧",
-            alias :['audio'],
-            desc: "Downloads audio from youtube.",
+            pattern: "play",
+            desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
-            use: '<text>',
+            use: '<faded-Alan walker.>',
         },
         async(Void, citel, text) => {
-            let yts = require("secktor-pack"); 
-let textYt;        
-if (text.startsWith("https://youtube.com/shorts/")) {
-  const svid = text.replace("https://youtube.com/shorts/", "https://youtube.com/v=");
-  const s2vid = svid.split("?feature")[0];
-  textYt = s2vid;
-} else {
-  textYt = text;
-}
-            let search = await yts(textYt);
+            if (!text) return citel.reply(`Use ${command} Back in Black`);
+            let yts = require("secktor-pack");
+            let search = await yts(text);
             let anu = search.videos[0];
-                       let buttonMessaged = {
+            let buttonMessage = {
                 image: {
                     url: anu.thumbnail,
                 },
                 caption: `
-╔───────────────✰
-◭🧚${tlang().title} 
-┊🚨 *Youtube Player* ✨
-◭ ◨┉━━━━◭☬◮━━━━━┉◧
-┊🎀 *Title:* ${anu.title}
-◭🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-◭⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────✰
+╭───────────────◆
+│◎◈◍ ${tlang().title} 
+┊ 🎶 *Youtube Player* 🎶
+│
+┊◎◈◍ *Title:* ${anu.title}
+│◎◈◍ *Duration:* ${anu.timestamp}
+┊◎◈◍ *Viewers:* ${anu.views}
+│◎◈◍ *Uploaded:* ${anu.ago}
+┊◎◈◍ *Author:* ${anu.author.name}
+╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
                 headerType: 4,
             };
-            await Void.sendMessage(citel.chat, buttonMessaged, {
+            return Void.sendMessage(citel.chat, buttonMessage, {
                 quoted: citel,
             });
 
-            
-            const getRandom = (ext) => {
-                return `${Math.floor(Math.random() * 10000)}${ext}`;
-            };
-            let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
- /*           citel.reply(`
-╔───────────────◆
-┊🧚 ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
-┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
-⦿ *Url* : ${anu.url}`,)
-*/
-            const stream = ytdl(anu.url, {
-                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
-                })
-                .pipe(fs.createWriteStream(`./${randomName}`));
-            await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
-
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
-                        },
-                    },
-                }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                return fs.unlinkSync(`./${randomName}`);
-            } else {
-                citel.reply(`❌ File size bigger than 100mb.`);
-            }
-            fs.unlinkSync(`./${randomName}`);
+        }
+    )
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ringtone",
@@ -385,17 +320,51 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "audio",
-            alias :['song'],
+            pattern: "song",
+            react: "🎧",
+            alias :['audio'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
             use: '<text>',
         },
         async(Void, citel, text) => {
-            let yts = require("secktor-pack");
-            let search = await yts(text);
+            let yts = require("secktor-pack"); 
+let textYt;        
+if (text.startsWith("https://youtube.com/shorts/")) {
+  const svid = text.replace("https://youtube.com/shorts/", "https://youtube.com/v=");
+  const s2vid = svid.split("?feature")[0];
+  textYt = s2vid;
+} else {
+  textYt = text;
+}
+            let search = await yts(textYt);
             let anu = search.videos[0];
+                       let buttonMessaged = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+╔───────────────✰
+◭🧚${tlang().title} 
+┊🚨 *Youtube Player* ✨
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
+┊🎀 *Title:* ${anu.title}
+◭🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+◭⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────✰
+⦿ *Url* : ${anu.url}
+`,
+                footer: tlang().footer,
+                headerType: 4,
+            };
+            await Void.sendMessage(citel.chat, buttonMessaged, {
+                quoted: citel,
+            });
+
+            
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
@@ -403,7 +372,19 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply = ('\t ╭──────Youtube Search Result─────╮  \n\n🏷Title : " + i.title + "\n\n🖇️Url : " + i.url +"\n\n🔖Description : " + i.timestamp +"\n\n👀Views : "+i.views +"\n\n📤Uploaded : " +i.ago +"\n\n👲🏻Author : "+i.author.name+"')
+ /*           citel.reply(`
+╔───────────────◆
+┊🧚 ${tlang().title} 
+┊🚨 *Youtube Player* ✨
+┊ ┉━━━━◭☬◮━━━━━┉
+┊🎀 *Title:* ${anu.title}
+┊🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+┊⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────◆
+⦿ *Url* : ${anu.url}`,)
+*/
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -418,10 +399,15 @@ cmd({
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
+                    let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let buttonMessage = {
                     document: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
+                    mimetype: 'document/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘔𝘋 𝘉𝘖𝘛 🧙`,  
+		    caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

@@ -108,6 +108,7 @@ Void.sendMessage(citel.chat,{image:{url:data.data[0].url}})
 //---------------------------------------------------------------------------
 cmd({
         pattern: "repo",
+	react: "🖥️",
         alias: ["git", "sc", "script"],
         desc: "Sends info about repo.",
         category: "general",
@@ -115,12 +116,13 @@ cmd({
     },
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `Hey ${citel.pushName}\n
+        let cap = `
+*👋 ┋ 𝐻𝐸𝑌 ${citel.pushName}\n
 *🔥 ┋ 𝑇𝑂𝑇𝐴𝐿 𝑆𝑇𝐴𝑅𝑆:* ${data.stargazers_count} stars
 *🖥️ ┋ 𝐹𝑂𝑅𝐾𝑆:* ${data.forks_count} forks
 *🔮 ┋ 𝑅𝐸𝑃𝑂:* 𝐶𝑎𝑚𝑖𝑛𝑔 𝑆𝑜𝑜𝑛 😗
 *🗺️ ┋ 𝐺𝑅𝑂𝑈𝑃:* https://chat.whatsapp.com/KCb5XO0jhm676fNwkJz93o
-*📼 ┋ Deploy Your Own:*-𝐶𝑦𝑏𝑒𝑟༆𝑻𝑯𝑼𝑺𝑯𝑨𝑵`
+*👩‍💻 ┋ 𝐷𝐸𝑃𝐿𝑂𝑌 𝑌𝑂𝑈𝑅 𝑂𝑊𝑁:*-𝐶𝑦𝑏𝑒𝑟༆𝑻𝑯𝑼𝑺𝑯𝑨𝑵`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -156,13 +158,13 @@ cmd({
         timestampe = speed();
         latensie = speed() - timestampe;
         let ter = `
-🔰 *${tlang().title}* 🔰
-*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
-*⚡Speed:* ${latensie.toFixed(4)} ms
-*🚦Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 0.0.7
-*👤Owner:*  ${Config.ownername}
-*Powered by ${tlang().title}*
+🔰 *${tlang().title}* 🔱
+*🚨Description:* *From the highlightsapp in the heatsapp that you can enjoy.*
+*⏳Speed:* ${latensie.toFixed(4)} ms
+*⏲️Uptime:* ${runtime(process.uptime())}
+*📊Version:* 0.0.7
+*👑Owner:*  ${Config.ownername}
+*𝑃𝑜𝑤𝑒𝑟𝑒𝑑 𝑏𝑦 *${tlang().title}*
 `;
         let buttonMessaged = {
             image: {

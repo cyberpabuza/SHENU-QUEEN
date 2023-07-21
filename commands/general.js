@@ -120,8 +120,7 @@ cmd({
 *🖥️ 𝐹𝑂𝑅𝐾𝑆:* ${data.forks_count} forks
 *🔮 𝑅𝐸𝑃𝑂:* citel-x.herokuapp.com/repo
 *🗺️ 𝐺𝑅𝑂𝑈𝑃:* citel-x.herokuapp.com/support
-*📼 Deploy Your Own:*-
-citel-x.herokuapp.com`
+*📼 Deploy Your Own:*-𝐶𝑦𝑏𝑒𝑟༆𝑻𝑯𝑼𝑺𝑯𝑨𝑵`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,

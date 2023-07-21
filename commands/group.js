@@ -36,6 +36,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "sticker",
+	    react: "👷‍♂️",
             alias: ["s"],
             desc: "Makes sticker of replied image/video.",
             category: "group",
@@ -621,6 +622,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "group",
+	    react: "🔕",
             desc: "mute and unmute group.",
             category: "group",
             filename: __filename,
@@ -869,7 +871,7 @@ cmd({
 
         }
     )
-    //---------------------------------------------------------------------------
+/*    //---------------------------------------------------------------------------
 cmd({
         pattern: "broadcast",
         alias: ["bc"],
@@ -995,9 +997,9 @@ cmd({ on: "text" }, async(Void, citel) => {
 ║ *📍Role*: *${role}*
 ║ *Enjoy🥳*
 ╚════════════╝
-`,
+`,*/
             }, {
-                quoted: citel,
+    /           quoted: citel,
             });
         }
     }

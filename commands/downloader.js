@@ -33,6 +33,7 @@ function __lobz(){const H=['R53FWbciV9','reply','rbot_18407','\x5c(\x20*\x5c)','
     //---------------------------------------------------------------------------
 cmd({
             pattern: "tts",
+            react: "🎤",
             desc: "text to speech.",
             category: "downloader",
             filename: __filename,
@@ -61,6 +62,7 @@ cmd({
      //---------------------------------------------------------------------------
      cmd({
         pattern: "yts",
+        react: "🔍",
         desc: "Gives descriptive info of query from youtube..",
         category: "downloader",
         filename: __filename,
@@ -189,6 +191,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
+            react: "🎶",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
@@ -317,6 +320,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
+            react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",

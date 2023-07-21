@@ -1018,7 +1018,7 @@ cmd({
 )
 
 //---------------------------------------------------------------------------
-	cmd({ on: "text" }, async(Void, citel) => {
+/*	cmd({ on: "text" }, async(Void, citel) => {
 	    const randomXp = 8;
 	    let usrname = citel.pushName
 	    const hasLeveledUp = await Levels.appendXp(citel.sender, "RandomXP", randomXp);
@@ -1069,5 +1069,5 @@ cmd({
 		    }
 	    }
 	})
-	
+*/	
 

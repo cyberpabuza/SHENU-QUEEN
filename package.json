@@ -1,7 +1,7 @@
 {
-               "name": "secktor-md",
-               "version": "0.0.7",
-               "description": "Multi device whatsapp bot by SamPandey001.",
+               "name": "SHENU-QUEEN-MD",
+               "version": "0.0.1",
+               "description": "Multi device whatsapp bot by CYBER-THUSHAN.",
                "main": "lib/client.js",
                "type": "commonjs",
                "license": "GPL-3.0",
@@ -9,7 +9,7 @@
                 "start": "pm2 start lib/client.js --deep-monitoring --attach --name secktor",
                 "stop": "pm2 stop secktor"
                 },
-               "author": "SamPandey001",
+               "author": "Cyber-THUSHAN",
               "dependencies": {
                        "@sampandey001/baileys": "latest", 
                        "@adiwajshing/keyed-db": "^0.2.4",
@@ -69,7 +69,7 @@
                     },
                  "repository": {
                  "type": "git",
-                 "url": "git+https://github.com/SamPandey001/Secktor-Md.git"
+                 "url": "git+https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1.git"
                   },
                  "bugs": {
                  "url": "https://github.com/SamPandey001/Secktor-Md/issues"

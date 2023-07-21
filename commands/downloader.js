@@ -321,7 +321,6 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-           	react: "⬇️",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -339,8 +338,7 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply('👲🏻_Download Your Video_👲🏻')
-	    citel.reply('👲🏻_Upload Your Video_👲🏻')
+            citel.reply = ('\t ╭──────Youtube Search Result─────╮  \n\n🏷Title : " + i.title + "\n\n🖇️Url : " + i.url +"\n\n🔖Description : " + i.timestamp +"\n\n👀Views : "+i.views +"\n\n📤Uploaded : " +i.ago +"\n\n👲🏻Author : "+i.author.name+"')
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -358,7 +356,7 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'document/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `👲🏻★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★👲🏻 `,  
+		    caption: `𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘔𝘋 𝘉𝘖𝘛 🧙`,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
@@ -370,35 +368,6 @@ cmd({
                             mediaType: 1,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: text,
-                        },
-                    },
-                }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                return fs.unlinkSync(`./${randomName}`);
-            } else {
-                citel.reply(`❌ File size bigger than 100mb.`);
-            }
-            fs.unlinkSync(`./${randomName}`);
-
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
                         },
                     },
                 }

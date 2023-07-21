@@ -251,10 +251,10 @@ _This is  ${tlang().title}._
 ${alivemessage}
 
 🕹️ *Version:-* _0.0.7_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
-
+⏳ *Uptime:-* _${runtime(process.uptime())}_
+👑 *Owner:-* _${Config.ownername}_
+🕹️ *Branch:-* _${Config.BRANCH}_
+🔨 *OWNERNB:-* _wa.me/+94710109956_
 _Type ${prefix}menu for my command list._
 
 _Powered by ${Config.ownername}_

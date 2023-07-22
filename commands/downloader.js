@@ -498,35 +498,28 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-        pattern: "ytmp3",
-        desc: "Downloads audio by yt link.",
-        category: "downloader",
-        use: '<yt video url>',
-    },
-    async(Void, citel, text) => {
-        const getRandom = (ext) => {
-            return `${Math.floor(Math.random() * 10000)}${ext}`;
-        };
-
-        if (text.length === 0) {
-            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
-            return;
-        }
-        try {
-            let urlYt = text;
-            if (!urlYt.startsWith("http")) {
-                citel.reply(`❌ Give youtube link!`);
-                return;
-            }
-            let infoYt = await ytdl.getInfo(urlYt);
-            //30 MIN
-            if (infoYt.videoDetails.lengthSeconds >= videotime) {
-                reply(`❌ I can't download that long video!`);
-                return;
-            }
+            pattern: "audio",
+	react: "👲🏻",
+            alias :['song'],
+            desc: "Downloads audio from youtube.",
+            category: "downloader",
+            filename: __filename,
+            use: '<text>',
+        },
+        async(Void, citel, text) => {
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            const getRandom = (ext) => {
+                return `${Math.floor(Math.random() * 10000)}${ext}`;
+            };
+            let infoYt = await ytdl.getInfo(anu.url);
+            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            const stream = ytdl(urlYt, {
+            citel.reply('👲🏻_Download Your Video_👲🏻')
+	    citel.reply('👲🏻_Upload Your Video_👲🏻')
+            const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
@@ -539,12 +532,11 @@ cmd({
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
-                let yts = require("secktor-pack");
-                let search = await yts(text);
                 let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
+                    document: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'document/mpeg',
                     fileName: titleYt + ".mp3",
+		    caption: `🚨𝘚𝘏𝘌𝘕𝘜-𝘘𝘜𝘌𝘌𝘕-𝘔𝘋🚨 `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

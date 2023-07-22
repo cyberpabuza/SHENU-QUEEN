@@ -315,18 +315,53 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------   
-cmd({      pattern: "audio",
-           	react: "🎧",
-            alias :['song'],
+    //---------------------------------------------------------------------------
+cmd({
+            pattern: "song",
+            react: "🎧",
+            alias :["song","so"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
             use: '<text>',
         },
         async(Void, citel, text) => {
-            let yts = require("secktor-pack");
-            let search = await yts(text);
+            let yts = require("secktor-pack"); 
+let textYt;        
+if (text.startsWith("https://youtube.com/shorts/")) {
+  const svid = text.replace("https://youtube.com/shorts/", "https://youtube.com/v=");
+  const s2vid = svid.split("?feature")[0];
+  textYt = s2vid;
+} else {
+  textYt = text;
+}
+            let search = await yts(textYt);
             let anu = search.videos[0];
+                       let buttonMessaged ={
+             image: {
+                    url: anu.thumbnail,
+               },
+                caption: `
+╔───────────────✰
+◭🧚${tlang().title} 
+┊🚨 *Youtube Player* ✨
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
+┊🎀 *Title:* ${anu.title}
+◭🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+◭⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────✰
+⦿ *Url* : ${anu.url}
+`,
+                footer: tlang().footer,
+                headerType: 4,
+            };
+            await Void.sendMessage(citel.chat, buttonMessaged, {
+                quoted: citel,
+            });
+
+            
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
@@ -334,8 +369,19 @@ cmd({      pattern: "audio",
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply(' 🎀 *Downloding:* *YOU SONG DL*')
-	    citel.reply('⬆️ *Uploaded:* *YOU SONG UP*')
+ /*           citel.reply(`
+╔───────────────◆
+┊🧚 ${tlang().title} 
+┊🚨 *Youtube Player* ✨
+┊ ┉━━━━◭☬◮━━━━━┉
+┊🎀 *Title:* ${anu.title}
+┊🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+┊⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────◆
+⦿ *Url* : ${anu.url}`,)
+*/
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -350,31 +396,20 @@ cmd({      pattern: "audio",
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
-                    document: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'document/mpeg',
+                    audio: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `🎭❮┃🎧╔───────────────✰
-◭🧚${tlang().title} 
-┊🚨 *Youtube Player* ✨
-◭ ◨┉━━━━◭☬◮━━━━━┉◧
-┊🎀 *Title:* ${anu.title}
-◭🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-◭⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────✰
-⦿ *Url* : ${anu.url}🎧┃❯🎭 `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
-                            renderLargerThumbnail: true,
+                            renderLargerThumbnail: false,
                             thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: text,
+                            mediaUrl: anu.url,
                             mediaType: 1,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: text,
+                            sourceUrl: anu.url,
                         },
                     },
                 }

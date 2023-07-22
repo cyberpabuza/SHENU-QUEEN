@@ -319,7 +319,7 @@ const videolink = fbdls.result.audio
         }
 
     )
-
+/*
 cmd({
 
             pattern: "apk",
@@ -369,7 +369,7 @@ const lastupdate = apkdl.data.lastup
         }
 
     )
-
+*/
     
 
     

@@ -2,7 +2,7 @@ const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = requ
 const { download} = require('aptoide-scraper')
 cmd({
     pattern: "downapk",
-    alias: ["ps","apk2","playstore"],
+    alias: ["ps","apk","playstore"],
     desc: "download playstore app",
     react: "🏷️",
     category: "downloader",

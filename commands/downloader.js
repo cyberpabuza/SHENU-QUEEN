@@ -284,7 +284,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "audio",
-	react: "👲🏻",
+	react: "🎧",
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
@@ -302,8 +302,8 @@ cmd({
             if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
-            citel.reply(' 🎀 *Title:* ${anu.title}')
-	    citel.reply('⬆️ *Uploaded:* ${anu.ago}')
+            citel.reply(' 🎀 *Downloding:* *YOU SONG DL*')
+	    citel.reply('⬆️ *Uploaded:* *YOU SONG UP*')
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
@@ -321,7 +321,17 @@ cmd({
                     document: fs.readFileSync(`./${randomName}`),
                     mimetype: 'document/mpeg',
                     fileName: titleYt + ".mp3",
-		    caption: `🎭❮┃🎧ˢᴴᴱᴺᵁ-Qᵁᴱᴱᴺ-ᴹᴰ ᴬᵁᴰᴵᴼ ᴰᴼᴺᴸᴼᴰ🎧┃❯🎭 `,  
+		    caption: `🎭❮┃🎧╔───────────────✰
+◭🧚${tlang().title} 
+┊🚨 *Youtube Player* ✨
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
+┊🎀 *Title:* ${anu.title}
+◭🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+◭⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────✰
+⦿ *Url* : ${anu.url}🎧┃❯🎭 `,  
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

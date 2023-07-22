@@ -319,7 +319,9 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
+/*
 cmd({
+
             pattern: "song",
             react: "🎧",
             alias :['audio'],
@@ -386,7 +388,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ⦿ *Url* : ${anu.url}`,)
 */
             const stream = ytdl(anu.url, {
-                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
+         /*           filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
             await new Promise((resolve, reject) => {
@@ -422,11 +424,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 citel.reply(`❌ File size bigger than 100mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
-            
+           */ 
 
 
         }
-    )
+   )
     //---------------------------------------------------------------------------
 
 cmd({

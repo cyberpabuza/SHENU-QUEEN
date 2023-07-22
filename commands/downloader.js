@@ -319,76 +319,37 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
-/*
 cmd({
+        pattern: "ytmp3",
+        desc: "Downloads audio by yt link.",
+        category: "downloader",
+        use: '<yt video url>',
+    },
+    async(Void, citel, text) => {
+        const getRandom = (ext) => {
+            return `${Math.floor(Math.random() * 10000)}${ext}`;
+        };
 
-            pattern: "song",
-            react: "🎧",
-            alias :['audio'],
-            desc: "Downloads audio from youtube.",
-            category: "downloader",
-            filename: __filename,
-            use: '<text>',
-        },
-        async(Void, citel, text) => {
-            let yts = require("secktor-pack"); 
-let textYt;        
-if (text.startsWith("https://youtube.com/shorts/")) {
-  const svid = text.replace("https://youtube.com/shorts/", "https://youtube.com/v=");
-  const s2vid = svid.split("?feature")[0];
-  textYt = s2vid;
-} else {
-  textYt = text;
-}
-            let search = await yts(textYt);
-            let anu = search.videos[0];
-                       let buttonMessaged = {
-                image: {
-                    url: anu.thumbnail,
-                },
-                caption: `
-╔───────────────✰
-◭🧚${tlang().title} 
-┊🚨 *Youtube Player* ✨
-◭ ◨┉━━━━◭☬◮━━━━━┉◧
-┊🎀 *Title:* ${anu.title}
-◭🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-◭⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────✰
-⦿ *Url* : ${anu.url}
-`,
-                footer: tlang().footer,
-                headerType: 4,
-            };
-            await Void.sendMessage(citel.chat, buttonMessaged, {
-                quoted: citel,
-            });
-
-            
-            const getRandom = (ext) => {
-                return `${Math.floor(Math.random() * 10000)}${ext}`;
-            };
-            let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+        if (text.length === 0) {
+            reply(`❌ URL is empty! \nSend ${prefix}ytmp3 url`);
+            return;
+        }
+        try {
+            let urlYt = text;
+            if (!urlYt.startsWith("http")) {
+                citel.reply(`❌ Give youtube link!`);
+                return;
+            }
+            let infoYt = await ytdl.getInfo(urlYt);
+            //30 MIN
+            if (infoYt.videoDetails.lengthSeconds >= videotime) {
+                reply(`❌ I can't download that long video!`);
+                return;
+            }
             let titleYt = infoYt.videoDetails.title;
             let randomName = getRandom(".mp3");
- /*           citel.reply(`
-╔───────────────◆
-┊🧚 ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
-┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
-⦿ *Url* : ${anu.url}`,)
-*/
-            const stream = ytdl(anu.url, {
-         /*           filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
+            const stream = ytdl(urlYt, {
+                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
             await new Promise((resolve, reject) => {
@@ -400,6 +361,8 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
@@ -409,12 +372,12 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
-                            renderLargerThumbnail: false,
+                            renderLargerThumbnail: true,
                             thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
+                            mediaUrl: text,
                             mediaType: 1,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
+                            sourceUrl: text,
                         },
                     },
                 }
@@ -424,11 +387,12 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 citel.reply(`❌ File size bigger than 100mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
-           */ 
-
-
+        } catch (e) {
+            console.log(e)
         }
-   )
+
+    }
+)
     //---------------------------------------------------------------------------
 
 cmd({

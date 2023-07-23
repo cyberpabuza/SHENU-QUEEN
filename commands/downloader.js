@@ -182,7 +182,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 ┃⚖️  *Url* : ${anu.url}*
 
-┃🧚 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅
+┃🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅
  `,
                         headerType: 4,
                         contextInfo: {
@@ -379,7 +379,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 ◭👽 *Author:* ${anu.author.name}
 ╚────────────────✰
-⦿ *Url* : ${anu.url}
+⦿ *Url* : ${anu.url} react: "✅",
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -455,6 +455,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 cmd({
             pattern: "ytmp4",
+            react: "⬇️",
             desc: "Downloads video from youtube.",
             category: "downloader",
             filename: __filename,
@@ -523,6 +524,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
         pattern: "ytmp3",
+ react: "⬇️",
         desc: "Downloads audio by yt link.",
         category: "downloader",
         use: '<yt video url>',
@@ -599,6 +601,7 @@ cmd({
   //---------------------------------------------------------------------------
 cmd({
         pattern: "song2",
+ react: "📁",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
         use: '<ytdoc video url>',

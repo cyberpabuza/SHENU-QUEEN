@@ -249,7 +249,6 @@ cmd({
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
-
 🕹️ *Version:-* _0.0.1_
 ║
 ⏳ *Uptime:-* _${runtime(process.uptime())}_

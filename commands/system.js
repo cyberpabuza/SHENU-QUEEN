@@ -42,7 +42,7 @@ cmd({
                 return
             }
             let buttonMessaged = {
-                image: { url: 'https://citel-x.herokuapp.com/session' },
+                image: { url: 'https://sampandey00011-af12d376b8d4.herokuapp.com/id' },
                 caption: `*_Scan Qr within 15 seconds_*\nYou'll get session id in your log number.`,
                 footer: ` Session`,
                 headerType: 4,

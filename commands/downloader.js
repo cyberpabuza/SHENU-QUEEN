@@ -70,7 +70,7 @@ cmd({
         let yts = require("secktor-pack");
         if (!text) return citel.reply(`Example : ${prefix}yts ${tlang().title} WhatsApp Bot`);
         let search = await yts(text);
-        let textt = "*YouTube Search*\n\n Result From " + text + "\n\n───────────────────\n";
+        let textt = "🧚🔍 SHENU QUEEN... *YouTube Search*\n\n Result From " + text + "\n\n───────────────────\n";
         let no = 1;
         for (let i of search.all) {
             textt += `⚡ No : ${no++}\n ❤Title : ${i.title}\n♫ Type : ${
@@ -495,7 +495,7 @@ cmd({
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        caption: ` 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

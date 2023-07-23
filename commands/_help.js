@@ -77,7 +77,7 @@ Secktor.cmd({
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `│⚠️ ${fancytext(plugins,1)}\n` ; }
+                   else { for (const plugins of cmds[category]) { str += `│⭕ ${fancytext(plugins,1)}\n` ; }
                          str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   

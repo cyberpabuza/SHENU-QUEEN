@@ -175,7 +175,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ┃👀 *Viewers:* ${anu.views}
 ┃⬆️ *Uploaded:* ${anu.ago}
 
-┃🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅
+┃🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅
  `,
                         headerType: 4,
                         contextInfo: {
@@ -380,7 +380,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 ◭👽 *Author:* ${anu.author.name}
 ╚────────────────✰
-⦿ *Url* : ${anu.url} react: "✅",
+⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
                 headerType: 4,

@@ -77,12 +77,12 @@ Secktor.cmd({
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `╏ ${fancytext(plugins,1)}\n ╏` ; }
+                   else { for (const plugins of cmds[category]) { str += `╏ ${fancytext(plugins,1)}\n` ; }
                          str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*`
+                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️* 📆 _𝗗𝗔𝗧𝗘:- ${date}_`
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,

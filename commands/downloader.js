@@ -168,7 +168,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        captio`───────╗
+                        caption:` ───────╗
 
  ┉━━━━◭☬◮━━━━━┉
 ┃🌐 *Duration:* ${anu.timestamp}

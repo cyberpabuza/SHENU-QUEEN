@@ -269,7 +269,6 @@ ${alivemessage}
 📶 *MEMORY:-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
 ║
 👨‍💻 *DEVELOPER:- Cyber-THUSHAN
-║   🧚‍♀️🎭 𝙎𝙃𝙀𝙉𝙐 𝙌𝙐𝙀𝙀𝙉 𝙈𝘿  🌿   ║
 _Type ${prefix}menu for my command list._`;
             let aliveMessage = {
                 image: {

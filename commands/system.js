@@ -238,7 +238,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "🔰",
+            react: "📲",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -250,7 +250,7 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-🕹️ *Version:-* _0.0.7_
+🕹️ *Version:-* _0.0.1_
 ║
 ⏳ *Uptime:-* _${runtime(process.uptime())}_
 ║
@@ -261,6 +261,15 @@ ${alivemessage}
 🔨 *OWNERNB:-* _wa.me/+94710109956_
 ║
 📡 *CREATED BY:-* ${Config.ownername}
+║
+🕛 *TIME:-*   ${time}
+║
+📆 *DATE:-* ${date}
+║
+📶 *MEMORY:-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+║
+👨‍💻 *DEVELOPER:- Cyber-THUSHAN
+║   🧚‍♀️🎭 𝙎𝙃𝙀𝙉𝙐 𝙌𝙐𝙀𝙀𝙉 𝙈𝘿  🌿   ║
 _Type ${prefix}menu for my command list._`;
             let aliveMessage = {
                 image: {

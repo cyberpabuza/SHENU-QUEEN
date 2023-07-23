@@ -249,26 +249,15 @@ cmd({
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
 ${alivemessage}
-🕹️ *Version:-* _0.0.1_
-║
-⏳ *Uptime:-* _${runtime(process.uptime())}_
-║
-👑 *Owner:-* _${Config.ownername}_
-║
-🕹️ *Branch:-* _${Config.BRANCH}_
-║
-🔨 *OWNERNB:-* _wa.me/+94710109956_
-║
-📡 *CREATED BY:-* ${Config.ownername}
-║
-🕛 *TIME:-*   ${time}
-║
-📆 *DATE:-* ${date}
-║
-📶 *MEMORY:-* ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-║
-👨‍💻 *DEVELOPER:- Cyber-THUSHAN
-_Type ${prefix}menu for my command list._`;
+
+*Version:-* _0.0.7_
+*Uptime:-* _${runtime(process.uptime())}_
+*Owner:-* _${Config.ownername}_
+*Branch:-* _${Config.BRANCH}_
+
+_Type ${prefix}menu for my command list._
+
+_Powered by ${Config.ownername}_`;
             let aliveMessage = {
                 image: {
                     url: await botpic(),

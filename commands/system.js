@@ -250,10 +250,10 @@ cmd({
 _This is  ${tlang().title}._
 ${alivemessage}
 
-*Version:-* _0.0.7_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
+╠🎭 *Version:-* _0.0.7_
+╠🕟 *Uptime:-* _${runtime(process.uptime())}_
+╠👑 *Owner:-* _${Config.ownername}_
+╠ℹ️ *Branch:-* _${Config.BRANCH}_
 
 _Type ${prefix}menu for my command list._
 

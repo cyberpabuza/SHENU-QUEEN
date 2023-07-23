@@ -33,7 +33,7 @@ module.exports = {
   warncount : process.env.WARN_COUNT === undefined ? 3 : process.env.WARN_COUNT,
   disablepm:  process.env.DISABLE_PM === undefined ? false : process.env.DISABLE_PM,
   levelupmessage:  process.env.LEVEL_UP_MESSAGE === undefined ? false : process.env.LEVEL_UP_MESSAGE,
- antibadword : process.env.ANTI_BAD_WORD || 'fuck,පකො,හුත්තො,pusy,miya kalifa,xnxx,xxx,sex,sex video,Brazzers,pronhub,වැල්,හුකන්නො,fucking,huththa,huththo,hukanna,fucked,pakaya,pako,ponnaya,ponnayo,kariya,kariyo,huththaa,hutta',
+ antibadword : process.env.ANTI_BAD_WORD || 'fuck,18+,lesbian,,හුත්තො,pusy,miya kalifa,xnxx,xxx,sex,sex video,Brazzers,pronhub,වැල්,හුකන්නො,fucking,huththa,huththo,hukanna,fucked,pakaya,pako,ponnaya,ponnayo,kariya,kariyo,huththaa,hutta',
   antilink:  process.env.ANTILINK_VALUES === undefined ? 'chat.whatsapp.com' : process.env.ANTILINK_VALUES,
   antilinkaction: process.env.ANTILINK_ACTION === undefined ? 'remove' : process.env.ANTILINK_ACTION,
   BRANCH: 'main', 

@@ -171,16 +171,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         caption:` 
  ┉━━━━◭☬◮━━━━━┉
 ┃♦ *Title:* ${anu.title}
-
 ┃🌐 *Duration:* ${anu.timestamp}
-
 ┃👀 *Viewers:* ${anu.views}
-
 ┃⬆️ *Uploaded:* ${anu.ago}
-
-┃👽 *Author:* ${anu.author.name}
-
-┃⚖️  *Url* : ${anu.url}*
 
 ┃🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅
  `,
@@ -226,13 +219,21 @@ cmd({
                 },
                 caption: `
 ╭───────────────◆
+
 │💫 ${tlang().title} 
+
 │♦️ *Youtube Player* ✨
+
 │🔨 *Title:* ${anu.title}
+
 │👩‍💻 *Duration:* ${anu.timestamp}
+
 │👀 *Viewers:* ${anu.views}
+
 │⬆️ *Uploaded:* ${anu.ago}
+
 │🔊 *Author:* ${anu.author.name}
+
 ╰────────────────◆
 ⦿ *Url* : ${anu.url}
 `,

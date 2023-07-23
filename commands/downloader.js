@@ -94,6 +94,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+            react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -116,16 +117,21 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                 },
                 caption: `
-╔───────────────◆
-┊🧚 ${tlang().title} 
-┊🚨 *Youtube Player* ✨
-┊ ┉━━━━◭☬◮━━━━━┉
-┊🎀 *Title:* ${anu.title}
-┊🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-┊⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────◆
+ ╔───────────────╗
+╠🧚 ${tlang().title} 
+
+╠🚨 *Youtube Player* ✨
+ ┉━━━━◭☬◮━━━━━┉
+╠🎀 *Title:* ${anu.title}
+
+╠🌐 *Duration:* ${anu.timestamp}
+
+╠👀 *Viewers:* ${anu.views}
+
+╠⬆️ *Uploaded:* ${anu.ago}
+
+╠👽 *Author:* ${anu.author.name}
+   ╚────────────────╝
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,
@@ -162,7 +168,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `*Title: ${anu.title}* *Duration: ${anu.timestamp}* *Uploaded: ${anu.ago}*`,
+                        caption: `📶 *Title: ${anu.title}* 
+                       🎀 *Duration: ${anu.timestamp}*
+                       ⬇️ *Uploaded: ${anu.ago}*`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

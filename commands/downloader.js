@@ -168,9 +168,18 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `📶 *Title: ${anu.title}* 
-                       🎀 *Duration: ${anu.timestamp}*
-                       ⬇️ *Uploaded: ${anu.ago}*`,
+                        captio`───────╗
+
+ ┉━━━━◭☬◮━━━━━┉
+┃🌐 *Duration:* ${anu.timestamp}
+
+┃👀 *Viewers:* ${anu.views}
+
+┃⬆️ *Uploaded:* ${anu.ago}
+
+┃👽 *Author:* ${anu.author.name}
+⦿ *Url* : ${anu.url}*
+  `,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

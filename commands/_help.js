@@ -89,7 +89,7 @@ Secktor.cmd({
                     footer: tlang().title,
                     headerType: 4
                 };
-             await Void.sendMessage(citel.chat, { audio: {url: "file:///storage/emulated/0/Download/SHENU%20QUEEN_mucik_Hmm.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/CYBER-THUSHAN/SH-VOICE-TEST/blob/main/SHENU%20QUEEN/mucik/Hmm.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

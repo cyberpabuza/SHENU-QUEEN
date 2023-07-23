@@ -168,9 +168,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption:` ───────╗
-
+                        caption:` 
  ┉━━━━◭☬◮━━━━━┉
+┃♦ *Title:* ${anu.title}
+
 ┃🌐 *Duration:* ${anu.timestamp}
 
 ┃👀 *Viewers:* ${anu.views}
@@ -178,8 +179,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ┃⬆️ *Uploaded:* ${anu.ago}
 
 ┃👽 *Author:* ${anu.author.name}
-⦿ *Url* : ${anu.url}*
-  `,
+
+┃⚖️  *Url* : ${anu.url}*
+
+┃🧚 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝙽𝙻𝙾𝙳 ✅
+ `,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
@@ -365,15 +369,15 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 🚨 *Youtube Player* 🌿
  ◨┉━━━━◭☬◮━━━━━┉◧
 
-🎀 *Title:* ${anu.title}
+◭🎀 *Title:* ${anu.title}
 
-🌐 *Duration:* ${anu.timestamp}
+◭🌐 *Duration:* ${anu.timestamp}
 
-👀 *Viewers:* ${anu.views}
+◭👀 *Viewers:* ${anu.views}
 
-⬆️ *Uploaded:* ${anu.ago}
+◭⬆️ *Uploaded:* ${anu.ago}
 
-👽 *Author:* ${anu.author.name}
+◭👽 *Author:* ${anu.author.name}
 ╚────────────────✰
 ⦿ *Url* : ${anu.url}
 `,

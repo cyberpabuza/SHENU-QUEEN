@@ -89,7 +89,7 @@ Secktor.cmd({
                     footer: tlang().title,
                     headerType: 4
                 };
-             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+             await Void.sendMessage(citel.chat, { audio: {url: "https://raw.githubusercontent.com/CYBER-THUSHAN/SH-VOICE-TEST/main/MP3/lv_0_20230722190453-mc.mp3?token=GHSAT0AAAAAACE6M3RR6DLCGLYAM4U23UV2ZF4TFCQ" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

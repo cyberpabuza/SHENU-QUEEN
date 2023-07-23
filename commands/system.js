@@ -254,7 +254,7 @@ ${alivemessage}
 ╠🕟 *Uptime:-* _${runtime(process.uptime())}_
 ╠👑 *Owner:-* _${Config.ownername}_
 ╠ℹ️ *Branch:-* _${Config.BRANCH}_
-
+╠📆 *TODAY DATE:-* _${date}_
 _Type ${prefix}menu for my command list._
 
 _Powered by ${Config.ownername}_`;

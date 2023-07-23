@@ -53,36 +53,36 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╔╍━┄─◧《☬🚨 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 🚨☬》◨╍────⊷\n`
+                let str = `╔╍━┄─◧╠☬ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ☬╣◨╍────⊷\n`
                 str +=
                     '```' + `│ ╔╍─────────────▽
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗨𝗦𝗘𝗥:- ${citel.pushName}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗢𝗪𝗡𝗘𝗥:- ${Config.ownername}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗨𝗦𝗘𝗥𝗦:- ${total}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗧𝗜𝗠𝗘:- ${time}
-║🧙‍♀️⃢⃩乡ᐇ│╠ 𝗗𝗔𝗧𝗘:- ${date}
+║🧙‍♀️⃢⃩乡ᐇ│👤╠ 𝗨𝗦𝗘𝗥:- ${citel.pushName}
+║🧙‍♀️⃢⃩乡ᐇ│🎊╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
+║🧙‍♀️⃢⃩乡ᐇ│🔮╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]
+║🧙‍♀️⃢⃩乡ᐇ│👑╠ 𝗢𝗪𝗡𝗘𝗥:- ${Config.ownername}
+║🧙‍♀️⃢⃩乡ᐇ│⚙️╠ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
+║🧙‍♀️⃢⃩乡ᐇ│👤╠ 𝗨𝗦𝗘𝗥𝗦:- ${total}
+║🧙‍♀️⃢⃩乡ᐇ│🕟╠ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
+║🧙‍♀️⃢⃩乡ᐇ│⚒️╠ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}
+║🧙‍♀️⃢⃩乡ᐇ│⏲️╠ 𝗧𝗜𝗠𝗘:- ${time}
+║🧙‍♀️⃢⃩乡ᐇ│📆╠ 𝗗𝗔𝗧𝗘:- ${date}
 ║ ╚──────────────➢
 ╚───────────────⊷\n
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `╔────❯★🚨 _${tiny(category)}_ ⚚\n` ;
+                   str += `╔────⛶ _${tiny(category)}_ ⛶\n` ;
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────☷ *${tiny(category)}* \n` ;      
                         for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
                         str += `╚╍━━━━━━━━━━━━──◭\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `│ ${fancytext(plugins,1)}\n` ; }
+                   else { for (const plugins of cmds[category]) { str += `│⛨ *${fancytext(plugins,1)}\n`* ; }
                          str += `╚╍━━━━━━━━━━━━━──◭\n`  ; 
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*`
+                str+= `_*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*_`
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,

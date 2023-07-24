@@ -174,8 +174,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ┃🌐 *Duration:* ${anu.timestamp}
 ┃👀 *Viewers:* ${anu.views}
 ┃⬆️ *Uploaded:* ${anu.ago}
-
-┃🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅
+🧚𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅
  `,
                         headerType: 4,
                         contextInfo: {
@@ -341,7 +340,7 @@ cmd({
 cmd({
             pattern: "song",
             react: "🎧",
-            alias :["song","so"],
+            alias :["song","so","𝚢𝚝"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -364,22 +363,23 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                },
                 caption: `
-╔───────────────✰
+╔◾───────────────◾✰
 🧚${tlang().title} 
 
 🚨 *Youtube Player* 🌿
  ◨┉━━━━◭☬◮━━━━━┉◧
 
-◭🎀 *Title:* ${anu.title}
+╔🎀 *Title:* ${anu.title}
 
-◭🌐 *Duration:* ${anu.timestamp}
+╔🌐 *Duration:* ${anu.timestamp}
 
-◭👀 *Viewers:* ${anu.views}
+╔👀 *Viewers:* ${anu.views}
 
-◭⬆️ *Uploaded:* ${anu.ago}
+╔⬆️ *Uploaded:* ${anu.ago}
 
-◭👽 *Author:* ${anu.author.name}
-╚────────────────✰
+╔👽 *Author:* ${anu.author.name}
+𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅
+╚◾────────────────◾✰
 ⦿ *Url* : ${anu.url}
 `,
                 footer: tlang().footer,

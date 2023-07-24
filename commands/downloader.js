@@ -70,10 +70,10 @@ cmd({
         let yts = require("secktor-pack");
         if (!text) return citel.reply(`Example : ${prefix}yts ${tlang().title} WhatsApp Bot`);
         let search = await yts(text);
-        let textt = "🧚🔍 SHENU QUEEN... *YouTube Search*\n\n Result From " + text + "\n\n───────────────────\n";
+        let textt = "_🧚🔍 SHENU QUEEN... *YouTube Search*_\n\n Result From " + text + "\n\n───────────────────\n";
         let no = 1;
         for (let i of search.all) {
-            textt += `⚡ No : ${no++}\n ❤Title : ${i.title}\n♫ Type : ${
+            textt += `🎀 No : ${no++}\n ❤Title : ${i.title}\n♫ Type : ${
       i.type
     }\n🙈Views : ${i.views}\n⌛Duration : ${
       i.timestamp
@@ -117,7 +117,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     url: anu.thumbnail,
                 },
                 caption: `
- ╔───────────────╗
+ ╔────────┅───────╗
 ╠🧚 ${tlang().title} 
 
 ╠🚨 *Youtube Player* ✨
@@ -131,8 +131,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╠⬆️ *Uploaded:* ${anu.ago}
 
 ╠👽 *Author:* ${anu.author.name}
-   ╚────────────────╝
-⦿ *Url* : ${anu.url}
+
+╠📡 *Url* : ${anu.url}
+   ╚────────┅────────╝
+☬ 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳✅
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -367,21 +369,21 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 🧚${tlang().title} 
 
 🚨 *Youtube Player* 🌿
- ◨┉━━━━◭☬◮━━━━━┉◧
+ ◨┉━━━━╚◭☬◮╝━━━━━┉◧
 
-╏🎀 *Title:* ${anu.title}╝
+╏🎀 *Title:* ${anu.title}
 
-╏🌐 *Duration:* ${anu.timestamp}╝
+╏🌐 *Duration:* ${anu.timestamp}
 
 ╏👀 *Viewers:* ${anu.views}
 
 ╏⬆️ *Uploaded:* ${anu.ago}
 
 ╏👽 *Author:* ${anu.author.name}
-𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅
+
+╏📡 *Url* : ${anu.url}
 ╚◾────────────────◾✰
-⦿ *Url* : ${anu.url}
-`,
+𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳✅`,
                 footer: tlang().footer,
                 headerType: 4,
             };

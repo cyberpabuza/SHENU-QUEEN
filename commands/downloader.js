@@ -434,10 +434,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
-                            renderLargerThumbnail: true,
+                            renderLargerThumbnail: fales,
                             thumbnailUrl: search.all[0].thumbnail,
                             mediaUrl: anu.url,
-                            mediaType: 1,
+                            mediaType: 2,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: anu.url,
                         },

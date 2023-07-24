@@ -384,9 +384,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏📡 *Url* : ${anu.url}
 ╚◾────────────────◾✰
 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳✅`,
-react: "🎧",
                 footer: tlang().footer,
                 headerType: 4,
+                react: "🎧",
             };
             await Void.sendMessage(citel.chat, buttonMessaged, {
                 quoted: citel,

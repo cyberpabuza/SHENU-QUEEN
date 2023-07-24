@@ -386,7 +386,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳✅`,
                 footer: tlang().footer,
                 headerType: 4,
-                react: "🎧",
             };
             await Void.sendMessage(citel.chat, buttonMessaged, {
                 quoted: citel,

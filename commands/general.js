@@ -151,7 +151,7 @@ cmd({
 )
 */
 //---------------------------------------------------------------------------
-cmd({
+/* cmd({
         pattern: "status",
         alias: ["about"],
         desc: "To check bot status",
@@ -195,10 +195,11 @@ cmd({
 
     }
 )
-
+*/
 //---------------------------------------------------------------------------
 cmd({
     pattern: "theme",
+    react: "📳",
     desc: "To find all themes",
     category: "general",
     filename: __filename,
@@ -206,8 +207,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*All available themes in Secktor*"
-str+=`1. SECKTOR\n2. ADAM\n3. AYANOKOJI\n4. EDITH\n5. FRIDAY\n6. GENOS\n7. GIDEON\n8. GOKU\n9. LUFFY\n10. NARUTO\n11. NEZUKO\n12. PARKER\n13. ZEROTWO\n14. Eren Jeager(Coming Soon)\n\n these are the themes of Secktor Userbot.\_Reply ${prefix}setvar THEME:ZEROTWO`
+let str=" *All available themes in SHENU QUEEN 🧚* "
+str+=`1. SHENU-QUEEN\n\n these are the themes of SHENU QUEEN Userbot.\_Reply ${prefix}setvar THEME:SHENU-QUEEN`
 return citel.reply(str)
     
 }

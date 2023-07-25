@@ -131,7 +131,7 @@ Secktor.cmd({
         pattern: "owner",
         desc: "To find owner number",
         category: "general",
-        react: "🕹️",
+        react: "👤",
         filename: __filename
     },
     async(Void, citel) => {
@@ -148,7 +148,7 @@ Secktor.cmd({
                 externalAdReply: {
                     title: Config.ownername,
                     body: 'Touch here.',
-                    renderLargerThumbnail: true,
+                    renderLargerThumbnail: false,
                     thumbnailUrl: ``,
                     thumbnail: log0,
                     mediaType: 2,
@@ -157,8 +157,8 @@ Secktor.cmd({
                 },
             },
         };
-        await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
-                return await Void.sendMessage(citel.chat, buttonMessaged);
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
         });
 
     }

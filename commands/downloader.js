@@ -42,7 +42,7 @@ cmd({
             if (!text) return citel.reply('Please give me Sentence to change into audio.')
             let texttts = text
             const ttsurl = googleTTS.getAudioUrl(texttts, {
-                lang: "en",
+                lang: "si",
                 slow: false,
                 host: "https://translate.google.com",
             });

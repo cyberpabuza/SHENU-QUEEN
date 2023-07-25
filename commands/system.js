@@ -31,6 +31,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "qr",
+            react: "🖥️",
             category: "owner",
             filename: __filename,
             desc: "Sends CitelsVoid Qr code to scan and get your session id."
@@ -48,7 +49,7 @@ cmd({
                 headerType: 4,
                 contextInfo: {
                     externalAdReply: {
-                        title: '*SHENU QUEEN MD QR 🧚*',
+                        title: '𝗦𝗛𝗘𝗡𝗨-𝗤𝗨𝗘𝗘𝗡-𝗠𝗗🧚',
                         body: 'Get you Session ID',
                         thumbnail: log0,
                         mediaType: 2,
@@ -64,7 +65,7 @@ cmd({
 
             });
             await sleep(20 * 1000)
-            return citel.reply('Your session is over now.')
+            return citel.reply('*🔮Your session is over now.*')
 
 
         }

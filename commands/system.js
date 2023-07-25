@@ -43,14 +43,14 @@ cmd({
                 return
             }
             let buttonMessaged = {
-                image: { url: 'https://sampandey00011-af12d376b8d4.herokuapp.com/id' },
-                caption: `📲 *_Scan Qr within 15 seconds_*\nYou'll get session id in your log number.`,
+                image: { url: 'https://telegra.ph/file/3db26fd64766de9ef24fd.jpg' },
+                caption: `📲 *_Caming soon Qr_*\nYou'll get session id in your log number.`,
                 footer: ` Session`,
                 headerType: 4,
                 contextInfo: {
                     externalAdReply: {
                         title: '𝗦𝗛𝗘𝗡𝗨-𝗤𝗨𝗘𝗘𝗡-𝗠𝗗🧚',
-                        body: 'Get you Session ID',
+                        body: '*Get you Session ID*',
                         thumbnail: log0,
                         mediaType: 2,
                         mediaUrl: ``,

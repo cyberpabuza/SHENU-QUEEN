@@ -158,28 +158,9 @@ Secktor.cmd({
             },
         };
         return await Void.sendMessage(citel.chat, buttonMessaged, {
-            quoted: citel,
+        quoted: citel,
+       
+        await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+                return await Void.sendMessage(citel.chat, buttonMessaged);
         });
-
-    }
-)
-
-Secktor.cmd({
-    pattern: "file",
-    desc: "to get extact name where that command is in repo.\nSo user can edit that.",
-    category: "general",
-    react: "🥀",
-    filename: __filename
-},
-async(Void, citel, text) => {
- const { commands } = require('../lib');
- let arr = [];
-        const cmd = commands.find((cmd) => cmd.pattern === (text.split(" ")[0].toLowerCase()))
-        if (!cmd) return await citel.reply("*❌No Such commands.*");
-        else arr.push(`*🍁Command:* ${cmd.pattern}`);
-        if (cmd.category) arr.push(`*🧩Type:* ${cmd.category}`);
-        if(cmd.filename) arr.push(`✨FileName: ${cmd.filename}`)
-        return citel.reply(arr.join('\n'));
-
-
-})
+.           

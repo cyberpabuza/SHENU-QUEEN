@@ -48,7 +48,7 @@ cmd({
                 headerType: 4,
                 contextInfo: {
                     externalAdReply: {
-                        title: 'Secktor Session',
+                        title: '*SHENU QUEEN MD QR 🧚*',
                         body: 'Get you Session ID',
                         thumbnail: log0,
                         mediaType: 2,

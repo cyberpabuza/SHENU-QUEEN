@@ -141,8 +141,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             };
             await Void.sendMessage(citel.chat, buttonMessaged, {
                 quoted: citel,
-            });
-   
+            })
+             await Void.sendMessage(citel.chat, { react: {
+        text: "✅",
+        key: txt2.key,
+            } } );
             
             let urlYt = anu.url
             const getRandom = (ext) => {

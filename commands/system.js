@@ -251,7 +251,7 @@ cmd({
             let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by SamPandey001.*`
             const alivtxt = `
 *Hello, 𝐼 𝑎𝑚 𝑆𝐻𝐸𝑁𝑈 𝑄𝑈𝐸𝐸𝑁 🧚,*
-_This is  ${tlang().title}._
+_💫⃟✦⃝🌸᭄᭄᭄̊̊̊̊̊̊🎆࿔😍␅HOW CAN HELP YOU🌻⃝♡꧂ᘝᘞ★._
 ${alivemessage}
 
 🕹️ *Version:-* _0.0.1_

@@ -71,25 +71,25 @@ Secktor.cmd({
 ` + '```'
                 for (const category in cmds) 
                 {
-                   str += `      ✧ *${tiny(category)}* ▼\n` ;
+                   str += `╔────❯★ ~${tiny(category)}~ ★\n` ;
                    if(text.toLowerCase() == category.toLowerCase()){ str = `╔─────♦ *${tiny(category)}* \n` ;      
                         for (const plugins of cmds[category]) { str += `│🔰 ${fancytext(plugins,1)}\n` ; }
-                        str += `╚◐━━━━━━━━━━━━──□\n`  ;
+                        str += `╚━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `╏ *_${fancytext(plugins,1)}\n*_ ; }
-                         str += `╚◐━━━━━━━━━━━━━──□\n`  ; 
+                   else { for (const plugins of cmds[category]) { str += `│⭕ ${fancytext(plugins,1)}\n` ; }
+                         str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️* 📆 _𝗗𝗔𝗧𝗘:- ${date}_`
+                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*`
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,
                     footer: tlang().title,
                     headerType: 4
                 };
-             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230725-WA0324.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

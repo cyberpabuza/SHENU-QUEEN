@@ -104,6 +104,7 @@ cmd({
     //---------------------------------------------------------------------------
     cmd({
         pattern: "url",
+        react: "🖇️",
         alias : ['createurl'],
         category: "misc",
         filename: __filename,
@@ -123,6 +124,7 @@ cmd({
 //---------------------------------------------------------------------------
 cmd({
     pattern: "trt",
+    react: "📈",
     alias :['translate'],
     category: "misc",
     filename: __filename,
@@ -208,6 +210,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "ban",
+            react: "⛔",
             category: "owner",
             filename: __filename,
             desc: "Bans user from using bot."
@@ -247,7 +250,7 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by SamPandey001.*`
             const alivtxt = `
-*Hello, ${citel.pushName},*
+*Hello, 𝐼 𝑎𝑚 𝑆𝐻𝐸𝑁𝑈 𝑄𝑈𝐸𝐸𝑁 🧚,*
 _This is  ${tlang().title}._
 ${alivemessage}
 

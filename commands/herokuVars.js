@@ -9,6 +9,7 @@ if(Config.HEROKU_APP_NAME && Config.HEROKU_API_KEY ){
         
          cmd({
              pattern: "setsudo",
+             react: "✅",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
              filename: __filename
@@ -41,6 +42,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
 //--------------------------------------------------------------------
  cmd({
              pattern: "getsudo",
+             react: "✅",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
              filename: __filename
@@ -50,6 +52,7 @@ async(Void, citel, text) => {  return await  citel.reply(global.sudo);})
 
  cmd({
              pattern: "delsudo",
+             react: "⛔",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
              filename: __filename
@@ -95,6 +98,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
         
 cmd({
         pattern: "allvar",
+        react: "✅",
         alias:['getallvar','allvars'],
         desc: "To get All  Heroku Vars",
         category: "tools",
@@ -123,6 +127,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`, { headers })
 //----------------------------------------------------------------------------------
 cmd({
         pattern: "addvar",
+        react: "✅",
         desc: "To Set Heroku Vars",
         category: "tools",
         filename: __filename
@@ -155,6 +160,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
 
 cmd({
         pattern: "getvar",
+        react: "✅",
         desc: "To Get A Heroku Var",
         category: "tools",
         filename: __filename
@@ -183,6 +189,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`, { headers })
 //----------------------------------------------------------------------------------
 cmd({
         pattern: "setvar",
+        react: "♦",
         desc: "To Set Heroku Vars",
         category: "tools",
         filename: __filename

@@ -138,10 +138,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 `,
                 footer: tlang().footer,
                 headerType: 4,
-                                                await Void.sendMessage(citel.chat, { react: {
-        text: "✅",
-        key: txt2.key,
-            } } );
             };
             await Void.sendMessage(citel.chat, buttonMessaged, {
                 quoted: citel,
@@ -207,6 +203,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
+ react: "✓",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
             filename: __filename,
@@ -385,8 +382,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏👽 *Author:* ${anu.author.name}
 
 ╏📡 *Url* : ${anu.url}
+*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙱𝙻𝙾𝙳 ✅*
 ╚◾────────────────◾✰
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*`,
+`,
                 footer: tlang().footer,
                 headerType: 4,
             };

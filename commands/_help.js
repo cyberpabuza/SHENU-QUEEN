@@ -77,7 +77,7 @@ Secktor.cmd({
                         str += `╚━━━━━━━━━━━━━──⊷\n`  ;
                         break ;
                    }
-                   else { for (const plugins of cmds[category]) { str += `│⭕ ${fancytext(plugins,1)}\n` ; }
+                   else { for (const plugins of cmds[category]) { str += `✅ _${fancytext(plugins,1)}\n_` ; }
                          str += `╚━━━━━━━━━━━━━━──⊷\n`  ; 
                    }
   
@@ -89,7 +89,7 @@ Secktor.cmd({
                     footer: tlang().title,
                     headerType: 4
                 };
-             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/alive.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+             await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230725-WA0324.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
             }
         }

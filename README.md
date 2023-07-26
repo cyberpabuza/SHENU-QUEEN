@@ -21,7 +21,7 @@
 
 
 
-<p align="center">
+## <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=𝙃𝙊𝙒+𝘾𝘼𝙉+𝙃𝙀𝙇𝙋+𝙔𝙊𝙐  👩‍🔧" alt="">
 </p>
 

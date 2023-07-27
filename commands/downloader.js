@@ -432,7 +432,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     fileName: titleYt + ".mp3",
                     headerType: 4,
                     contextInfo: {
-                        externalAdReply: {
                         },
                     },
                 }

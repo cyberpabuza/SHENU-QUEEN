@@ -250,7 +250,7 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `_*A bot developed by CYBER-THUSHN*_`
             const alivtxt = `
-╔━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+╔━━━━━❰*SHENU QUEEN MD*❱━━━━━━╗
 *Hello, I AM SHENU QUEEM MD 👩‍💻*⃟
 ⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
 _*HOW CAN HELP YOU*._
@@ -267,10 +267,12 @@ ${alivemessage}
 ❲◧┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄◨❳
 🔨 *OWNERNB:-* _wa.me/+94710109956_
 ❲◧┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄◨❳
+🔱 *PUBLIC GROUP:* _https://chat.whatsapp.com/KCb5XO0jhm676fNwkJz93o_
+❲◧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◨❳
 📋 *Get the commands List Apply .menu*
 ❲◧┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄◨❳
 _*MULTI DEVICE WHATSAPP BOT*._
-
+_*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝙲𝙰𝙼𝙸𝙽𝙶 𝚂𝙾𝙾𝙽*_
 _Powered by ${Config.ownername}_
 `;
             let aliveMessage = {

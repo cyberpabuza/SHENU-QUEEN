@@ -706,9 +706,42 @@ async function tiktokdl (url) {
     } else return { status: false };
 };
 //---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+async function tiktokdl (url) {
+    const gettoken = await axios.get("https://tikdown.org/id");
+    const $ = cheerio.load(gettoken.data);
+    const token = $("#download-form > input[type=hidden]:nth-child(2)").attr("value");
+    const param = {
+        url: url,
+        _token: token,
+    };
+    const { data } = await axios.request("https://tikdown.org/getAjax?", {
+        method: "post",
+        data: new URLSearchParams(Object.entries(param)),
+        headers: {
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "user-agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36",
+        },
+    });
+    var getdata = cheerio.load(data.html);
+    if (data.status) {
+        return {
+            status: true,
+            thumbnail: getdata("img").attr("src"),
+            video: getdata("div.download-links > div:nth-child(1) > a").attr("href"),
+            audio: getdata("div.download-links > div:nth-child(2) > a").attr("href"),
+        };
+    } else return { status: false };
+};
+
+
+
+
+//---------------------------------------------------------------------------
+
 cmd({
             pattern: "tiktok",
-	    react: "🎊",
 	    alias :  ['tt','ttdl'],
             desc: "Downloads Tiktok Videos Via Url.",
             category: "downloader",
@@ -724,47 +757,4 @@ cmd({
  console.log("url : " , video  ,"\nThumbnail : " , thumbnail ,"\n Audio url : " , audio )
  if (status) return await Void.sendMessage(citel.chat, {video : {url : video } , caption : Config.caption } , {quoted : citel });
  else return await citel.reply("Error While Downloading Your Video") 
-		
-//---------------------------------------------------------------------------	
-	cmd({
-            pattern: "facebook",
-	    alias :  ['fb','fbdl'],
-	    react: "👲🏻",
-            desc: "Downloads fb videos  .",
-            category: "downloader",
-            filename: __filename,
-            use: '<add fb url.>'
-        },
-
-        async(Void, citel, text) => {
-if(!text) return citel.reply(`*_Please Give me Facebook Video Url_*`);
-fbInfoVideo.getInfo(text)
-  .then(info =>{
-let vurl=info.video.url_video;
-// citel.reply('name:-------'+info.video.title);
-
-      let data  ="*Video Name✅     :* "+  info.video.title;
-	data +="\n*Video Views✅   :* "+  info.video.view;
-	data +="\n*Video Comments✅ :* "+  info.video.comment;
-	data +="\n*Video Likes✅    :* "+info.video.reaction.Like ;
-	//data +="\n*Video Link     :* "+  vurl;
-//citel.reply("    FACEBOOK DOWNLOADER  \n"+data)
-//console.log(info);
-	data +=Config.caption ;
-                        let buttonMessage = {
-                        video: {url:vurl},
-                        mimetype: 'video/mp4',
-                        fileName: info.video.title+`.mp4`,
-                        caption :"     *FACEBOOK DOWNLOADER*  \n"+data
-                        
-                    }
-                 Void.sendMessage(citel.chat, buttonMessage, { quoted: citel });
-
-
-
-})
-  .catch(err => {citel.reply("Error, Video Not Found\n *Please Give Me A Valid Url*");
-			console.error(err);})
-}
-)
 })

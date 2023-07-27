@@ -435,18 +435,12 @@ cmd({
 		let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
                         mimetype: 'video/mp4',
-                        caption:`┉━━━━◭☬◮━━━━━┉
-┃♦ *Title:* ${anu.title}
-┃🌐 *Duration:* ${anu.timestamp}
-┃👀 *Viewers:* ${anu.views}
-┃⬆️ *Uploaded:* ${anu.ago}
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
- `,
+                        caption: "𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅🎞️" + Config.caption ,
                     }
                  Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
 
-                }catch(e){return await citel.reply("Error While Downloading Video : " + e ); }
+                }catch(e){return await citel.reply("_Error While Downloading Video_ : " + e ); }
 		    
 		    
 		    
@@ -704,7 +698,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏👽 *Author:* ${anu.author.name}
 
 ╏📡 *Url* : ${anu.url}
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙱𝙻𝙾𝙳 ✅*
+*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
 ╚┉────────────────┉✰
 `,
                 footer: tlang().footer,

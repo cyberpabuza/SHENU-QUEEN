@@ -268,7 +268,7 @@ ${alivemessage}
 ❲□┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄□❳
 📋 *Get the commands List Apply .menu*
 ❲□┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄□❳
-_-MULTI DEVICE WHATSAPP BOT*._
+_*MULTI DEVICE WHATSAPP BOT*._
 
 _Powered by ${Config.ownername}_
 `;

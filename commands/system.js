@@ -250,12 +250,13 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `_*A bot developed by CYBER-THUSHN*_`
             const alivtxt = `
+╔━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 *Hello, I AM SHENU QUEEM MD 👩‍💻*⃟
 ⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
 _*HOW CAN HELP YOU*._
-🔮━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍🔮
+🔮━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━🔮
 ${alivemessage}
-
+╭╍─────────────────╍╮
 🕹️ *Version:-* _0.0.1_
 ❲◧┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄◨❳
 ⏳ *Uptime:-* _${runtime(process.uptime())}_

@@ -437,7 +437,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                             body: citel.pushName,
                             mediaUrl: anu.url,
                             mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: anu.url,
                         },
                     },

@@ -433,10 +433,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            mediaUrl: anu.url,
-                            mediaType: 1,
                         },
                     },
                 }

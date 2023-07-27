@@ -430,17 +430,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 2,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
                         },
                     },
                 }

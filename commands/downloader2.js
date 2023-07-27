@@ -400,8 +400,10 @@ cmd({
             return Void.sendMessage(citel.chat,{audio: {url: ttsurl}, mimetype: "audio/mpeg", fileName: `ttsCitelVoid.m4a` },{quoted: citel } );
         }
 
-    )
+   )
+/*
     //---------------------------------------------------------------------------
+/*
 cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
@@ -470,9 +472,10 @@ cmd({
                 sections
             }
             return Void.sendMessage(citel.chat, listMessage, {quoted: citel })
-*/
+
         }
-    )
+   )
+	*/
     //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
@@ -653,7 +656,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*
         }
     )
     //---------------------------------------------------------------------------
-
+/*
 cmd({
             pattern: "song",
             alias: ["audio"],
@@ -671,7 +674,7 @@ cmd({
                 let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
-           
+           */
            
            
            

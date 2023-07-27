@@ -437,7 +437,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                             body: citel.pushName,
                             mediaUrl: anu.url,
                             mediaType: 1,
-                            sourceUrl: anu.url,
                         },
                     },
                 }

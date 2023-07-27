@@ -248,11 +248,12 @@ cmd({
             desc: "is bot alive??"
         },
         async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `꧁⃟✯*A bot developed by CYBER-THUSHN.✯*⃟꧂`
+            let alivemessage = Config.ALIVE_MESSAGE || `꧁⃟✯*A bot developed by CYBER-THUSHN*.✯⃟꧂`
             const alivtxt = `
 *Hello, 𝐼 𝑎𝑚 𝑆𝐻𝐸𝑁𝑈 𝑄𝑈𝐸𝐸𝑁 🧚⃟
 ⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
-_💫⃟✦⃝🌸᭄🎆࿔😍␅HOW CAN HELP YOU🌻⃝♡꧂ᘝᘞ★._
+_💫⃟🎆࿔😍␅HOW CAN HELP YOU🌻⃝♡꧂★._
+🔮╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍🔮
 ${alivemessage}
 
 🕹️ *Version:-* _0.0.1_

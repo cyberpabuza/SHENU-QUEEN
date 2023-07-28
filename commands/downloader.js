@@ -429,7 +429,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
+                    fileName: ".mp3",
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {

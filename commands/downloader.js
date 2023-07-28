@@ -183,7 +183,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                                 title: titleYt,
                                 body: citel.pushName,
                                 thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
+                                renderLargerThumbnail: false,
                                 mediaType: 2,
                                 mediaUrl: search.all[0].thumbnail,
                                 sourceUrl: search.all[0].thumbnail

@@ -5,9 +5,9 @@
   "LANGCODE": "en",
   "STRINGS": {
       "updater": {
-          "UPDATE": "*Your bot is already on latest version Darling*",
+          "UPDATE": "*Your bot is already on latest version Darling♻️*",
           "NEW_UPDATE": "*There is a new update available for the bot!*\n\n*Changes:*\n",
-          "UPDATED_LOCAL": "*Successfully Updated!*"
+          "UPDATED_LOCAL": "*Successfully Updated!✅*"
       },
       "global": {
           "greet2": "Konnichiwa!(💚ω💚)",
@@ -32,21 +32,21 @@
           "antlink": "Link Detected.\n*Good Bye Sir*",
           "session": "\n*This is your session.sam.json,keep it safe and store it properly*\n_Now Upload This json file in Your Forked Repo_\n Connect your repo to Heroku and *Deploy Branch* and Bot will run for Always\n\n*𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 𝒁𝒆𝒓𝒐 𝑻𝒘𝒐*",
           "mention": " Please mention any user Darling",
-          "title": "🎀𝘚𝘏𝘌𝘕𝘜-𝘘𝘜𝘌𝘌𝘕-𝘔𝘋",
-          "footer": "🎀𝘚𝘏𝘌𝘕𝘜-𝘘𝘜𝘌𝘌𝘕-𝘔𝘋",
+          "title": "𝘚𝘏𝘌𝘕𝘜-𝘘𝘜𝘌𝘌𝘕-𝘔𝘋",
+          "footer": "𝘚𝘏𝘌𝘕𝘜-𝘘𝘜𝘌𝘌𝘕-𝘔𝘋",
           "by": "Made by: *CitelVoid*",
           "chat_desc": "Options Avilable* : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete",
           "success": "Done ✓",
           "dot": "Darling📍, Do you mean *-help?*",
           "couple_male": "*I dont want to die alone,I want a female yaar*",
           "couple_female": "*I dont want to die alone,I want a male yaar*",
-          "admin": "𝑻𝒉𝒊𝒔 𝑪𝒐𝒎𝒎𝒂𝒏𝒅 𝒊𝒔 𝒐𝒏𝒍𝒚 𝒇𝒐𝒓 𝑮𝒓𝒐𝒖𝒑 𝑨𝒅𝒎𝒊𝒏⚠❯🔰!",
-          "botAdmin": "𝑰𝒇 𝒚𝒐𝒖 𝒓𝒆𝒂𝒍𝒍𝒚 𝒘𝒂𝒏𝒕 𝒎𝒆 𝒕𝒐 𝒅𝒐 𝒕𝒉𝒂𝒕,𝑮𝒊𝒗𝒆 𝒎𝒆 𝒂𝒅𝒎𝒊𝒏 𝒑𝒓𝒊𝒗𝒊𝒍𝒆𝒈𝒆❗",
-          "owner": "𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐢𝐬 𝐨𝐧𝐥𝐲 𝐟𝐨𝐫 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫 ⚠❯🔰",
-          "group": "𝑻𝒉𝒊𝒔 𝑭𝒆𝒂𝒕𝒖𝒓𝒆 𝒊𝒔 𝑶𝒏𝒍𝒚 𝑭𝒐𝒓 𝑮𝒓𝒐𝒖𝒑𝒔🔰",
-          "private": "𝑻𝒉𝒊𝒔 𝒇𝒆𝒂𝒕𝒖𝒓𝒆 𝒊𝒏 𝒐𝒏𝒍𝒚 𝒇𝒐𝒓 𝒕𝒉𝒆 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫 ⚠❯🔰",
-          "bot": "𝑻𝒉𝒊𝒔 𝒇𝒆𝒂𝒕𝒖𝒓𝒆 𝒊𝒏 𝒐𝒏𝒍𝒚 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒏𝒖𝒎𝒃𝒆𝒓⚠❯🔰",
-          "wait": "𝑷𝒓𝒐𝒄𝒆𝒔𝒔𝒊𝒏𝒈 𝒚𝒐𝒖𝒓 𝒓𝒆𝒒𝒖𝒆𝒔𝒕✅"
+          "admin": "𝚃𝙷𝙸𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝙸𝚂 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 🧛!",
+          "botAdmin": "𝙸𝙵 𝚈𝙾𝚄 𝚁𝙴𝙰𝙻𝙻𝚈 𝚆𝙰𝙽𝚃 𝙼𝙴 𝚃𝙾 𝙳𝙾 𝙶𝙸𝚅𝙴 𝚃𝙷𝙰𝚃 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽 𝙿𝚁𝙸𝚅𝙸𝙻𝙴𝙶𝙴 🧛❗",
+          "owner": "𝚃𝙷𝙸𝚂 𝙲𝙾𝙾𝙼𝙰𝙽𝙳 𝙸𝚂 𝙾𝙽𝙻𝚈 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 👩‍💻",
+          "group": "𝚃𝙷𝙸𝚂 𝙵𝙴𝙰𝚃𝚄𝚁𝙴 𝙸𝚂 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝙶𝚁𝙾𝚄𝙿 ⛔",
+          "private": "𝚃𝙷𝙸𝚂 𝙵𝙴𝙰𝚃𝚄𝚁𝙴 𝙸𝙽 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝚃𝙷𝙴 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 👩‍💻",
+          "bot": "𝚃𝙷𝙸𝚂 𝙵𝙴𝙰𝚃𝚄𝚁𝙴 𝙸𝙽 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝚃𝙷𝙴 𝙱𝙾𝚃 𝙽𝚄𝙼𝙱𝙴𝚁 🧛",
+          "wait": "𝚙𝚛𝚘𝚌𝚎𝚜𝚜𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 𝚛𝚎𝚚𝚞𝚎𝚜𝚝✅"
       },
       "error": {
           "text": "*Uhh,Got an Error*"

@@ -73,6 +73,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "unban",
+ react: "✔",
             category: "misc",
             filename: __filename,
             desc: "Unbans banned user (from using bot)."
@@ -242,7 +243,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "alive",
-            react: "📲",
+            react: "🎀",
             category: "general",
             filename: __filename,
             desc: "is bot alive??"
@@ -250,7 +251,7 @@ cmd({
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `_*A bot developed by CYBER-THUSHN*_`
             const alivtxt = `
-╔━━━━━❰*SHENU QUEEN MD*❱━━━━━━╗
+╔━━━━❰ *SHENU QUEEN MD* ❱━━━━━╗
 *Hello, I AM SHENU QUEEM MD 👩‍💻*⃟
 ⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
 _*HOW CAN HELP YOU*._

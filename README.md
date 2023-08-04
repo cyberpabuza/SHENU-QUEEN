@@ -1,3 +1,5 @@
+  <a href="https://github.com/diggilly"><img src="http://readme-typing-svg.herokuapp.com?color=FFFFFF&center=true&vCenter=true&multiline=false&lines=SHENU+QUEEN+MD+v1+MultiDevice;The+stable+version+whatsApp+bot;Developed+by+CYBER-THUSHAN~digital;Give+star+and+forks+this+Repo+✨" alt="AnyaReadme">
+</p>
 ##   SHENU QUEEN MD 🎭🧙
 <p align="center">  
   <a href="tiktok.com/@shenu_status21">

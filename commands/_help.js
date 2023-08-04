@@ -53,9 +53,9 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `╔╍───╠☬ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ☬╣╍────⊷\n`
+                let str = `╔╍──╠☬ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ☬╣──╍╗\n`
                 str +=
-                    '```' + `│ ╔╍─────────────◆
+                    '```' + `│ ╔╍─────────────╍╗
 │👤│╠ 𝗨𝗦𝗘𝗥:-  ${citel.pushName}
 │💈│╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
 │🎨│╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]

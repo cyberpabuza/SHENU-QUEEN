@@ -22,7 +22,7 @@ let result = await download(text)
         image: {
             url: icon,
         },
-        caption: `*Hello ${citel.pushName} , _𝑃𝑙𝑒𝑎𝑠𝑒 𝑤𝑎𝑖𝑡...._ ,𝐼 𝐴𝑚 𝐹𝑖𝑛𝑑𝑖𝑛𝑔 𝑌𝑜𝑢𝑟 𝐴𝑝𝑘 𝐹𝑖𝑙𝑒*\n╔─────▣\n│♦️ ${tlang().title}\n│  *Playstore Download*\n│📁 *App name:* ${getname}\n│ℹ️ *Last update:* ${lastupdate}\n│#️⃣ *Package name:* ${packagename}\n│📶 *File size:* ${size}\n╚──────────▣\n⦿ *You can also download the App from the link below* 👇: \n${applink}`,
+        caption: `*Hello ${citel.pushName} , _𝑃𝑙𝑒𝑎𝑠𝑒 𝑤𝑎𝑖𝑡...._ ,𝐼 𝐴𝑚 𝐹𝑖𝑛𝑑𝑖𝑛𝑔 𝑌𝑜𝑢𝑟 𝐴𝑝𝑘 𝐹𝑖𝑙𝑒*\n╔─────▣\n *Playstore Download*\n *App name:* ${getname}\n *Last update:* ${lastupdate}\n *Package name:* ${packagename}\n *File size:* ${size}\n╚──────────▣\n⦿ 𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙰𝙿𝙿 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅`,
     })
     return Void.sendMessage(citel.chat, {
         document: {

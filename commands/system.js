@@ -258,21 +258,21 @@ _*HOW CAN HELP YOU*._
 🔮━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━🔮
 ${alivemessage}
 ╭╍─────────────────╍╮
-🤖 *BOT NAME:- _SHENU-QUEEN_
+🤖 *ʙᴏᴛ ɴᴀᴍᴇ:-* _SHENU-QUEEN_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-🕹️ *Version:-* _0.0.1_
+🕹️ *ᴠᴇʀꜱɪᴏɴ:-* _0.0.1_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-⏳ *Uptime:-* _${runtime(process.uptime())}_
+⏳ *ᴜᴘᴛɪᴍᴇ:-* _${runtime(process.uptime())}_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-👑 *Owner:-* _${Config.ownername}_
+👑 *ᴏᴡɴᴇʀ:-* _${Config.ownername}_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-🕹️ *Branch:-* _${Config.BRANCH}_
+🕹️ *ʙʀᴀɴᴄʜ:-* _${Config.BRANCH}_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-🔨 *OWNERNB:-* _wa.me/+94710109956_
+🔨 *ɴᴜᴍʙᴇʀ:-* _wa.me/+94710109956_
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
-🔱 *PUBLIC GROUP:* _https://chat.whatsapp.com/KCb5XO0jhm676fNwkJz93o_
+🔱 *ɢʀᴏᴜᴘ:-* _https://chat.whatsapp.com/KCb5XO0jhm676fNwkJz93o_
  ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-📋 *Get the commands List Apply .menu*
+📋 *𝙶𝙴𝚃 𝚃𝙷𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝙻𝙸𝚂𝚃 𝙰𝙿𝙿𝙻𝚈 .𝚖𝚎𝚗𝚞*
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
 _*MULTI DEVICE WHATSAPP BOT*._
 ╔═══════════════════════╗

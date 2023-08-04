@@ -24,7 +24,7 @@ Secktor.cmd({
             alias: ["menu"],
             desc: "Help list",
             category: "general",
-            react: "📄",
+            react: "📝",
             filename: __filename
         },
         async(Void, citel, text) => {
@@ -56,16 +56,16 @@ Secktor.cmd({
                 let str = `╔╍──╠☬ ` + fancytext(Config.ownername.split(' ')[0], 58) + ` ☬╣──╍╗\n`
                 str +=
                     '```' + `│ ╔╍─────────────╍╗
-│👤│╠ 𝗨𝗦𝗘𝗥:-  ${citel.pushName}
-│💈│╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
-│🎨│╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]
-│👨‍💻│╠ 𝗢𝗪𝗡𝗘𝗥:- ${Config.ownername}
-│🖥️│╠ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
-│🎊│╠ 𝗨𝗦𝗘𝗥𝗦:- ${total}
-│⏲️│╠ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
-│👻│╠ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}_
-│🕟│╠ 𝗧𝗜𝗠𝗘:- ${time}
-│📆│╠ 𝗗𝗔𝗧𝗘:- ${date}
+│👤╠ 𝗨𝗦𝗘𝗥:-  ${citel.pushName}
+│💈╠ 𝗧𝗛𝗘𝗠𝗘:- ${tlang().title}
+│🎨╠ 𝗣𝗥𝗘𝗙𝗜𝗫P:- [ ${prefix} ]
+│👨‍💻╠ 𝗢𝗪𝗡𝗘𝗥:- ${Config.ownername}
+│🖥️╠ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
+│🎊╠ 𝗨𝗦𝗘𝗥𝗦:- ${total}
+│⏲️╠ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
+│👻╠ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}_
+│🕟╠ 𝗧𝗜𝗠𝗘:- ${time}
+│📆╠ 𝗗𝗔𝗧𝗘:- ${date}
 │ ❤❰◭┉────────────┉◮❱❤
 ╚───────────────♛\n
 ` + '```'
@@ -82,7 +82,7 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️*`
+                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️ _📆 𝑇𝑂𝐷𝐴𝑌 𝐷𝐴𝑇𝐸:- ${date}_*`
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,

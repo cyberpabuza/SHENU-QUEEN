@@ -224,11 +224,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                             externalAdReply: {
                                 title: titleYt,
                                 body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: false,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: anu.url,
+                            mediaType: 2,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: anu.url,
                             }
                         }
                     }

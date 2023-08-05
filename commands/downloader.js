@@ -234,7 +234,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     }
               await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
-                } else {
+              await Void.sendMessage(citel.chat, { react: {
+        text: "✅",
+        key: txt2.key,
+            } } );
+		} else {
                     citel.reply(`❌ File size bigger than 100mb.`);
                 }
                 return fs.unlinkSync(`./${randomName}`);      

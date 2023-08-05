@@ -723,24 +723,21 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
-                let stats = fs.statSync(`./${randomName}`);
+                .pipe(fs.createWriteStream(`./${randomName}`));
+            await new Promise((resolve, reject) => {
+                 stats = fs.statSync(`./${randomName}`);
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                
+             
+             let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            body: citel.pushName,
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
                         },
                     },
                 }
@@ -889,11 +886,7 @@ cmd({
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
             await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
-
-            let stats = fs.statSync(`./${randomName}`);
+                 stats = fs.statSync(`./${randomName}`);
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {

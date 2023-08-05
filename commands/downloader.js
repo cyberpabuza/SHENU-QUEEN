@@ -720,7 +720,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╚────────────────◆
 ⦿ *Url* : ${anu.url}`,)
 */
-            const stream = ytdl(anu.url, {
+            let titleYt = infoYt.videoDetails.title;
+            let randomName = getRandom(".mp3");
+            const stream = ytdl(urlYt, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
@@ -738,20 +740,23 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     headerType: 4,
-                        },
-                    },
+                   
                 }
+             
+             
                 await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                 return fs.unlinkSync(`./${randomName}`);
             } else {
-                citel.reply(`❌ File size bigger than 100mb.`);
+                citel.reply(`❌ File size bigger than 200mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
-            
-
-
+        } catch (e) {
+            console.log(e)
         }
-    )
+
+    }
+)
+
 
     //---------------------------------------------------------------------------
 cmd({

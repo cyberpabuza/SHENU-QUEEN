@@ -723,20 +723,24 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
-                video: fs.readFileSync(`./${randomName}`),
-                        jpegThumbnail: log0,
-                        mimetype: 'video/mp4',
-                        fileName: `${titleYt}.mp4`,
-                        headerType: 4,
-                        contextInfo: {
-                            externalAdReply: {
-                                title: titleYt,
-                                body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
+                let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let buttonMessage = {
+                    audio: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'audio/mpeg',
+                    fileName: titleYt + ".mp3",
+                    headerType: 4,
+                    contextInfo: {
+                        externalAdReply: {
+                            body: citel.pushName,
+                            renderLargerThumbnail: false,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: anu.url,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: anu.url,
                         },
                     },
                 }

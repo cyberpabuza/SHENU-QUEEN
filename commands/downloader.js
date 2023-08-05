@@ -23,6 +23,7 @@ var dlsize = 100 // 100mb
     //---------------------------------------------------------------------------
 cmd({
             pattern: "tgs",
+	react: "🕹️",
             desc: "Downloads telegram stickers.",
             category: "downloader",
             filename: __filename,
@@ -139,6 +140,7 @@ async function tiktokdl (url) {
 
 cmd({
             pattern: "tiktok",
+	react: "🎊",
 	    alias :  ['tt','ttdl'],
             desc: "Downloads Tiktok Videos Via Url.",
             category: "downloader",
@@ -195,6 +197,7 @@ let buttonMessage =
 //---------------------------------------------------------------------------
 cmd({
             pattern: "facebook",
+	react: "🌐",
 	    alias :  ['fb','fbdl'],
             desc: "Downloads fb videos  .",
             category: "downloader",
@@ -235,7 +238,7 @@ let vurl=info.video.url_video;
 )
 
 //---------------------------------------------------------------------------
-
+/*
 cmd({
             pattern: "apk",
             desc: "Downloads apks  .",
@@ -404,6 +407,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "video",
+	react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -434,7 +438,7 @@ cmd({
 		let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
                         mimetype: 'video/mp4',
-                        caption: "  Here's Your Video" + Config.caption ,
+                        caption: "𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙻 ✅" + Config.caption ,
                     }
                  Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
@@ -720,42 +724,48 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╚────────────────◆
 ⦿ *Url* : ${anu.url}`,)
 */
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
-            const stream = ytdl(urlYt, {
+            const stream = ytdl(anu.url, {
                     filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
                 })
                 .pipe(fs.createWriteStream(`./${randomName}`));
             await new Promise((resolve, reject) => {
-                 stats = fs.statSync(`./${randomName}`);
+                stream.on("error", reject);
+                stream.on("finish", resolve);
+            });
+
+            let stats = fs.statSync(`./${randomName}`);
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
             if (fileSizeInMegabytes <= dlsize) {
-                let yts = require("secktor-pack");
-                let search = await yts(text);
-                
-             
-             let buttonMessage = {
+                let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
                     fileName: titleYt + ".mp3",
                     headerType: 4,
-                   
+                    contextInfo: {
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            renderLargerThumbnail: false,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: anu.url,
+                            mediaType: 1,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: anu.url,
+                        },
+                    },
                 }
-             
-             
                 await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                 return fs.unlinkSync(`./${randomName}`);
             } else {
-                citel.reply(`❌ File size bigger than 200mb.`);
+                citel.reply(`❌ File size bigger than 100mb.`);
             }
             fs.unlinkSync(`./${randomName}`);
-        } catch (e) {
-            console.log(e)
-        }
+            
 
-    }
-)
+
+        }
+    )
 
 
     //---------------------------------------------------------------------------

@@ -400,10 +400,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 } else {
   textYt = text;
 }
- await Void.sendMessage(citel.chat, { react: {
-        text: "🤖",
-        key: txt2.key,
-            } } );
 		let search = await yts(textYt);
             let anu = search.videos[0];
                        let buttonMessaged ={
@@ -438,7 +434,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 quoted: citel,
             });
 
-            
+            await Void.sendMessage(citel.chat, { react: {
+        text: "🤖",
+        key: txt2.key,
+            } } );
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };

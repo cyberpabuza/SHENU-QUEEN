@@ -495,10 +495,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             }
             fs.unlinkSync(`./${randomName}`);
             
- await Void.sendMessage(citel.chat, { react: {
-        text: "🤖",
-        key: txt2.key,
-            } } );
 
         }
     )

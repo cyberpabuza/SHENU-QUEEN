@@ -400,7 +400,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 } else {
   textYt = text;
 }
-            let search = await yts(textYt);
+ await Void.sendMessage(citel.chat, { react: {
+        text: "🤖",
+        key: txt2.key,
+            } } );
+		let search = await yts(textYt);
             let anu = search.videos[0];
                        let buttonMessaged ={
              image: {

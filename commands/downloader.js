@@ -388,7 +388,7 @@ cmd({
 cmd({
             pattern: "song",
             react: "🎧",
-            alias :["song","so","𝚢𝚝"],
+            alias :['audio'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -404,32 +404,33 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 } else {
   textYt = text;
 }
-		let search = await yts(textYt);
+            let search = await yts(textYt);
             let anu = search.videos[0];
-                       let buttonMessaged ={
-             image: {
+                       let buttonMessaged = {
+                image: {
                     url: anu.thumbnail,
-               },
+                },
                 caption: `
-╔┉───────────────┉✰
-🧚${tlang().title} 
+╔───────────────✰
+◭🧚${tlang().title} 
 
-🚨 *Youtube Player* 🌿
- ◨┉━━━━╚◭☬◮╝━━━━━┉◧
+┊🚨 *Youtube Player* ✨
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
 
-╏🎀 *Title:* ${anu.title}
+┊🎀 *Title:* ${anu.title}
+◭🌐 *Duration:* ${anu.timestamp}
 
-╏🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
 
-╏👀 *Viewers:* ${anu.views}
+◭⬆️ *Uploaded:* ${anu.ago}
 
-╏⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
 
-╏👽 *Author:* ${anu.author.name}
+┊🌐 *Url* : ${anu.url}
 
-╏📡 *Url* : ${anu.url}
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙱𝙻𝙾𝙳 ✅*
-╚┉────────────────┉✰
+┃𝗦𝗛𝗘𝗡𝗨 𝗤𝗨𝗘𝗘𝗡 𝗦𝗢𝗡𝗚 𝗗𝗟 ✅
+ 
+╚────────────────✰
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -438,6 +439,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 quoted: citel,
             });
 
+            
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
@@ -474,18 +476,19 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
                     mimetype: 'audio/mpeg',
-                    fileName: ".mp3",
+                    fileName: titleYt + ".mp3",
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
                             title: titleYt,
                             body: citel.pushName,
+                            renderLargerThumbnail: false,
                             thumbnailUrl: search.all[0].thumbnail,
                             mediaUrl: anu.url,
-                            mediaType: 2,
+                            mediaType: 1,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: anu.url,
-			},
+                        },
                     },
                 }
                 await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
@@ -495,6 +498,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             }
             fs.unlinkSync(`./${randomName}`);
             
+
 
         }
     )

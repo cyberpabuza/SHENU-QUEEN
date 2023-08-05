@@ -434,10 +434,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 quoted: citel,
             });
 
-            await Void.sendMessage(citel.chat, { react: {
-        text: "🤖",
-        key: txt2.key,
-            } } );
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;
             };
@@ -485,7 +481,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                             mediaType: 2,
                             thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: anu.url,
-                        },
+			},
                     },
                 }
                 await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
@@ -495,7 +491,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             }
             fs.unlinkSync(`./${randomName}`);
             
-
+ await Void.sendMessage(citel.chat, { react: {
+        text: "🤖",
+        key: txt2.key,
+            } } );
 
         }
     )

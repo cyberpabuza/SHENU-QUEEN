@@ -728,7 +728,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 stream.on("error", reject);
                 stream.on("finish", resolve);
             });
-/*
+
             let stats = fs.statSync(`./${randomName}`);
             let fileSizeInBytes = stats.size;
             let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
@@ -740,14 +740,13 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     headerType: 4,
                     contextInfo: {
                         externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: false,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
+                             title: titleYt,
+                                body: citel.pushName,
+                                thumbnail: await getBuffer(search.all[0].thumbnail),
+                                renderLargerThumbnail: true,
+                                mediaType: 2,
+                                mediaUrl: search.all[0].thumbnail,
+                                sourceUrl: search.all[0].thumbnail
                         },
                     },
                 }
@@ -762,7 +761,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
         }
     )
-*/
+
     //---------------------------------------------------------------------------
 cmd({
             pattern: "yts",

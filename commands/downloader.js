@@ -223,7 +223,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         contextInfo: {
                             externalAdReply: {
                                 title: titleYt,
-                                body: citel.pushName,
+                                body: SHENU QUEEN MD VIDEO DL ✅,
                             thumbnailUrl: search.all[0].thumbnail,
                             mediaUrl: anu.url,
                             mediaType: 2,

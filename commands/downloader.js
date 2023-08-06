@@ -705,7 +705,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             await Void.sendMessage(citel.chat, buttonMessaged, {
                 quoted: citel,
             });
-
+           await Void.sendMessage(citel.chat, { react: {
+        text: "🎧",
+        key: txt2.key,
+            } } );
             
             const getRandom = (ext) => {
                 return `${Math.floor(Math.random() * 10000)}${ext}`;

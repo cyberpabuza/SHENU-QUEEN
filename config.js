@@ -29,7 +29,7 @@ module.exports = {
   antibadword : process.env.ANTI_BAD_WORD || 'fuck,xxx,sex,xnxx,Brazzers,pronhub,huth,fucking,huththa,huththo,hukanna,fucked,pakaya,pako,ponnaya,ponnayo,kariya,kariyo,huththaa,hutta',
   antifake : process.env.FAKE_COUNTRY_CODE === undefined ? '971' : process.env.FAKE_COUNTRY_CODE,
   readmessage:  process.env.READ_MESSAGE === undefined ? true : process.env.READ_MESSAGE,
-  auto_status_saver: process.env.AUTO_STATUS_SAVER === undefined ? true : process.env.AUTO_STATUS_SAVER,
+  auto_status_saver: process.env.AUTO_STATUS_SAVER === undefined ? fales : process.env.AUTO_STATUS_SAVER,
   HANDLERS:  process.env.PREFIX === undefined ? ['.'] : process.env.PREFIX,
   warncount : process.env.WARN_COUNT === undefined ? 3 : process.env.WARN_COUNT,
   disablepm:  process.env.DISABLE_PM === undefined ? false : process.env.DISABLE_PM,

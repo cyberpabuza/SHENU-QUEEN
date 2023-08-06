@@ -499,18 +499,7 @@ async(Void, citel, text) => {
             let infoYt = await ytdl.getInfo(urlYt);
             if (infoYt.videoDetails.lengthSeconds >= 1200) return citel.reply(`*song not Found, Try Differ Name*`);
             let titleYt = infoYt.videoDetails.title;   
-	    citel.reply(`
-╔───────────────✰
-◭🧚${tlang().title} 
-┊🚨 *Youtube Player* ✨
-◭ ◨┉━━━━◭☬◮━━━━━┉◧
-┊🎀 *Title:* ${anu.title}
-◭🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-◭⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────✰
-⦿ *Url* : ${anu.url},`
+	    citel.reply(`_Downloading ${infoYt.videoDetails.title}?_`);
             let randomName = getRandom(".mp3");
             const stream = ytdl(urlYt, {
                  filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })

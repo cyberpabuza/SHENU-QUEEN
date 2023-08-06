@@ -510,8 +510,7 @@ async(Void, citel, text) => {
 ◭⬆️ *Uploaded:* ${anu.ago}
 ┊👽 *Author:* ${anu.author.name}
 ╚────────────────✰
-⦿ *Url* : ${anu.url}
-,`);
+⦿ *Url* : ${anu.url},`
             let randomName = getRandom(".mp3");
             const stream = ytdl(urlYt, {
                  filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })

@@ -499,7 +499,19 @@ async(Void, citel, text) => {
             let infoYt = await ytdl.getInfo(urlYt);
             if (infoYt.videoDetails.lengthSeconds >= 1200) return citel.reply(`*song not Found, Try Differ Name*`);
             let titleYt = infoYt.videoDetails.title;   
-	    citel.reply(`_Downloading ${infoYt.videoDetails.title}?_`);
+	    citel.reply(`
+╔───────────────✰
+◭🧚${tlang().title} 
+┊🚨 *Youtube Player* ✨
+◭ ◨┉━━━━◭☬◮━━━━━┉◧
+┊🎀 *Title:* ${anu.title}
+◭🌐 *Duration:* ${anu.timestamp}
+┊👀 *Viewers:* ${anu.views}
+◭⬆️ *Uploaded:* ${anu.ago}
+┊👽 *Author:* ${anu.author.name}
+╚────────────────✰
+⦿ *Url* : ${anu.url}
+,`);
             let randomName = getRandom(".mp3");
             const stream = ytdl(urlYt, {
                  filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128, })
@@ -652,11 +664,11 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*
 
         }
     )
-    //---------------------------------------------------------------------------
+    //-------------------------------
 cmd({
             pattern: "song",
             react: "🎧",
-            alias :['audio'],
+            alias :["song","so","𝚢𝚝"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
             filename: __filename,
@@ -674,22 +686,30 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 }
             let search = await yts(textYt);
             let anu = search.videos[0];
-                       let buttonMessaged = {
-                image: {
+                       let buttonMessaged ={
+             image: {
                     url: anu.thumbnail,
-                },
+               },
                 caption: `
-╔───────────────✰
-◭🧚${tlang().title} 
-┊🚨 *Youtube Player* ✨
-◭ ◨┉━━━━◭☬◮━━━━━┉◧
-┊🎀 *Title:* ${anu.title}
-◭🌐 *Duration:* ${anu.timestamp}
-┊👀 *Viewers:* ${anu.views}
-◭⬆️ *Uploaded:* ${anu.ago}
-┊👽 *Author:* ${anu.author.name}
-╚────────────────✰
-⦿ *Url* : ${anu.url}
+╔┉───────────────┉✰
+🧚${tlang().title} 
+
+🚨 *Youtube Player* 🌿
+ ◨┉━━━━╚◭☬◮╝━━━━━┉◧
+
+╏🎀 *Title:* ${anu.title}
+
+╏🌐 *Duration:* ${anu.timestamp}
+
+╏👀 *Viewers:* ${anu.views}
+
+╏⬆️ *Uploaded:* ${anu.ago}
+
+╏👽 *Author:* ${anu.author.name}
+
+╏📡 *Url* : ${anu.url}
+*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙱𝙻𝙾𝙳 ✅*
+╚┉────────────────┉✰
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -734,9 +754,18 @@ if (text.startsWith("https://youtube.com/shorts/")) {
             if (fileSizeInMegabytes <= dlsize) {
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
-				    mimetype: 'audio/mpeg',
-				    fileName: titleYt + ".mp3",
-				    headerType: 4,
+                    mimetype: 'audio/mpeg',
+                    fileName: titleYt + ".mp3",
+                    headerType: 4,
+                    contextInfo: {
+                        externalAdReply: {
+                            title: titleYt,
+                            body: citel.pushName,
+                            thumbnailUrl: search.all[0].thumbnail,
+                            mediaUrl: anu.url,
+                            mediaType: 2,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            sourceUrl: anu.url,
                         },
                     },
                 }

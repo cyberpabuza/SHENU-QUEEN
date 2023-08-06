@@ -786,7 +786,13 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     fileName: titleYt + ".mp3",
        
                 }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+
+                await Void.sendMessage(citel.chat, { react: {
+        text: "🎧",
+        key: txt2.key,
+            } } );
+
                 return fs.unlinkSync(`./${randomName}`);
             } else {
                 citel.reply(`❌ File size bigger than 100mb.`);

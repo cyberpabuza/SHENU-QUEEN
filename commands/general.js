@@ -107,7 +107,7 @@ Void.sendMessage(citel.chat,{image:{url:data.data[0].url}})
 )
 
 //---------------------------------------------------------------------------
-/*
+
 cmd({
         pattern: "repo",
 	react: "🖥️",
@@ -117,7 +117,7 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/github.com/CYBER-THUSHAN/SHENU-QUEEN-V1')
+        let { data } = await axios.get('https://api.github.com/repos/CYBER-THUSHAN/SHENU-QUEEN-V1')
         let cap = `
 ╔┅━━━━━━━━━━━━━━━━━━▣
 ┋  👋 ┋ 𝐻𝐸𝑌 ${citel.pushName}\n
@@ -150,7 +150,7 @@ cmd({
 
     }
 )
-*/
+
 //---------------------------------------------------------------------------
 /* cmd({
         pattern: "status",

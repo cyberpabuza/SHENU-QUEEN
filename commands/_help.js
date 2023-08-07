@@ -63,7 +63,7 @@ Secktor.cmd({
 ╏ ☰ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦:- ${commands.length}
 ╏ ☰ 𝗨𝗦𝗘𝗥𝗦:- ${total}
 ╏ ☰ 𝗨𝗣𝗧𝗜𝗠𝗘:- ${runtime(process.uptime())}
-╏ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}_
+╏ ☰ 𝗠𝗘𝗠:- ${formatp(os.totalmem() - os.freemem())}/${formatp(os.totalmem())}_
 ╏ ☰ 𝗧𝗜𝗠𝗘:- ${time}
 ╏ ☰ 𝗗𝗔𝗧𝗘:- ${date}
  ❤❰◭┉────────────┉◮❱❤

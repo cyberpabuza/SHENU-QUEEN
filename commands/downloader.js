@@ -495,20 +495,13 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         contextInfo: {
                             externalAdReply: {
                                 title: titleYt,
-                            body: citel.pushName,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: anu.url,
-                            mediaType: 2,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: anu.url,
+                                body: citel.pushName,
+                                thumbnail: await getBuffer(search.all[0].thumbnail),
+                                renderLargerThumbnail: true,
+                                mediaType: 2,
+                                mediaUrl: search.all[0].thumbnail,
+                                sourceUrl: search.all[0].thumbnail
                             }
-                const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-
-                await Void.sendMessage(citel.chat, { react: {
-        text: "✅",
-        key: txt2.key,
-            } } );	    
-			    }
                         }
                     }
               await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })

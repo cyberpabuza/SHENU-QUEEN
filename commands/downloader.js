@@ -502,17 +502,17 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                             thumbnail: await getBuffer(search.all[0].thumbnail),
                             sourceUrl: anu.url,
                             }
-                        }
-                    }
-              await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                 return fs.unlinkSync(`./${randomName}`);
-			}
                 const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
 
                 await Void.sendMessage(citel.chat, { react: {
         text: "✅",
         key: txt2.key,
-            } } );
+            } } );	    
+			    }
+                        }
+                    }
+              await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                 return fs.unlinkSync(`./${randomName}`);
                 } else {
                     citel.reply(`❌ File size bigger than 100mb.`);
                 }

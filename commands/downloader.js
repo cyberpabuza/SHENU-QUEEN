@@ -139,6 +139,7 @@ async function tiktokdl (url) {
 
 cmd({
             pattern: "tiktok",
+	react: "🎊",
 	    alias :  ['tt','ttdl'],
             desc: "Downloads Tiktok Videos Via Url.",
             category: "downloader",

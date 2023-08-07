@@ -1036,6 +1036,7 @@ cmd({
 /////=======================  REPLY SYSTEM ===================================================
 cmd({
             pattern: "video2",
+	react: "🎞️",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -1072,7 +1073,7 @@ cmd({
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: 'document/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,                        
+                        caption: `☰┋ 𝑪𝑹𝑬𝑨𝑻𝑬𝑫 𝑩𝒀 𝑪𝒀𝑩𝑬𝑹 𝑻𝑯𝑼𝑺𝑯𝑨𝑵 ┋☰`,                        
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

@@ -1034,8 +1034,8 @@ cmd({
 })
 
 /////=======================  REPLY SYSTEM ===================================================
-md({
-            pattern: "docvideo",
+cmd({
+            pattern: "video2",
             desc: "Downloads video from yt.",
             category: "downloader",
             filename: __filename,
@@ -1072,7 +1072,7 @@ md({
                         document: fs.readFileSync(`./${randomName}`),
                         mimetype: 'document/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: `ᴄʀᴇᴀᴛᴇᴅ ʙʏ ◙◭▫ᴄʏʙᴇʀ-ᴛʜᴜꜱʜᴀɴ`,                        
+                        caption: `★[ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ ᴍʀ ᴘᴀꜱɪɴᴅᴜ]★ `,                        
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {

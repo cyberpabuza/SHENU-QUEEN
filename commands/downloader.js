@@ -372,7 +372,7 @@ cmd({
             use: '<add sticker url.>',
         },
         async(Void, citel, text) => {
-	if (!text) return await citel.reply('*Provide Repo Url, Ex:- _.gitclone https://github.com/SuhailTechInfo/Secktor-bot_*') 
+	if (!text) return await citel.reply('*Provide Repo Url, Ex:- _.gitclone https:caming soon_*') 
     const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     if (!regex.test(text) ) return await citel.reply('*Uhh Please, Provide Valid Repositry Url*');
     let [_, user, repo] = text.match(regex) || []
@@ -506,7 +506,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                     }
               await   Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);
-			await Void.sendMessage(citel.chat, { react: {
+			}
+                const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+
+                await Void.sendMessage(citel.chat, { react: {
         text: "✅",
         key: txt2.key,
             } } );

@@ -82,7 +82,7 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️ _📆 𝑇𝑂𝐷𝐴𝑌 𝐷𝐴𝑇𝐸:- ${date}_*  _𝑩𝑶𝑻 𝑺𝑷𝑬𝑬𝑫:-${usedPrefix}uptime_`
+                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️ _📆 𝑇𝑂𝐷𝐴𝑌 𝐷𝐴𝑇𝐸:- ${date}_* `
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,

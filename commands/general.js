@@ -117,7 +117,7 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/CYBER-THUSHAN/SHENU-QUEEN-V1')
+        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
         let cap = `
 ╔┅━━━━━━━━━━━━━━━━━━▣
 ┋  👋 ┋ 𝐻𝐸𝑌 ${citel.pushName}\n

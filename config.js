@@ -7,6 +7,7 @@ global.owner = process.env.OWNER_NUMBER.split("94710109956,")
 global.mongodb = process.env.MONGODB_URI || "mongodb+srv://sam:sam@cluster0.u1smxsv.mongodb.net/?retryWrites=true&w=majority"
 global.port= process.env.PORT || 5000
 global.email = 'sam@secktor.live'
+global.blockJids = process.env.BLOCK_JID ||'120363165030810524@g.us' ;
 global.github = 'https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1'
 global.location = 'Sultanpur IN'
 global.gurl = 'https://instagram.com/' // add your username

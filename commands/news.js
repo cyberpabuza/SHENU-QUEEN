@@ -3,10 +3,10 @@ const Esana = require('@sl-code-lords/esana-news');
 var api = new Esana()
 
 cmd({
-    pattern: 'esana1',
+    pattern: 'esana',
     alias: ['esananews','news'],
     desc: 'whatsapp beta infomation.',
-    category: 'downloader',
+    category: 'news',
     react: "📃",
     use: '<wbi>',
   },

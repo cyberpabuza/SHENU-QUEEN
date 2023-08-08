@@ -292,7 +292,7 @@ _Powered by ${Config.ownername}_
                 quoted: citel,
             });
             
-            await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230725-WA0323.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+            await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/CYBER-THUSHAN/VOICE-TEST/blob/main/Mp3/shenu%20v1/Hi.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
         }
     )

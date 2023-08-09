@@ -819,7 +819,7 @@ cmd({
             let yts = require("secktor-pack");
             if (!text) return citel.reply(`Example : ${prefix}yts WhatsApp Bot by Suhail Tech`);
             let search = await yts(text);
-            let textt = "*YouTube Search*\n Result From " + text + "\n   ─────────────────── \n";
+            let textt = "*🎀🧚 𝐒𝐇𝐄𝐍𝐔 𝐐𝐔𝐄𝐄𝐍 𝐌𝐃 𝐘𝐎𝐔𝐓𝐔𝐁 𝐒𝐄𝐀𝐑𝐂𝐇\n Result From " + text + "\n   ─────────────────── \n";
             let no = 1;
             for (let i of search.all) 
 	    {
@@ -1082,7 +1082,13 @@ cmd({
                                 thumbnail: await getBuffer(search.all[0].thumbnail),
                                 renderLargerThumbnail: true,
 				mediaUrl: search.all[0].thumbnail
-                                
+                               }
+                const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+
+                await Void.sendMessage(citel.chat, { react: {
+        text: "🗂️",
+        key: txt2.key,
+            } } ); 
                             }
                         }
                     }

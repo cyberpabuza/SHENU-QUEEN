@@ -1082,13 +1082,7 @@ cmd({
                                 thumbnail: await getBuffer(search.all[0].thumbnail),
                                 renderLargerThumbnail: true,
 				mediaUrl: search.all[0].thumbnail
-                               }
-                const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-
-                await Void.sendMessage(citel.chat, { react: {
-        text: "🗂️",
-        key: txt2.key,
-            } } ); 
+                         
                             }
                         }
                     }

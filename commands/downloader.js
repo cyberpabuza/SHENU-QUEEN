@@ -483,12 +483,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
                         caption: "  *Here's Your Video*" + Config.caption ,
-			 gifPlayback: false,
-                   height: 496,
-                   width: 640,
-                   headerType: 4,
-                        headerType: 4,
-			    
                             }
                         }
                     }

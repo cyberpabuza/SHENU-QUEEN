@@ -479,10 +479,7 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
                 if (fileSizeInMegabytes <= dlsize) {
                     let buttonMessage = {
-                        video: fs.readFileSync(`./${randomName}`),
-                        jpegThumbnail: log0,
                         mimetype: 'video/mp4',
-                        fileName: `${titleYt}.mp4`,
                         caption:` 
  ┉━━━━◭☬◮━━━━━┉
 ┃♦ *Title:* ${anu.title}

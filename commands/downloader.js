@@ -482,19 +482,13 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                         video: fs.readFileSync(`./${randomName}`),
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption:` 
- ┉━━━━◭☬◮━━━━━┉
-┃♦ *Title:* ${anu.title}
-┃🌐 *Duration:* ${anu.timestamp}
-┃👀 *Viewers:* ${anu.views}
-┃⬆️ *Uploaded:* ${anu.ago}
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
- `,
-                         gifPlayback: false,
+                        caption: "  *Here's Your Video*" + Config.caption ,
+			 gifPlayback: false,
                    height: 496,
                    width: 640,
                    headerType: 4,
                         headerType: 4,
+			    
                             }
                         }
                     }

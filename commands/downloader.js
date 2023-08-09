@@ -885,7 +885,7 @@ cmd({
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
                         caption: "  *Here's Your Video*" + Config.caption ,
-			 gifPlayback: false,
+			 gifPlayback: true,
                    height: 496,
                    width: 640,
                    headerType: 4,

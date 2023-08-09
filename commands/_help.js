@@ -68,14 +68,14 @@ Secktor.cmd({
 ╏ ✪ 𝗗𝗔𝗧𝗘:- ${date}
 ▣━━━━━━━━━━━━━━━▣
 ════════════════
-*SPICIAL THANK* 
+👩‍🔧 SPICIAL THANK 
 ☞𝙼𝚁 𝙷𝙸𝙼𝙴𝚂𝙷  [𝙰𝙽𝙶𝙰𝙻 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳]
 ☞𝙼𝚁 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻 [𝚀𝚄𝙴𝙴𝙽 𝙽𝙴𝚃𝙷𝚄 𝙼𝙳]
 ☞𝙼𝚁 𝚂𝙷𝙰𝙳𝙾𝚆 
 ════════════════
- ✪▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰✪
-  𝘚𝘏𝘌𝘕𝘜 𝘘𝘜𝘌𝘌𝘕 𝘊𝘖𝘔𝘔𝘈𝘕𝘋 𝘓𝘐𝘚𝘛
- ✪▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰✪\n
+ ❀▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰❀
+ 𝗦𝗛𝗘𝗡𝗨 𝗤𝗨𝗘𝗘𝗡 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧
+ ❀▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰❀\n
 ` + '```'
                 for (const category in cmds) 
                 {
@@ -90,7 +90,9 @@ Secktor.cmd({
                    }
   
                 }
-                str+= `*Tell me what you want to happen to me* *SHENU QUEEN MD WHATSAPP BOT 🧙‍♀️ _📆 𝑇𝑂𝐷𝐴𝑌 𝐷𝐴𝑇𝐸:- ${date}_* `
+                str+= `🧚 *ꜱʜᴇɴᴜ-Qᴜᴇᴇɴ-ᴍᴅ ᴠ1*
+👩‍💻 *ᴄʀᴇᴛᴇᴅ ʙʏ ᴄʏʙᴇʀ ᴛʜᴜꜱʜᴀɴ*
+🔰 *ʀᴇʟᴇꜱᴇ ɴᴏᴡ ?/08/2023*`
                let buttonMessaged = {
                     image: { url: await botpic() },
                     caption: str,

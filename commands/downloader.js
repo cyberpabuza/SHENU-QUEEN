@@ -490,16 +490,11 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ┃⬆️ *Uploaded:* ${anu.ago}
 *𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
  `,
+                         gifPlayback: false,
+                   height: 496,
+                   width: 640,
+                   headerType: 4,
                         headerType: 4,
-                        contextInfo: {
-                            externalAdReply: {
-                                title: titleYt,
-                                body: citel.pushName,
-                                thumbnail: await getBuffer(search.all[0].thumbnail),
-                                renderLargerThumbnail: true,
-                                mediaType: 2,
-                                mediaUrl: search.all[0].thumbnail,
-                                sourceUrl: search.all[0].thumbnail
                             }
                         }
                     }

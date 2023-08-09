@@ -480,9 +480,27 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 if (fileSizeInMegabytes <= dlsize) {
                     let buttonMessage = {
                         video: fs.readFileSync(`./${randomName}`),
+                        jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: "  *Here's Your Video*" + Config.caption ,
+                        caption:` 
+ ┉━━━━◭☬◮━━━━━┉
+┃♦ *Title:* ${anu.title}
+┃🌐 *Duration:* ${anu.timestamp}
+┃👀 *Viewers:* ${anu.views}
+┃⬆️ *Uploaded:* ${anu.ago}
+*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
+ `,
+                        headerType: 4,
+                        contextInfo: {
+                            externalAdReply: {
+                                title: titleYt,
+                                body: citel.pushName,
+                                thumbnail: await getBuffer(search.all[0].thumbnail),
+                                renderLargerThumbnail: true,
+                                mediaType: 2,
+                                mediaUrl: search.all[0].thumbnail,
+                                sourceUrl: search.all[0].thumbnail
                             }
                         }
                     }

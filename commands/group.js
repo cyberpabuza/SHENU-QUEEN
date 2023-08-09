@@ -1,118 +1,4 @@
-/**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SuhailTechInfo <https://github.com/SuhailTechInfo>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
-
-const { sck, sck1,cmd, jsonformat, botpic, TelegraPh, RandomXP, Config, tlang, warndb, sleep,getAdmin,getBuffer, prefix } = require('../lib')
-const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
-const moment = require("moment-timezone");
-const Levels = require("discord-xp");
-const fs = require('fs-extra')
-const Jimp = require("jimp");
-
-
-//---------------------------------------------------------------------------
-cmd({
-            pattern: "join",
-            desc: "joins group by link",
-            category: "owner",
-	 filename: __filename,
-            use: '<group link.>',
-        },
-        async(Void, citel, text,{ isCreator }) => {
-            if (!isCreator) return citel.reply(tlang().owner);
-            if (!text) return citel.reply(`Please give me Query ${tlang().greet}`);
-            if (!text.split(" ")[0] && !text.split(" ")[0].includes("whatsapp.com")) return await citel.reply("Link Invalid, Please Send a valid whatsapp Group Link!");
-            let result = text.split(" ")[0].split("https://chat.whatsapp.com/")[1];
-            await Void.groupAcceptInvite(result)
-                .then((res) => citel.reply("🟩Joined Group"))
-                .catch((err) => citel.reply("Error in Joining Group"));
-
-        }
-    )
-    //---------------------------------------------------------------------------
-/*
-
-cmd({
-        pattern: "support",
-        desc: "Sends official support group link.",
-        category: "group",
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-        citel.reply(`*Check your Pm ${tlang().greet}*`);
-        await Void.sendMessage(`${citel.sender}`, {
-            image: log0,
-            caption: `*Group Name: Secktor-Support*\n*Group Link:* https://chat.whatsapp.com/Bl2F9UTVU4CBfZU6eVnrbC`,
-        });
-
-    }
-)
-*/
-//---------------------------------------------------------------------------
-cmd({
-            pattern: "warn",
-            desc: "Warns user in Group.",
-            category: "group",
-            filename: __filename,
-            use: '<quote|reply|number>',
-        },
-        async(Void, citel, text,{ isCreator }) => {
-            if (!citel.isGroup) return citel.reply(`This Command is only for group.`)
-            const groupAdmins = await getAdmin(Void, citel)
-            const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
-            if (!isAdmins) return citel.reply('This command is only for Admin.')
-            const S=m;function Z(){const F=['126402oKAcRa','date','Removing\x20User\x20because\x20Warn\x20limit\x20exceeded\x0a\x0a*All\x20Warnings.*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','│\x20*🔰Time:-*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a╭─────────────◆\x0a│\x20*🍁In\x20Group:-*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','*----Warn----*\x0aUser:\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*There\x20are\x20total\x20','split','│\x20*⚠️Warned\x20by:-*\x20','length','sender','setDefault','group','Asia/KOLKATA','../config','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('Please\x20quote\x20a\x20user\x20master.');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0aWith\x20Reason:\x20'+text+'\x0aWarned\x20by:\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const Config=require(S(0x1ff));if(h[S(0x1fa)]>Config['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings.*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='│\x20_📍Reason:\x20'+h[i][S(0x1ee)]+'_\x0a╰─────────────◆\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
-            
-        }
-    )
-    //---------------------------------------------------------------------------
-cmd({
-            pattern: "unblock",
-            desc: "Unblocked to the quoted user.",
-            category: "owner",
-            filename: __filename,
-
-        },
-        async(Void, citel, text,{ isCreator }) => {
-            if (!citel.quoted) return citel.reply(`Please reply to user`);
-            if (!isCreator) citel.reply(tlang().owner);
-            let users = citel.quoted ? citel.quoted.sender : citel.mentionedJid[0] ? citel.mentionedJid[0] : text.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
-	    let num = users.replace("@s.whatsapp.net","")
-            await Void.updateBlockStatus(users, "unblock")
-                .then((res) => citel.reply(`${num} is Unblocked With Status : `+ jsonformat(res)))
-                .catch((err) => console.log(jsonformat(err)));
-        }
-    )
-    //---------------------------------------------------------------------------
-    cmd({
-        pattern: "invite",
-        desc: "get group link.",
-        category: "group",
-        filename: __filename,
-    },
-	 async(Void, citel, text,{ isCreator }) => {
-	    if (!citel.isGroup) return citel.reply(tlang().group);
-	    
-        const groupAdmins = await getAdmin(Void, citel)	
-	const botNumber = await Void.decodeJid(Void.user.id)
-        const isBotAdmins =groupAdmins.includes(botNumber)
-	
-if (!isBotAdmins) return citel.reply("*_I'm Not Admin, So I can't Send Invite Link_*");
-var str1 = await Void.groupInviteCode(citel.chat)
-var str2 ="https://chat.whatsapp.com/"
-var mergedString = `${str2}${str1}`;
-return citel.reply("*Group Invite Link Is Here* \n*"+mergedString+"*");
-	
-    }
-	)
-	
+[_0x1b86c0(-0x77,-0x166,-0x12,-0x21,0xb9)+_0x18e293(0x4af,0x60f,0x63e,0x545,0x64b)+'r'](_0x5160e4[_0x18308a(-0x12d,-0x257,-0xfb,-0x27e,-0x1ab)](_0x5160e4[_0x4bbf02(0x19d,0x204,0x2b3,0x292,0x1cd)],_0x5160e4[_0x18308a(0x12f,0x1b9,0x2a3,0xa5,-0x30)]))[_0x1b86c0(-0x66,0xb5,-0x81,-0x2e,0xd0)](_0x5160e4[_0x1b86c0(0x9d,0xf8,0x9a,0x143,-0x54)]));else return _0x48f3ad;}}}function _0x1ee911(_0x79f6f,_0x2eb424,_0x54dfd8,_0x2a7ca8,_0x3b1fe3){return _0x553953(_0x79f6f,_0x2eb424-0x166,_0x54dfd8-0x1be,_0x54dfd8- -0x2e2,_0x3b1fe3-0x1dc);}function _0x18308a(_0x1d88a4,_0x4e6b28,_0xe877b8,_0x367d62,_0x10ef24){return _0x380aad(_0x1d88a4-0xe2,_0x4e6b28-0x19e,_0x1d88a4- -0x56d,_0x367d62-0x52,_0x10ef24);}_0x5160e4[_0x1ee911(0x30b,0x31d,0x1be,0x2e0,0xf3)](_0x2aedcb,++_0xb20ead);}try{if(_0x5a3d2f)return _0x2aedcb;else _0x5160e4[_0x199d54(0x470,0x338,0x4ae,0x2c0,0x3bd)](_0x2aedcb,-0x23c3+0x7*0x17+-0x1191*-0x2);}catch(_0x1b0ebf){}}	
   //---------------------------------------------------------------------------
     cmd({
         pattern: "revoke",
@@ -159,6 +45,7 @@ return citel.reply("*_Group Link Revoked SuccesFully_*");
     //---------------------------------------------------------------------------
 cmd({
         pattern: "tagall",
+	react: "📍",
         desc: "Tags every person of group.",
         category: "group",
         filename: __filename,
@@ -174,8 +61,8 @@ cmd({
         let textt = `
 ══✪〘   *Tag All*   〙✪══
 
-➲ *Message :* ${text ? text : "blank Message"} \n ${Config.caption} \n\n
-➲ *Author:* ${citel.pushName} 🔖
+☞ *_Message :_* ${text ? text : "blank Message"} \n ${Config.caption} \n\n
+☞ *_Author:_* ${citel.pushName} 🔖
 `
         for (let mem of participants) { textt += `📍 @${mem.id.split("@")[0]}\n`;   }
         Void.sendMessage(citel.chat, { text: textt,  mentions: participants.map((a) => a.id) }, {  quoted: citel });

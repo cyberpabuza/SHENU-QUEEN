@@ -476,7 +476,8 @@ cmd({
             return Void.sendMessage(citel.chat, listMessage, {quoted: citel })
 */
         }
-    )-------------------------------
+    )
+    //---------------------------------------------------------------------------
 cmd({
             pattern: "play",
             alias: ["music"],

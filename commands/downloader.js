@@ -436,9 +436,15 @@ cmd({
                 });
                    
 		let buttonMessage = {
-                        audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
+                        video: fs.readFileSync(`./${randomName}`),
+                        mimetype: 'video/mp4',
+                        fileName: `${titleYt}.mp4`,
+                        caption: "  *Here's Your Video*" + Config.caption ,
+			 gifPlayback: false,
+                   height: 496,
+                   width: 640,
+                   headerType: 4,
+                        headerType: 4,
                     }
                  Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
                  return fs.unlinkSync(`./${randomName}`);

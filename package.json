@@ -85,10 +85,10 @@
                     },
                  "repository": {
                  "type": "git",
-                 "url": "git+https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1.git"
+                 "url": "git+https://github.com/CYBER-THUSHAN/SHENU-QUEEN.git"
                   },
                  "bugs": {
-                 "url": "https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1/issues"
+                 "url": "https://github.com/CYBER-THUSHAN/SHENU-QUEEN/issues"
                   },
-                 "homepage": "https://github.com/CYBER-THUSHAN/SHENU-QUEEN-V1#readme"
+                 "homepage": "https://github.com/CYBER-THUSHAN/SHENU-QUEEN#readme"
 }

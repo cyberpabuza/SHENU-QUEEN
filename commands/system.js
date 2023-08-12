@@ -188,9 +188,10 @@ cmd({
             let alivemessage = Config.ALIVE_MESSAGE || `_*A bot developed by CYBER-THUSHN*_`
             const alivtxt = `
 ╔━━━━❰ *SHENU QUEEN MD* ❱━━━━━╗
+⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
 *Hello, I AM SHENU QUEEM MD 👩‍💻*⃟
 ⃟▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰⃟
-_*HOW CAN HELP YOU*._
+    _*HOW CAN HELP YOU*._
 🔮━╍━╍━╍━╍━╍━╍━╍━╍━╍━╍━🔮
 ${alivemessage}
 ╭╍─────────────────╍╮
@@ -212,9 +213,8 @@ ${alivemessage}
  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
 _*MULTI DEVICE WHATSAPP BOT*._
 ╔═══════════════════════╗
-   *ＳＨＥＮＵ-ＱＵＥＥＮ-ＭＤ* 
+  ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴄʏʙᴇʀ ᴛʜᴜꜱʜᴀɴ 
 ╚═══════════════════════╝
-_Powered by ${Config.ownername}_
 `;
             let aliveMessage = {
                 image: {
@@ -228,7 +228,7 @@ _Powered by ${Config.ownername}_
                 quoted: citel,
             });
             
-            await Void.sendMessage(citel.chat, { audio: {url: "https://raw.githubusercontent.com/CYBER-THUSHAN/VOICE-TEST/main/Mp3/shenu%20v1/Hi.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
+            await Void.sendMessage(citel.chat, { audio: {url: "https://github.com/Pramesh04/sup_to_ravana/raw/main/Audio/AUD-20230725-WA0323.mp3" }, mimetype: 'audio/mp4', ptt: true, }, { quoted: citel })
                 return await Void.sendMessage(citel.chat, buttonMessaged);
         }
     )

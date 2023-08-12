@@ -36,25 +36,54 @@ cmd({
 
         }
     )
-    //---------------------------------------------------------------------------
-/*
-
+        //---------------------------------------------------------------------------
 cmd({
-        pattern: "support",
-        desc: "Sends official support group link.",
-        category: "group",
-        filename: __filename,
-    },
-    async(Void, citel, text) => {
-        citel.reply(`*Check your Pm ${tlang().greet}*`);
-        await Void.sendMessage(`${citel.sender}`, {
-            image: log0,
-            caption: `*Group Name: Secktor-Support*\n*Group Link:* https://chat.whatsapp.com/Bl2F9UTVU4CBfZU6eVnrbC`,
-        });
-
-    }
-)
-*/
+            pattern: "sticker",
+	react: "🔃",
+            alias: ["s"],
+            desc: "Makes sticker of replied image/video.",
+            category: "group",
+            use: '<reply to any image/video.>',
+        },
+        async(Void, citel, text) => {
+            if (!citel.quoted) return citel.reply(`*Mention any Image or video Sir.*`);
+            let mime = citel.quoted.mtype
+            pack = Config.packname
+            author = Config.author
+            if (citel.quoted) {
+                let media = await citel.quoted.download();
+                citel.reply("*Processing Your request*");
+                let sticker = new Sticker(media, {
+                    pack: pack, // The pack name
+                    author: author, // The author name
+                    type: text.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
+                    categories: ["🤩", "🎉"], // The sticker category
+                    id: "12345", // The sticker id
+                    quality: 75, // The quality of the output file
+                    background: "transparent", // The sticker background color (only for full stickers)
+                });
+                const buffer = await sticker.toBuffer();
+                return Void.sendMessage(citel.chat, {sticker: buffer}, {quoted: citel });
+            } else if (/video/.test(mime)) {
+                if ((quoted.msg || citel.quoted)
+                    .seconds > 20) return citel.reply("Cannot fetch videos longer than *20 Seconds*");
+                let media = await quoted.download();
+                let sticker = new Sticker(media, {
+                    pack: pack, // The pack name
+                    author: author, // The author name
+                    type: StickerTypes.FULL, // The sticker type
+                    categories: ["🤩", "🎉"], // The sticker category
+                    id: "12345", // The sticker id
+                    quality: 70, // The quality of the output file
+                    background: "transparent", // The sticker background color (only for full stickers)
+                });
+                const stikk = await sticker.toBuffer();
+                return Void.sendMessage(citel.chat, {  sticker: stikk   }, {    quoted: citel });
+            } else {
+                citel.reply("*Uhh,Please reply to any image or video*");
+            }
+        }
+    )
 //---------------------------------------------------------------------------
 cmd({
             pattern: "warn",
@@ -173,9 +202,10 @@ cmd({
 
         let textt = `
 ══✪〘   *Tag All*   〙✪══
+👼 *ꜱʜᴇɴᴜ-Qᴜᴇᴇɴ ᴛᴀɢᴀʟʟ* 👼
 
-➲ *Message :* ${text ? text : "blank Message"} \n ${Config.caption} \n\n
-➲ *Author:* ${citel.pushName} 🔖
+✪ *Message :* ${text ? text : "blank Message"} \n ${Config.caption} \n\n
+✪ *Author:* ${citel.pushName} 🔖
 `
         for (let mem of participants) { textt += `📍 @${mem.id.split("@")[0]}\n`;   }
         Void.sendMessage(citel.chat, { text: textt,  mentions: participants.map((a) => a.id) }, {  quoted: citel });
